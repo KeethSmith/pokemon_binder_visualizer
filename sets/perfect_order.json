@@ -17,6 +17,10 @@
     "columns": 3,
     "binder_capacity": 360
   },
+  "appearance": {
+    "holographic_variants": ["Reverse Holo"],
+    "holographic_opacity": 0.18
+  },
   "variant_rules": [
     {
       "name": "Secret cards",

@@ -49,6 +49,10 @@ Set `number_padding` to `3` when a site expects `001`, `002`, and so on. Use `0`
 
 Every object in `sections` starts on a fresh binder page. Each section provides its first collector number and a sequential list of card names.
 
+### Holographic appearance
+
+Variant labels listed in `appearance.holographic_variants` receive a subtle CSS foil sheen. Adjust `appearance.holographic_opacity` from `0` to `0.5`; Perfect Order uses `0.18` for a restrained effect.
+
 ## Contents
 
 - `index.html` — standalone interactive visualizer.
