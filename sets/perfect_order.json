@@ -1,0 +1,99 @@
+{
+  "set": {
+    "name": "Pokémon Perfect Order",
+    "short_name": "Perfect Order",
+    "code": "POR"
+  },
+  "image": {
+    "url_template": "https://dz3we2x72f7ol.cloudfront.net/expansions/{set_slug}/en-us/{image_prefix}_{number}-2x.png",
+    "context": {
+      "set_slug": "perfect-order",
+      "image_prefix": "P614_EN"
+    },
+    "number_padding": 0
+  },
+  "binder": {
+    "pockets_per_page": 9,
+    "columns": 3,
+    "binder_capacity": 360
+  },
+  "variant_rules": [
+    {
+      "name": "Secret cards",
+      "numbers": "89-124",
+      "variants": ["Secret"]
+    },
+    {
+      "name": "Base Double Rare ex cards",
+      "numbers": [12, 16, 21, 22, 31, 47, 53, 55, 62],
+      "variants": ["Regular"]
+    },
+    {
+      "name": "Other base cards",
+      "numbers": "1-88",
+      "variants": ["Regular", "Reverse Holo"]
+    }
+  ],
+  "sections": [
+    {
+      "name": "Grass",
+      "start": 1,
+      "cards": ["Spinarak", "Ariados", "Shaymin", "Snivy", "Servine", "Serperior", "Scatterbug", "Spewpa", "Vivillon", "Rowlet", "Dartrix", "Decidueye ex"]
+    },
+    {
+      "name": "Fire",
+      "start": 13,
+      "cards": ["Fletchinder", "Talonflame", "Salandit", "Salazzle ex", "Turtonator"]
+    },
+    {
+      "name": "Water",
+      "start": 18,
+      "cards": ["Seel", "Dewgong", "Staryu", "Mega Starmie ex", "Lapras ex", "Amaura", "Aurorus", "Volcanion"]
+    },
+    {
+      "name": "Lightning",
+      "start": 26,
+      "cards": ["Shinx", "Luxio", "Luxray", "Dedenne"]
+    },
+    {
+      "name": "Psychic",
+      "start": 30,
+      "cards": ["Clefairy", "Mega Clefable ex", "Mawile", "Espurr", "Meowstic", "Spritzee", "Aromatisse"]
+    },
+    {
+      "name": "Fighting",
+      "start": 37,
+      "cards": ["Nosepass", "Probopass", "Hippopotas", "Hippowdon", "Landorus", "Binacle", "Barbaracle", "Tyrunt", "Tyrantrum", "Hawlucha", "Mega Zygarde ex"]
+    },
+    {
+      "name": "Darkness",
+      "start": 48,
+      "cards": ["Gastly", "Haunter", "Gengar", "Skorupi", "Drapion", "Yveltal ex", "Chien-Pao"]
+    },
+    {
+      "name": "Metal",
+      "start": 55,
+      "cards": ["Mega Skarmory ex", "Honedge", "Doublade", "Aegislash", "Klefki"]
+    },
+    {
+      "name": "Colorless",
+      "start": 60,
+      "cards": ["Rattata", "Raticate", "Meowth ex", "Snorlax", "Bunnelby", "Diggersby", "Fletchling", "Furfrou"]
+    },
+    {
+      "name": "Trainers",
+      "start": 68,
+      "cards": ["Antique Jaw Fossil", "Antique Sail Fossil", "Core Memory", "Crushing Hammer", "Energy Search", "Energy Swatter", "Hole-Digging Shovel", "Jacinthe", "Judge", "Lumiose City", "Lumiose Galette", "Naveen", "Poké Ball", "Poké Pad", "Pokémon Catcher", "Potion", "Rosa's Encouragement", "Tarragon"]
+    },
+    {
+      "name": "Energy",
+      "start": 86,
+      "cards": ["Growing Grass Energy", "Rocky Fighting Energy", "Telepathic Psychic Energy"]
+    },
+    {
+      "name": "Secret Rares",
+      "start": 89,
+      "cards": ["Spewpa", "Rowlet", "Talonflame", "Aurorus", "Dedenne", "Clefairy", "Espurr", "Probopass", "Drapion", "Doublade", "Raticate", "Decidueye ex", "Salazzle ex", "Mega Starmie ex", "Mega Clefable ex", "Mega Zygarde ex", "Yveltal ex", "Mega Skarmory ex", "Meowth ex", "Energy Recycler", "Forest of Vitality", "Jacinthe", "Lumiose City", "Naveen", "Poké Pad", "Rosa's Encouragement", "Sacred Ash", "Tarragon", "Wondrous Patch", "Mega Starmie ex", "Mega Clefable ex", "Mega Zygarde ex", "Meowth ex", "Jacinthe", "Rosa's Encouragement", "Mega Zygarde ex"]
+    }
+  ]
+}

@@ -1,20 +1,14 @@
-PERFECT ORDER (POR) — 3x3 MASTER-SET BINDER LAYOUT
-==========================================================
+POKÉMON PERFECT ORDER — BINDER LAYOUT
+================================================================
 
-Official image pattern:
-https://dz3we2x72f7ol.cloudfront.net/expansions/perfect-order/en-us/P614_EN_<collector-number>-2x.png
-Examples: #001 -> P614_EN_1-2x.png; #124 -> P614_EN_124-2x.png
+Image template: https://dz3we2x72f7ol.cloudfront.net/expansions/{set_slug}/en-us/{image_prefix}_{number}-2x.png
+Every configured section begins on a fresh page.
 
-Rules: each section begins on a fresh page; base non-ex cards get Regular +
-Reverse Holo; the nine base Double Rare ex cards get one Regular pocket;
-cards #089-124 get one Secret pocket each.
-
-Totals: 203 cards | 26 used pages | 31 deliberate blanks | 14 unused
-pages in a 40-page / 360-pocket binder.
+Totals: 203 cards | 26 used pages | 31 deliberate blanks | 14 unused pages.
 
 
 PAIRED LAYOUT
-----------------------------------------------------------
+----------------------------------------------------------------
 
 PAGE 01 — Grass
 1. #001 Spinarak — Regular | 2. #001 Spinarak — Reverse Holo | 3. #002 Ariados — Regular
@@ -148,7 +142,7 @@ PAGE 26 — Secret Rares
 
 
 SPLIT LAYOUT
-----------------------------------------------------------
+----------------------------------------------------------------
 
 PAGE 01 — Grass
 1. #001 Spinarak — Regular | 2. #002 Ariados — Regular | 3. #003 Shaymin — Regular
