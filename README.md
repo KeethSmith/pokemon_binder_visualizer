@@ -51,7 +51,7 @@ Every object in `sections` starts on a fresh binder page. Each section provides 
 
 ### Holographic appearance
 
-Variant labels listed in `appearance.holographic_variants` receive a CSS reverse-holo treatment. `holographic_darkening` controls the darker printed header and text field, while `holographic_opacity` controls the static dark metallic shimmer. The effect includes a strong fixed diagonal silver highlight with no animation or cursor tracking.
+Variant labels listed in `appearance.holographic_variants` receive a CSS reverse-holo treatment. `holographic_darkening` controls the darker printed header and text field, while `holographic_opacity` controls a full-card static shimmer rendered with `mix-blend-mode: screen`. The effect includes a strong fixed diagonal silver highlight with no animation or cursor tracking.
 
 ## Contents
 
