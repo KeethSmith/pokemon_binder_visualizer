@@ -100,7 +100,7 @@
           "number": 10,
           "name": "Meganium",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -248,7 +248,7 @@
           "number": 28,
           "name": "Cinderace",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -501,7 +501,7 @@
           "number": 58,
           "name": "Ralts",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -509,7 +509,7 @@
           "number": 59,
           "name": "Kirlia",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -548,7 +548,7 @@
           "number": 64,
           "name": "Xerneas",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -625,7 +625,7 @@
           "number": 73,
           "name": "Hariyama",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -633,7 +633,7 @@
           "number": 74,
           "name": "Lunatone",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -641,7 +641,7 @@
           "number": 75,
           "name": "Solrock",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -649,7 +649,7 @@
           "number": 76,
           "name": "Riolu",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -860,7 +860,7 @@
           "number": 101,
           "name": "Latios",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         }
@@ -989,7 +989,7 @@
           "number": 116,
           "name": "Fighting Gong",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -997,7 +997,7 @@
           "number": 117,
           "name": "Forest of Vitality",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -1005,7 +1005,7 @@
           "number": 118,
           "name": "Iron Defender",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -1013,7 +1013,7 @@
           "number": 119,
           "name": "Lillie's Determination",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -1029,7 +1029,7 @@
           "number": 121,
           "name": "Mega Signal",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -1037,7 +1037,7 @@
           "number": 122,
           "name": "Mystery Garden",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -1053,7 +1053,7 @@
           "number": 124,
           "name": "Premium Power Pro",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -1117,7 +1117,7 @@
           "number": 132,
           "name": "Wally's Compassion",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         }

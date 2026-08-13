@@ -13,7 +13,7 @@ The visualizer provides two arrangements:
 
 The **Binder** menu supports 2 × 2, 3 × 3, 4 × 3, and 4 × 4 pocket pages. Page totals and intentional blanks recalculate for the selected format, while every elemental type and collection section continues to begin on a fresh page.
 
-Card variants are defined per set, and ex cards use one pocket each unless the source data explicitly identifies another physical variant.
+Card variants are defined per set. Non-holo cards are labeled **Regular**, holo rares are labeled **Holo**, and their parallel finish is labeled **Reverse Holo**. ex cards use one pocket each unless the source data explicitly identifies another physical variant.
 
 ## Generate another set
 

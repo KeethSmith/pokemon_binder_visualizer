@@ -44,7 +44,7 @@
           "number": 3,
           "name": "Ledian",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -808,7 +808,7 @@
           "number": 96,
           "name": "Grimmsnarl",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -900,7 +900,7 @@
           "number": 107,
           "name": "Archaludon",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -1005,7 +1005,7 @@
           "number": 119,
           "name": "Bouffalant",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },

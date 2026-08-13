@@ -165,7 +165,7 @@
           "number": 18,
           "name": "Dipplin",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -287,7 +287,7 @@
           "number": 33,
           "name": "Infernape",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -451,7 +451,7 @@
           "number": 53,
           "name": "Froslass",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -499,7 +499,7 @@
           "number": 59,
           "name": "Finizen",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -507,7 +507,7 @@
           "number": 60,
           "name": "Palafin",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -522,7 +522,7 @@
           "number": 62,
           "name": "Iron Bundle",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -792,7 +792,7 @@
           "number": 95,
           "name": "Munkidori",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -800,7 +800,7 @@
           "number": 96,
           "name": "Fezandipiti",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         }
@@ -837,7 +837,7 @@
           "number": 100,
           "name": "Hisuian Arcanine",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -924,7 +924,7 @@
           "number": 111,
           "name": "Okidogi",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -1328,7 +1328,7 @@
           "number": 159,
           "name": "Ogre's Mask",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },

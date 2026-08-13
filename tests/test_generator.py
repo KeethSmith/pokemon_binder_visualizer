@@ -63,11 +63,16 @@ class GeneratorTests(unittest.TestCase):
             self.assertTrue(all(len(page["pockets"]) == page_size for page in pages))
 
     def test_perfect_order_master_count_and_ex_slots(self):
-        path = Path(__file__).parents[1] / "sets" / "builtin" / "me03.json"
+        path = Path(__file__).parents[1] / "sets" / "perfect_order.json"
         config = json.loads(path.read_text(encoding="utf-8"))
         cards = load_cards(config)
         self.assertEqual(metrics(config, cards)["master_cards"], 203)
         self.assertTrue(all(len(card.variants) == 1 for card in cards if card.name.lower().endswith(" ex")))
+        by_number = {card.number: card for card in cards}
+        self.assertEqual(by_number[88].name, "Telepathic Psychic Energy")
+        self.assertEqual(by_number[88].variants, ("Holo", "Reverse Holo"))
+        self.assertEqual(by_number[12].variants, ("Holo",))
+        self.assertEqual(by_number[1].variants, ("Regular", "Reverse Holo"))
 
     def test_all_bundled_sets_load_and_keep_ex_cards_single_slot(self):
         directory = Path(__file__).parents[1] / "sets" / "builtin"

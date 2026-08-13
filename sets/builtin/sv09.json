@@ -240,7 +240,7 @@
           "number": 27,
           "name": "N's Darmanitan",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -283,7 +283,7 @@
           "number": 32,
           "name": "Articuno",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -407,7 +407,7 @@
           "number": 47,
           "name": "Iono's Voltorb",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -446,7 +446,7 @@
           "number": 52,
           "name": "Iono's Tadbulb",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -469,7 +469,7 @@
           "number": 55,
           "name": "Iono's Kilowattrel",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         }
@@ -569,7 +569,7 @@
           "number": 67,
           "name": "Lillie's Ribombee",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -799,7 +799,7 @@
           "number": 95,
           "name": "Tyranitar",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -974,7 +974,7 @@
           "number": 116,
           "name": "N's Reshiram",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         }
@@ -987,7 +987,7 @@
           "number": 117,
           "name": "Hop's Snorlax",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -1074,7 +1074,7 @@
           "number": 128,
           "name": "Noivern",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -1130,7 +1130,7 @@
           "number": 135,
           "name": "Hop's Wooloo",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -1239,7 +1239,7 @@
           "number": 148,
           "name": "Hop's Choice Band",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -1255,7 +1255,7 @@
           "number": 150,
           "name": "Levincia",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -1263,7 +1263,7 @@
           "number": 151,
           "name": "Lillie's Pearl",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -1279,7 +1279,7 @@
           "number": 153,
           "name": "N's PP Up",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -1287,7 +1287,7 @@
           "number": 154,
           "name": "Postwick",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },

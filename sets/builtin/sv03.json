@@ -125,7 +125,7 @@
           "number": 13,
           "name": "Rowlet",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -133,7 +133,7 @@
           "number": 14,
           "name": "Dartrix",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -232,7 +232,7 @@
           "number": 26,
           "name": "Charmander",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -240,7 +240,7 @@
           "number": 27,
           "name": "Charmeleon",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -475,7 +475,7 @@
           "number": 56,
           "name": "Froakie",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -483,7 +483,7 @@
           "number": 57,
           "name": "Frogadier",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -523,7 +523,7 @@
           "number": 62,
           "name": "Palafin",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         }
@@ -721,7 +721,7 @@
           "number": 86,
           "name": "Espeon",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -832,7 +832,7 @@
           "number": 100,
           "name": "Greavard",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -884,7 +884,7 @@
           "number": 106,
           "name": "Pupitar",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -1232,7 +1232,7 @@
           "number": 149,
           "name": "Bisharp",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },

@@ -180,7 +180,7 @@
           "number": 20,
           "name": "Team Rocket's Spidops",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -211,7 +211,7 @@
           "number": 24,
           "name": "Rellor",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -294,7 +294,7 @@
           "number": 34,
           "name": "Ethan's Typhlosion",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -418,7 +418,7 @@
           "number": 49,
           "name": "Misty's Gyarados",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -434,7 +434,7 @@
           "number": 51,
           "name": "Team Rocket's Articuno",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -728,7 +728,7 @@
           "number": 87,
           "name": "Team Rocket's Mimikyu",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -805,7 +805,7 @@
           "number": 96,
           "name": "Team Rocket's Tyranitar",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },

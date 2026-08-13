@@ -136,7 +136,7 @@
           "number": 14,
           "name": "Moltres",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -395,7 +395,7 @@
           "number": 45,
           "name": "Zacian",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -464,7 +464,7 @@
           "number": 53,
           "name": "Flygon",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         }
@@ -587,7 +587,7 @@
           "number": 68,
           "name": "Toxtricity",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },

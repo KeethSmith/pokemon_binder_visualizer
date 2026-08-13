@@ -27,12 +27,17 @@
     {
       "name": "Secret cards",
       "numbers": "89-124",
-      "variants": ["Secret"]
+      "variants": ["Holo"]
     },
     {
       "name": "Base Double Rare ex cards",
       "numbers": [12, 16, 21, 22, 31, 47, 53, 55, 62],
-      "variants": ["Regular"]
+      "variants": ["Holo"]
+    },
+    {
+      "name": "Base holo rare cards",
+      "numbers": [19, 24, 28, 41, 45, 50, 54, 86, 87, 88],
+      "variants": ["Holo", "Reverse Holo"]
     },
     {
       "name": "Other base cards",

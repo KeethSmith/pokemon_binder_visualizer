@@ -325,7 +325,7 @@
           "number": 37,
           "name": "Snorunt",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -388,7 +388,7 @@
           "number": 45,
           "name": "Vanilluxe",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -1090,7 +1090,7 @@
           "number": 131,
           "name": "Honedge",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -1098,7 +1098,7 @@
           "number": 132,
           "name": "Doublade",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },

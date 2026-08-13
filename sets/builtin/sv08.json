@@ -132,7 +132,7 @@
           "number": 14,
           "name": "Rabsca",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -327,7 +327,7 @@
           "number": 38,
           "name": "Gouging Fire",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         }
@@ -550,7 +550,7 @@
           "number": 65,
           "name": "Tapu Koko",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -891,7 +891,7 @@
           "number": 107,
           "name": "Gastrodon",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -1076,7 +1076,7 @@
           "number": 129,
           "name": "Duraludon",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },

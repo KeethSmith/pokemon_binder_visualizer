@@ -181,7 +181,7 @@
           "number": 19,
           "name": "Dewgong",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -219,7 +219,7 @@
           "number": 24,
           "name": "Aurorus",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -256,7 +256,7 @@
           "number": 28,
           "name": "Luxray",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -369,7 +369,7 @@
           "number": 41,
           "name": "Landorus",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -401,7 +401,7 @@
           "number": 45,
           "name": "Tyrantrum",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -445,7 +445,7 @@
           "number": 50,
           "name": "Gengar",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -750,7 +750,7 @@
           "number": 86,
           "name": "Growing Grass Energy",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -758,7 +758,7 @@
           "number": 87,
           "name": "Rocky Fighting Energy",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -766,7 +766,7 @@
           "number": 88,
           "name": "Telepathic Psychic Energy",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         }

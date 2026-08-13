@@ -188,7 +188,7 @@
           "number": 21,
           "name": "Brambleghast",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -211,7 +211,7 @@
           "number": 24,
           "name": "Rabsca",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -354,7 +354,7 @@
           "number": 41,
           "name": "Feraligatr",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -438,7 +438,7 @@
           "number": 51,
           "name": "Pikachu",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -525,7 +525,7 @@
           "number": 62,
           "name": "Iron Thorns",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         }
@@ -650,7 +650,7 @@
           "number": 77,
           "name": "Scream Tail",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -666,7 +666,7 @@
           "number": 79,
           "name": "Iron Valiant",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -710,7 +710,7 @@
           "number": 84,
           "name": "Relicanth",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -1001,7 +1001,7 @@
           "number": 119,
           "name": "Koraidon",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -1016,7 +1016,7 @@
           "number": 121,
           "name": "Miraidon",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -1059,7 +1059,7 @@
           "number": 126,
           "name": "Hoothoot",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -1067,7 +1067,7 @@
           "number": 127,
           "name": "Noctowl",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -1083,7 +1083,7 @@
           "number": 129,
           "name": "Dudunsparce",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -1191,7 +1191,7 @@
           "number": 142,
           "name": "Bianca's Devotion",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -1207,7 +1207,7 @@
           "number": 144,
           "name": "Buddy-Buddy Poffin",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -1215,7 +1215,7 @@
           "number": 145,
           "name": "Ciphermaniac's Codebreaking",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -1231,7 +1231,7 @@
           "number": 147,
           "name": "Explorer's Guidance",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -1239,7 +1239,7 @@
           "number": 148,
           "name": "Full Metal Lab",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -1300,7 +1300,7 @@
           "number": 156,
           "name": "Perilous Jungle",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -1322,7 +1322,7 @@
           "number": 159,
           "name": "Rescue Board",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -1351,7 +1351,7 @@
           "number": 162,
           "name": "Neo Upper Energy",
           "variants": [
-            "Regular"
+            "Holo"
           ]
         }
       ]

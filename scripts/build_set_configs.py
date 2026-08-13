@@ -54,10 +54,10 @@ def get_json(url: str) -> dict:
 def variants(card: dict) -> list[str]:
     available = card.get("variants") or {}
     result = []
-    if available.get("normal"):
-        result.append("Regular")
-    elif available.get("holo"):
+    if available.get("holo"):
         result.append("Holo")
+    elif available.get("normal"):
+        result.append("Regular")
     if available.get("reverse"):
         result.append("Reverse Holo")
     return result or ["Regular"]

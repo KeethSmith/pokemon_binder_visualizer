@@ -449,7 +449,7 @@
           "number": 53,
           "name": "Cetoddle",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -489,7 +489,7 @@
           "number": 58,
           "name": "Frigibax",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -915,7 +915,7 @@
           "number": 110,
           "name": "Larvitar",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -923,7 +923,7 @@
           "number": 111,
           "name": "Pupitar",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -1330,7 +1330,7 @@
           "number": 160,
           "name": "Slakoth",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
@@ -1338,7 +1338,7 @@
           "number": 161,
           "name": "Vigoroth",
           "variants": [
-            "Regular",
+            "Holo",
             "Reverse Holo"
           ]
         },
