@@ -1,0 +1,1568 @@
+{
+  "set": {
+    "name": "Journey Together",
+    "short_name": "Journey Together",
+    "code": "SV09"
+  },
+  "image": {
+    "url_template": "https://dz3we2x72f7ol.cloudfront.net/expansions/journey-together/en-us/SV09_EN_{number}-2x.png",
+    "number_padding": 0
+  },
+  "binder": {
+    "pockets_per_page": 9,
+    "columns": 3
+  },
+  "appearance": {
+    "holographic_variants": [
+      "Reverse Holo",
+      "Holo"
+    ],
+    "holographic_opacity": 0.58,
+    "holographic_darkening": 0.315
+  },
+  "sections": [
+    {
+      "name": "Grass",
+      "cards": [
+        {
+          "number": 1,
+          "name": "Caterpie",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 2,
+          "name": "Metapod",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 3,
+          "name": "Butterfree",
+          "variants": [
+            "Holo",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 4,
+          "name": "Paras",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 5,
+          "name": "Parasect",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 6,
+          "name": "Petilil",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 7,
+          "name": "Lilligant",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 8,
+          "name": "Maractus",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 9,
+          "name": "Karrablast",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 10,
+          "name": "Foongus",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 11,
+          "name": "Amoonguss ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 12,
+          "name": "Shelmet",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 13,
+          "name": "Accelgor",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 14,
+          "name": "Durant",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 15,
+          "name": "Virizion",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 16,
+          "name": "Sprigatito",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 17,
+          "name": "Floragato",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 18,
+          "name": "Meowscarada",
+          "variants": [
+            "Holo",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 19,
+          "name": "Nymble",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fire",
+      "cards": [
+        {
+          "number": 20,
+          "name": "Magmar",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 21,
+          "name": "Magmortar",
+          "variants": [
+            "Holo",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 22,
+          "name": "Torchic",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 23,
+          "name": "Combusken",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 24,
+          "name": "Blaziken ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 25,
+          "name": "Torkoal",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 26,
+          "name": "N's Darumaka",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 27,
+          "name": "N's Darmanitan",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 28,
+          "name": "Larvesta",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 29,
+          "name": "Volcarona",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 30,
+          "name": "Reshiram ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 31,
+          "name": "Volcanion ex",
+          "variants": [
+            "Holo"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Water",
+      "cards": [
+        {
+          "number": 32,
+          "name": "Articuno",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 33,
+          "name": "Remoraid",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 34,
+          "name": "Octillery",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 35,
+          "name": "Lotad",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 36,
+          "name": "Lombre",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 37,
+          "name": "Ludicolo",
+          "variants": [
+            "Holo",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 38,
+          "name": "Wingull",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 39,
+          "name": "Pelipper",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 40,
+          "name": "Wailmer",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 41,
+          "name": "Wailord",
+          "variants": [
+            "Holo",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 42,
+          "name": "Regice",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 43,
+          "name": "Veluza ex",
+          "variants": [
+            "Holo"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lightning",
+      "cards": [
+        {
+          "number": 44,
+          "name": "Alolan Geodude",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 45,
+          "name": "Alolan Graveler",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 46,
+          "name": "Alolan Golem",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 47,
+          "name": "Iono's Voltorb",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 48,
+          "name": "Iono's Electrode",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 49,
+          "name": "N's Joltik",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 50,
+          "name": "Togedemaru",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 51,
+          "name": "Tapu Koko ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 52,
+          "name": "Iono's Tadbulb",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 53,
+          "name": "Iono's Bellibolt ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 54,
+          "name": "Iono's Wattrel",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 55,
+          "name": "Iono's Kilowattrel",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Psychic",
+      "cards": [
+        {
+          "number": 56,
+          "name": "Lillie's Clefairy ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 57,
+          "name": "Alolan Marowak",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 58,
+          "name": "Mr. Mime",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 59,
+          "name": "Shuppet",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 60,
+          "name": "Banette",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 61,
+          "name": "Beldum",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 62,
+          "name": "Metang",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 63,
+          "name": "Metagross",
+          "variants": [
+            "Holo",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 64,
+          "name": "N's Sigilyph",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 65,
+          "name": "Oricorio",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 66,
+          "name": "Lillie's Cutiefly",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 67,
+          "name": "Lillie's Ribombee",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 68,
+          "name": "Lillie's Comfey",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 69,
+          "name": "Mimikyu ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 70,
+          "name": "Dhelmise",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 71,
+          "name": "Impidimp",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 72,
+          "name": "Morgrem",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 73,
+          "name": "Grimmsnarl",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 74,
+          "name": "Milcery",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 75,
+          "name": "Alcremie ex",
+          "variants": [
+            "Holo"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fighting",
+      "cards": [
+        {
+          "number": 76,
+          "name": "Cubone",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 77,
+          "name": "Swinub",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 78,
+          "name": "Piloswine",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 79,
+          "name": "Mamoswine ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 80,
+          "name": "Larvitar",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 81,
+          "name": "Pupitar",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 82,
+          "name": "Regirock",
+          "variants": [
+            "Holo",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 83,
+          "name": "Pancham",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 84,
+          "name": "Rockruff",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 85,
+          "name": "Lycanroc",
+          "variants": [
+            "Holo",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 86,
+          "name": "Hop's Silicobra",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 87,
+          "name": "Hop's Sandaconda",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 88,
+          "name": "Toedscool",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 89,
+          "name": "Toedscruel",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 90,
+          "name": "Klawf",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Darkness",
+      "cards": [
+        {
+          "number": 91,
+          "name": "Koffing",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 92,
+          "name": "Weezing",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 93,
+          "name": "Paldean Wooper",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 94,
+          "name": "Paldean Clodsire ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 95,
+          "name": "Tyranitar",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 96,
+          "name": "N's Purrloin",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 97,
+          "name": "N's Zorua",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 98,
+          "name": "N's Zoroark ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 99,
+          "name": "Pangoro",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 100,
+          "name": "Lokix",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 101,
+          "name": "Bombirdier",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Metal",
+      "cards": [
+        {
+          "number": 102,
+          "name": "Escavalier",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 103,
+          "name": "N's Klink",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 104,
+          "name": "N's Klang",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 105,
+          "name": "N's Klinklang",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 106,
+          "name": "Galarian Stunfisk",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 107,
+          "name": "Magearna",
+          "variants": [
+            "Holo",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 108,
+          "name": "Hop's Corviknight",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 109,
+          "name": "Cufant",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 110,
+          "name": "Copperajah",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 111,
+          "name": "Hop's Zacian ex",
+          "variants": [
+            "Holo"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Dragon",
+      "cards": [
+        {
+          "number": 112,
+          "name": "Bagon",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 113,
+          "name": "Shelgon",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 114,
+          "name": "Salamence ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 115,
+          "name": "Druddigon",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 116,
+          "name": "N's Reshiram",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Colorless",
+      "cards": [
+        {
+          "number": 117,
+          "name": "Hop's Snorlax",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 118,
+          "name": "Sentret",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 119,
+          "name": "Furret",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 120,
+          "name": "Dunsparce",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 121,
+          "name": "Dudunsparce ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 122,
+          "name": "Kecleon",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 123,
+          "name": "Tropius",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 124,
+          "name": "Audino",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 125,
+          "name": "Minccino",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 126,
+          "name": "Cinccino",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 127,
+          "name": "Noibat",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 128,
+          "name": "Noivern",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 129,
+          "name": "Komala",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 130,
+          "name": "Drampa",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 131,
+          "name": "Skwovet",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 132,
+          "name": "Greedent",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 133,
+          "name": "Hop's Rookidee",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 134,
+          "name": "Hop's Corvisquire",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 135,
+          "name": "Hop's Wooloo",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 136,
+          "name": "Hop's Dubwool",
+          "variants": [
+            "Holo",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 137,
+          "name": "Cramorant",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 138,
+          "name": "Hop's Cramorant",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 139,
+          "name": "Lechonk",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 140,
+          "name": "Oinkologne",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 141,
+          "name": "Squawkabilly",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Trainers",
+      "cards": [
+        {
+          "number": 142,
+          "name": "Billy & O'Nare",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 143,
+          "name": "Black Belt's Training",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 144,
+          "name": "Black Belt's Training",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 145,
+          "name": "Black Belt's Training",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 146,
+          "name": "Brock's Scouting",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 147,
+          "name": "Hop's Bag",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 148,
+          "name": "Hop's Choice Band",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 149,
+          "name": "Iris's Fighting Spirit",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 150,
+          "name": "Levincia",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 151,
+          "name": "Lillie's Pearl",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 152,
+          "name": "N's Castle",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 153,
+          "name": "N's PP Up",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 154,
+          "name": "Postwick",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 155,
+          "name": "Professor's Research",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 156,
+          "name": "Redeemable Ticket",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 157,
+          "name": "Ruffian",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        },
+        {
+          "number": 158,
+          "name": "Super Potion",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Energy",
+      "cards": [
+        {
+          "number": 159,
+          "name": "Spiky Energy",
+          "variants": [
+            "Regular",
+            "Reverse Holo"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Secret Rares",
+      "cards": [
+        {
+          "number": 160,
+          "name": "Maractus",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 161,
+          "name": "Articuno",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 162,
+          "name": "Wailord",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 163,
+          "name": "Iono's Kilowattrel",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 164,
+          "name": "Lillie's Ribombee",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 165,
+          "name": "Swinub",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 166,
+          "name": "Lycanroc",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 167,
+          "name": "N's Reshiram",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 168,
+          "name": "Furret",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 169,
+          "name": "Noibat",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 170,
+          "name": "Hop's Wooloo",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 171,
+          "name": "Volcanion ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 172,
+          "name": "Iono's Bellibolt ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 173,
+          "name": "Lillie's Clefairy ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 174,
+          "name": "Mamoswine ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 175,
+          "name": "N's Zoroark ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 176,
+          "name": "Hop's Zacian ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 177,
+          "name": "Salamence ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 178,
+          "name": "Dudunsparce ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 179,
+          "name": "Brock's Scouting",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 180,
+          "name": "Iris's Fighting Spirit",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 181,
+          "name": "Ruffian",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 182,
+          "name": "Volcanion ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 183,
+          "name": "Iono's Bellibolt ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 184,
+          "name": "Lillie's Clefairy ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 185,
+          "name": "N's Zoroark ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 186,
+          "name": "Hop's Zacian ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 187,
+          "name": "Salamence ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 188,
+          "name": "Iono's Bellibolt ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 189,
+          "name": "N's Zoroark ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 190,
+          "name": "Spiky Energy",
+          "variants": [
+            "Holo"
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "card_data_source": "https://api.tcgdex.net/v2/en/sets/sv09",
+    "official_count": 159,
+    "unique_cards": 190
+  }
+}

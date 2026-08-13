@@ -197,7 +197,7 @@ def browser_data(cards: list[Card], page_size: int, layout: str) -> list[dict[st
     return result
 
 
-def render_html(config: dict[str, Any], cards: list[Card]) -> str:
+def browser_dataset(config: dict[str, Any], cards: list[Card]) -> dict[str, Any]:
     set_info = config["set"]
     binder = config.get("binder", {})
     page_size = int(binder.get("pockets_per_page", 9))
@@ -206,7 +206,7 @@ def render_html(config: dict[str, Any], cards: list[Card]) -> str:
     appearance = config.get("appearance", {})
     holo_opacity = min(0.75, max(0.0, float(appearance.get("holographic_opacity", 0.58))))
     holo_darkening = min(0.65, max(0.0, float(appearance.get("holographic_darkening", 0.315))))
-    dataset = json.dumps({
+    return {
         "id": str(set_info.get("code", set_info["name"])).lower().replace(" ", "-"),
         "name": str(set_info["name"]),
         "code": str(set_info.get("code", "")),
@@ -220,7 +220,20 @@ def render_html(config: dict[str, Any], cards: list[Card]) -> str:
             "paired": browser_data(cards, page_size, "paired"),
             "split": browser_data(cards, page_size, "split"),
         },
-    }, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+    }
+
+
+def render_html(
+    config: dict[str, Any],
+    cards: list[Card],
+    additional_sets: list[tuple[dict[str, Any], list[Card]]] | None = None,
+) -> str:
+    bundled = [(config, cards), *(additional_sets or [])]
+    datasets = json.dumps(
+        [browser_dataset(set_config, set_cards) for set_config, set_cards in bundled],
+        ensure_ascii=False,
+        separators=(",", ":"),
+    ).replace("</", "<\\/")
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Pokémon Binder Visualizer</title>
@@ -229,7 +242,7 @@ def render_html(config: dict[str, Any], cards: list[Card]) -> str:
 *{{box-sizing:border-box}}body{{margin:0;font:15px/1.4 system-ui,sans-serif;background:radial-gradient(circle at top,#24364d,var(--bg) 52%);color:var(--ink)}}
 header{{position:sticky;top:0;z-index:2;padding:14px 18px;background:rgba(16,22,31,.94);backdrop-filter:blur(10px);border-bottom:1px solid #35465a}}
 .bar{{max-width:1180px;margin:auto;display:flex;gap:12px;align-items:center;flex-wrap:wrap}}h1{{font-size:20px;margin:0 auto 0 0}}
-button,select,.import-label{{color:var(--ink);background:#243449;border:1px solid #4a607a;border-radius:8px;padding:8px 11px;font-weight:650}}button:hover,.import-label:hover{{border-color:var(--accent);cursor:pointer}}button:disabled{{opacity:.42;cursor:not-allowed}}.page-nav{{display:flex;justify-content:space-between;gap:12px;margin:0 0 12px}}
+button,select{{color:var(--ink);background:#243449;border:1px solid #4a607a;border-radius:8px;padding:8px 11px;font-weight:650}}button:hover{{border-color:var(--accent);cursor:pointer}}button:disabled{{opacity:.42;cursor:not-allowed}}.page-nav{{display:flex;justify-content:space-between;gap:12px;margin:0 0 12px}}
 main{{max-width:1180px;margin:22px auto 60px;padding:0 16px}}.summary,.note{{color:var(--muted)}}.page-head{{display:flex;align-items:end;justify-content:space-between;margin-bottom:10px}}.page-head h2{{margin:0;font-size:22px}}
 .page{{display:grid;grid-template-columns:repeat(var(--columns),minmax(0,1fr));gap:14px;padding:18px;border:2px solid #50657e;border-radius:18px;background:linear-gradient(145deg,#202c3c,#141c27);box-shadow:0 18px 50px #0008}}
 .pocket{{position:relative;min-width:0;aspect-ratio:2.5/3.5;border-radius:12px;padding:8px;background:#0b1017;border:1px solid #3b4b5f;overflow:hidden;display:flex;align-items:center;justify-content:center}}
@@ -238,14 +251,14 @@ main{{max-width:1180px;margin:22px auto 60px;padding:0 16px}}.summary,.note{{col
 .holographic::before{{background:rgb(62,76,18);mix-blend-mode:multiply;opacity:var(--holo-darkening);-webkit-mask-image:linear-gradient(to bottom,#000 0 9.5%,transparent 9.5% 48%,#000 48% 100%);mask-image:linear-gradient(to bottom,#000 0 9.5%,transparent 9.5% 48%,#000 48% 100%)}}
 .holographic::after{{background-image:linear-gradient(125deg,rgba(255,255,255,.14) 0%,rgba(22,30,24,.38) 18%,rgba(0,0,0,.58) 36%,rgba(245,250,247,.68) 46%,rgba(185,200,190,.34) 52%,rgba(0,0,0,.52) 68%,rgba(255,255,255,.14) 100%),repeating-linear-gradient(115deg,transparent 0 10px,rgba(8,14,10,.2) 11px,rgba(225,238,230,.18) 12px,transparent 15px);background-size:100% 100%;mix-blend-mode:screen;opacity:var(--holo-opacity)}}
 .tag{{position:absolute;z-index:1;left:8px;right:8px;bottom:8px;padding:6px 7px;border-radius:6px;color:white;background:rgba(5,8,12,.88);font-size:12px;text-align:center}}.tag strong{{color:var(--accent)}}
-.empty{{border-style:dashed;color:#627187;font-weight:700;letter-spacing:.12em}}.error{{padding:14px;color:#ffb4b4;text-align:center;overflow-wrap:anywhere}}.note{{margin-top:18px;font-size:13px}}.status{{min-height:1.4em;color:#ffb4b4;margin:8px 0 0}}
+.empty{{border-style:dashed;color:#627187;font-weight:700;letter-spacing:.12em}}.error{{padding:14px;color:#ffb4b4;text-align:center;overflow-wrap:anywhere}}.note{{margin-top:18px;font-size:13px}}
 @media(max-width:700px){{h1{{flex-basis:100%}}.bar{{justify-content:center}}.page{{gap:6px;padding:8px}}.tag{{inset:auto 4px 4px;font-size:9px;padding:3px}}}}@media print{{header,.page-nav,.note{{display:none}}body{{background:white;color:black}}main{{margin:0}}.page{{box-shadow:none;break-after:page}}}}
 </style></head><body>
-<header><div class="bar"><h1>Pokémon Binder Visualizer</h1><label>Set <select id="setSelect"></select></label><label>Layout <select id="layout"><option value="paired">Paired</option><option value="split">Split</option></select></label><label>Page <select id="pageSelect"></select></label><label class="import-label">Load set JSON<input id="configFile" type="file" accept="application/json,.json" hidden></label></div></header>
-<main><p class="summary" id="summary"></p><p class="status" id="status" role="alert"></p><div class="page-head"><h2 id="title"></h2><span id="count"></span></div><nav class="page-nav" aria-label="Binder pages"><button id="prev">← Previous</button><button id="next">Next →</button></nav><section class="page" id="page"></section><p class="note">Images load from the URL template configured for the selected set. Use “Load set JSON” to preview any compatible set configuration locally; the file stays in your browser.</p></main>
+<header><div class="bar"><h1>Pokémon Binder Visualizer</h1><label>Set <select id="setSelect"></select></label><label>Layout <select id="layout"><option value="paired">Paired</option><option value="split">Split</option></select></label><label>Page <select id="pageSelect"></select></label></div></header>
+<main><p class="summary" id="summary"></p><div class="page-head"><h2 id="title"></h2><span id="count"></span></div><nav class="page-nav" aria-label="Binder pages"><button id="prev">← Previous</button><button id="next">Next →</button></nav><section class="page" id="page"></section><p class="note">All supported sets are built in. Card images load from Pokémon's official image CDN.</p></main>
 <script>
-let DATASETS=[{dataset}],active=DATASETS[0],index=0;
-const setSelect=document.querySelector('#setSelect'),layout=document.querySelector('#layout'),pageSelect=document.querySelector('#pageSelect'),grid=document.querySelector('#page'),statusEl=document.querySelector('#status');
+const DATASETS={datasets};let active=DATASETS[0],index=0;
+const setSelect=document.querySelector('#setSelect'),layout=document.querySelector('#layout'),pageSelect=document.querySelector('#pageSelect'),grid=document.querySelector('#page');
 function expandNumbers(value){{if(Number.isInteger(value))return new Set([value]);if(Array.isArray(value)){{const out=new Set();value.forEach(v=>expandNumbers(v).forEach(n=>out.add(n)));return out}}if(typeof value==='string'){{const out=new Set();value.split(',').forEach(part=>{{const p=part.trim();if(!p)return;if(p.includes('-')){{const [a,b]=p.split('-',2).map(Number);for(let n=a;n<=b;n++)out.add(n)}}else out.add(Number(p))}});return out}}throw new Error(`Unsupported number selection: ${{value}}`)}}
 function variantsFor(number,rules){{for(const rule of rules||[])if(expandNumbers(rule.numbers).has(number))return rule.variants.map(String);throw new Error(`Card #${{number}} is not covered by a variant rule`)}}
 function formatImage(config,number){{const image=config.image||{{}},padding=Number(image.number_padding||0),rendered=padding?String(number).padStart(padding,'0'):String(number);const values={{...(image.context||{{}}),number:rendered,number_raw:String(number)}};return String(image.url_template).replace(/\\{{([^}}]+)\\}}/g,(_,key)=>{{if(!(key in values))throw new Error(`Missing image variable ${{key}}`);return values[key]}})}}
@@ -254,7 +267,7 @@ function refreshSetOptions(){{setSelect.innerHTML=DATASETS.map((set,i)=>`<option
 function activate(dataset){{active=dataset;index=0;document.documentElement.style.setProperty('--columns',String(active.columns));document.documentElement.style.setProperty('--holo-opacity',String(active.holoOpacity));document.documentElement.style.setProperty('--holo-darkening',String(active.holoDarkening));document.title=`${{active.name}} · Pokémon Binder Visualizer`;document.querySelector('#summary').textContent=`${{active.stats.master_cards}} cards · ${{active.stats.used_pages}} used pages · ${{active.stats.blanks}} intentional blanks · each section starts fresh`;resetPages()}}
 function resetPages(){{const pages=active.layouts[layout.value];pageSelect.innerHTML=pages.map((p,i)=>`<option value="${{i}}">${{i+1}}. ${{p.section}}</option>`).join('');index=Math.min(index,Math.max(0,pages.length-1));render()}}
 function render(){{const pages=active.layouts[layout.value],data=pages[index];if(!data){{grid.innerHTML='<div class="error">This set has no pages.</div>';return}}pageSelect.value=String(index);document.querySelector('#title').textContent=`${{active.name}} · Page ${{index+1}} — ${{data.section}}`;document.querySelector('#count').textContent=`${{index+1}} / ${{pages.length}}`;grid.innerHTML='';const holoVariants=new Set(active.holoVariants);data.pockets.forEach(card=>{{const el=document.createElement('article');el.className='pocket'+(card?'':' empty');if(!card)el.textContent='EMPTY';else{{if(holoVariants.has(card.variant))el.classList.add('holographic');const img=document.createElement('img');img.src=card.url;img.alt=`#${{String(card.n).padStart(3,'0')}} ${{card.name}}`;img.onerror=()=>{{el.innerHTML=`<div class="error">Image failed to load<br>${{card.url}}</div>`}};const tag=document.createElement('div');tag.className='tag';tag.innerHTML=`<strong>#${{String(card.n).padStart(3,'0')}}</strong> ${{card.name}}<br>${{card.variant}}`;el.append(img,tag)}}grid.append(el)}});document.querySelector('#prev').disabled=index===0;document.querySelector('#next').disabled=index===pages.length-1}}
-setSelect.addEventListener('change',()=>{{statusEl.textContent='';activate(DATASETS[Number(setSelect.value)])}});layout.addEventListener('change',()=>{{index=0;resetPages()}});pageSelect.addEventListener('change',()=>{{index=Number(pageSelect.value);render()}});document.querySelector('#prev').addEventListener('click',()=>{{if(index>0){{index--;render()}}}});document.querySelector('#next').addEventListener('click',()=>{{if(index<active.layouts[layout.value].length-1){{index++;render()}}}});document.querySelector('#configFile').addEventListener('change',async event=>{{const file=event.target.files[0];if(!file)return;try{{const imported=compileConfig(JSON.parse(await file.text()));const existing=DATASETS.findIndex(set=>set.id===imported.id);if(existing>=0)DATASETS[existing]=imported;else DATASETS.push(imported);active=imported;refreshSetOptions();statusEl.textContent='';activate(imported)}}catch(error){{statusEl.textContent=`Could not load set: ${{error.message}}`}}finally{{event.target.value=''}}}});document.addEventListener('keydown',event=>{{if(event.key==='ArrowLeft')document.querySelector('#prev').click();if(event.key==='ArrowRight')document.querySelector('#next').click()}});refreshSetOptions();activate(active);
+setSelect.addEventListener('change',()=>activate(DATASETS[Number(setSelect.value)]));layout.addEventListener('change',()=>{{index=0;resetPages()}});pageSelect.addEventListener('change',()=>{{index=Number(pageSelect.value);render()}});document.querySelector('#prev').addEventListener('click',()=>{{if(index>0){{index--;render()}}}});document.querySelector('#next').addEventListener('click',()=>{{if(index<active.layouts[layout.value].length-1){{index++;render()}}}});document.addEventListener('keydown',event=>{{if(event.key==='ArrowLeft')document.querySelector('#prev').click();if(event.key==='ArrowRight')document.querySelector('#next').click()}});refreshSetOptions();activate(active);
 </script></body></html>'''
 
 

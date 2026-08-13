@@ -1,17 +1,17 @@
 # Pokémon Binder Visualizer Generator
 
-A set-agnostic, configuration-driven generator and browser app for interactive 3×3 Pokémon TCG binder planners. Perfect Order is included as a complete example.
+A set-agnostic, configuration-driven generator and browser app for interactive 3×3 Pokémon TCG binder planners. Every expansion in Pokémon's current All Galleries catalog is built into the published site.
 
 ## Open the visualizer
 
-Visit the published GitHub Pages site, or open `index.html` locally. The published app includes Perfect Order by default and can load any compatible set JSON with the **Load set JSON** control. Imported files are processed locally in the browser and are not uploaded.
+Visit the published GitHub Pages site, or open `index.html` locally. Choose any bundled expansion directly from the **Set** menu; no downloads or JSON imports are required. Perfect Order remains the default.
 
 The visualizer provides two arrangements:
 
 - **Paired:** each regular card is followed by its reverse holo.
 - **Split:** regular cards appear first, followed by reverse holos.
 
-Every elemental type and collection section begins on a fresh nine-pocket page. The nine base-set Double Rare ex cards use one pocket each, while cards 089–124 also use one pocket each.
+Every elemental type and collection section begins on a fresh nine-pocket page. Card variants are defined per set, and ex cards use one pocket each unless the source data explicitly identifies another physical variant.
 
 ## Generate another set
 
@@ -59,7 +59,9 @@ Variant labels listed in `appearance.holographic_variants` receive a CSS reverse
 - `por_binder_layout.txt` — complete pocket-by-pocket layout for both arrangements.
 - `binder_generator.py` — reusable configuration-driven generator.
 - `sets/perfect_order.json` — Perfect Order set definition and image pattern.
+- `sets/builtin/` — generated definitions for all 22 expansions; the public build keeps the curated `perfect_order.json` definition for its default set.
 - `sets/official_gallery_sources.json` — first-card image sources and reusable `-2x` URL templates extracted from every set on Pokémon's official All Galleries page.
-- `por_binder_generator.py` — compatibility shortcut that regenerates the Perfect Order site.
+- `scripts/build_set_configs.py` — refreshes bundled names, types, and variants from TCGdex metadata while retaining official Pokémon image URLs.
+- `por_binder_generator.py` — regenerates the public multi-set site with Perfect Order selected by default.
 
 Card images load from the official Pokémon CloudFront CDN and are not stored in this repository.

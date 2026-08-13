@@ -1,6 +1,8 @@
+import json
 import unittest
+from pathlib import Path
 
-from binder_generator import build_pages, image_url, load_cards, metrics, number_set
+from binder_generator import build_pages, image_url, load_cards, metrics, number_set, render_html
 
 
 class GeneratorTests(unittest.TestCase):
@@ -40,6 +42,35 @@ class GeneratorTests(unittest.TestCase):
         self.assertEqual(stats["master_cards"], 5)
         self.assertEqual(stats["used_pages"], 2)
         self.assertEqual(stats["blanks"], 13)
+
+    def test_bundled_sets_render_without_import_control(self):
+        cards = load_cards(self.config)
+        second = json.loads(json.dumps(self.config))
+        second["set"] = {"name": "Second Set", "code": "TWO"}
+        html = render_html(self.config, cards, [(second, load_cards(second))])
+        self.assertIn('const DATASETS=[{"id":"ex"', html)
+        self.assertIn('"name":"Second Set"', html)
+        self.assertNotIn("Load set JSON", html)
+
+    def test_perfect_order_master_count_and_ex_slots(self):
+        path = Path(__file__).parents[1] / "sets" / "builtin" / "me03.json"
+        config = json.loads(path.read_text(encoding="utf-8"))
+        cards = load_cards(config)
+        self.assertEqual(metrics(config, cards)["master_cards"], 203)
+        self.assertTrue(all(len(card.variants) == 1 for card in cards if card.name.lower().endswith(" ex")))
+
+    def test_all_bundled_sets_load_and_keep_ex_cards_single_slot(self):
+        directory = Path(__file__).parents[1] / "sets" / "builtin"
+        paths = sorted(directory.glob("*.json"))
+        self.assertEqual(len(paths), 22)
+        for path in paths:
+            config = json.loads(path.read_text(encoding="utf-8"))
+            cards = load_cards(config)
+            self.assertTrue(cards, path.name)
+            self.assertTrue(
+                all(len(card.variants) == 1 for card in cards if card.name.lower().endswith(" ex")),
+                path.name,
+            )
 
 
 if __name__ == "__main__":
