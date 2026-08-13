@@ -1,0 +1,197 @@
+{
+  "source": "https://tcg.pokemon.com/en-us/all-galleries/",
+  "locale": "en-us",
+  "discovered_at": "2026-08-13",
+  "notes": "first_card_img_src is copied from the first numbered card <img> in each rendered official gallery. first_card_2x_url is its higher-resolution companion.",
+  "galleries": [
+    {
+      "name": "Pokémon TCG: Mega Evolution—Pitch Black",
+      "set_slug": "pitch-black",
+      "image_prefix": "KD5B_EN",
+      "gallery_url": "https://tcg.pokemon.com/en-us/galleries/pitch-black/",
+      "first_card_img_src": "https://dz3we2x72f7ol.cloudfront.net/expansions/pitch-black/en-us/KD5B_EN_1.png",
+      "first_card_2x_url": "https://dz3we2x72f7ol.cloudfront.net/expansions/pitch-black/en-us/KD5B_EN_1-2x.png",
+      "url_template": "https://dz3we2x72f7ol.cloudfront.net/expansions/pitch-black/en-us/KD5B_EN_{number}-2x.png"
+    },
+    {
+      "name": "Pokémon TCG: Mega Evolution—Chaos Rising",
+      "set_slug": "chaos-rising",
+      "image_prefix": "SN54_EN",
+      "gallery_url": "https://tcg.pokemon.com/en-us/galleries/chaos-rising/",
+      "first_card_img_src": "https://dz3we2x72f7ol.cloudfront.net/expansions/chaos-rising/en-us/SN54_EN_1.png",
+      "first_card_2x_url": "https://dz3we2x72f7ol.cloudfront.net/expansions/chaos-rising/en-us/SN54_EN_1-2x.png",
+      "url_template": "https://dz3we2x72f7ol.cloudfront.net/expansions/chaos-rising/en-us/SN54_EN_{number}-2x.png"
+    },
+    {
+      "name": "Pokémon TCG: Mega Evolution—Perfect Order",
+      "set_slug": "perfect-order",
+      "image_prefix": "P614_EN",
+      "gallery_url": "https://tcg.pokemon.com/en-us/galleries/perfect-order/",
+      "first_card_img_src": "https://dz3we2x72f7ol.cloudfront.net/expansions/perfect-order/en-us/P614_EN_1.png",
+      "first_card_2x_url": "https://dz3we2x72f7ol.cloudfront.net/expansions/perfect-order/en-us/P614_EN_1-2x.png",
+      "url_template": "https://dz3we2x72f7ol.cloudfront.net/expansions/perfect-order/en-us/P614_EN_{number}-2x.png"
+    },
+    {
+      "name": "Pokémon TCG: Mega Evolution—Ascended Heroes",
+      "set_slug": "ascended-heroes",
+      "image_prefix": "M7XJ_EN",
+      "gallery_url": "https://tcg.pokemon.com/en-us/galleries/ascended-heroes/",
+      "first_card_img_src": "https://dz3we2x72f7ol.cloudfront.net/expansions/ascended-heroes/en-us/M7XJ_EN_1.png",
+      "first_card_2x_url": "https://dz3we2x72f7ol.cloudfront.net/expansions/ascended-heroes/en-us/M7XJ_EN_1-2x.png",
+      "url_template": "https://dz3we2x72f7ol.cloudfront.net/expansions/ascended-heroes/en-us/M7XJ_EN_{number}-2x.png"
+    },
+    {
+      "name": "Pokémon TCG: Mega Evolution—Phantasmal Flames",
+      "set_slug": "phantasmal-flames",
+      "image_prefix": "8BXG_EN",
+      "gallery_url": "https://tcg.pokemon.com/en-us/galleries/phantasmal-flames/",
+      "first_card_img_src": "https://dz3we2x72f7ol.cloudfront.net/expansions/phantasmal-flames/en-us/8BXG_EN_1.png",
+      "first_card_2x_url": "https://dz3we2x72f7ol.cloudfront.net/expansions/phantasmal-flames/en-us/8BXG_EN_1-2x.png",
+      "url_template": "https://dz3we2x72f7ol.cloudfront.net/expansions/phantasmal-flames/en-us/8BXG_EN_{number}-2x.png"
+    },
+    {
+      "name": "Pokémon TCG: Mega Evolution",
+      "set_slug": "mega-evolution",
+      "image_prefix": "JL2G_EN",
+      "gallery_url": "https://tcg.pokemon.com/en-us/galleries/mega-evolution/",
+      "first_card_img_src": "https://dz3we2x72f7ol.cloudfront.net/expansions/mega-evolution/en-us/JL2G_EN_1.png",
+      "first_card_2x_url": "https://dz3we2x72f7ol.cloudfront.net/expansions/mega-evolution/en-us/JL2G_EN_1-2x.png",
+      "url_template": "https://dz3we2x72f7ol.cloudfront.net/expansions/mega-evolution/en-us/JL2G_EN_{number}-2x.png"
+    },
+    {
+      "name": "Pokémon TCG: Scarlet & Violet—Black Bolt and White Flare",
+      "set_slug": "black-white",
+      "image_prefix": "SV10pt5_ZSV_EN",
+      "gallery_url": "https://tcg.pokemon.com/en-us/galleries/black-white/",
+      "first_card_img_src": "https://dz3we2x72f7ol.cloudfront.net/expansions/black-white/en-us/SV10pt5_ZSV_EN_1.png",
+      "first_card_2x_url": "https://dz3we2x72f7ol.cloudfront.net/expansions/black-white/en-us/SV10pt5_ZSV_EN_1-2x.png",
+      "url_template": "https://dz3we2x72f7ol.cloudfront.net/expansions/black-white/en-us/SV10pt5_ZSV_EN_{number}-2x.png"
+    },
+    {
+      "name": "Pokémon TCG: Scarlet & Violet—Destined Rivals",
+      "set_slug": "destined-rivals",
+      "image_prefix": "SV10_EN",
+      "gallery_url": "https://tcg.pokemon.com/en-us/galleries/destined-rivals/",
+      "first_card_img_src": "https://dz3we2x72f7ol.cloudfront.net/expansions/destined-rivals/en-us/SV10_EN_1.png",
+      "first_card_2x_url": "https://dz3we2x72f7ol.cloudfront.net/expansions/destined-rivals/en-us/SV10_EN_1-2x.png",
+      "url_template": "https://dz3we2x72f7ol.cloudfront.net/expansions/destined-rivals/en-us/SV10_EN_{number}-2x.png"
+    },
+    {
+      "name": "Pokémon TCG: Scarlet & Violet—Journey Together",
+      "set_slug": "journey-together",
+      "image_prefix": "SV09_EN",
+      "gallery_url": "https://tcg.pokemon.com/en-us/galleries/journey-together/",
+      "first_card_img_src": "https://dz3we2x72f7ol.cloudfront.net/expansions/journey-together/en-us/SV09_EN_1.png",
+      "first_card_2x_url": "https://dz3we2x72f7ol.cloudfront.net/expansions/journey-together/en-us/SV09_EN_1-2x.png",
+      "url_template": "https://dz3we2x72f7ol.cloudfront.net/expansions/journey-together/en-us/SV09_EN_{number}-2x.png"
+    },
+    {
+      "name": "Pokémon TCG: Scarlet & Violet—Prismatic Evolutions",
+      "set_slug": "prismatic-evolutions",
+      "image_prefix": "SV8pt5_EN",
+      "gallery_url": "https://tcg.pokemon.com/en-us/galleries/prismatic-evolutions/",
+      "first_card_img_src": "https://dz3we2x72f7ol.cloudfront.net/expansions/prismatic-evolutions/en-us/SV8pt5_EN_1.png",
+      "first_card_2x_url": "https://dz3we2x72f7ol.cloudfront.net/expansions/prismatic-evolutions/en-us/SV8pt5_EN_1-2x.png",
+      "url_template": "https://dz3we2x72f7ol.cloudfront.net/expansions/prismatic-evolutions/en-us/SV8pt5_EN_{number}-2x.png"
+    },
+    {
+      "name": "Pokémon TCG: Scarlet & Violet—Surging Sparks",
+      "set_slug": "surging-sparks",
+      "image_prefix": "SV08_EN",
+      "gallery_url": "https://tcg.pokemon.com/en-us/galleries/surging-sparks/",
+      "first_card_img_src": "https://dz3we2x72f7ol.cloudfront.net/expansions/surging-sparks/en-us/SV08_EN_1.png",
+      "first_card_2x_url": "https://dz3we2x72f7ol.cloudfront.net/expansions/surging-sparks/en-us/SV08_EN_1-2x.png",
+      "url_template": "https://dz3we2x72f7ol.cloudfront.net/expansions/surging-sparks/en-us/SV08_EN_{number}-2x.png"
+    },
+    {
+      "name": "Pokémon TCG: Scarlet & Violet—Stellar Crown",
+      "set_slug": "stellar-crown",
+      "image_prefix": "SV07_EN",
+      "gallery_url": "https://tcg.pokemon.com/en-us/galleries/stellar-crown/",
+      "first_card_img_src": "https://dz3we2x72f7ol.cloudfront.net/expansions/stellar-crown/en-us/SV07_EN_1.png",
+      "first_card_2x_url": "https://dz3we2x72f7ol.cloudfront.net/expansions/stellar-crown/en-us/SV07_EN_1-2x.png",
+      "url_template": "https://dz3we2x72f7ol.cloudfront.net/expansions/stellar-crown/en-us/SV07_EN_{number}-2x.png"
+    },
+    {
+      "name": "Pokémon TCG: Scarlet & Violet—Shrouded Fable",
+      "set_slug": "shrouded-fable",
+      "image_prefix": "SV6pt5_EN",
+      "gallery_url": "https://tcg.pokemon.com/en-us/galleries/shrouded-fable/",
+      "first_card_img_src": "https://dz3we2x72f7ol.cloudfront.net/expansions/shrouded-fable/en-us/SV6pt5_EN_1.png",
+      "first_card_2x_url": "https://dz3we2x72f7ol.cloudfront.net/expansions/shrouded-fable/en-us/SV6pt5_EN_1-2x.png",
+      "url_template": "https://dz3we2x72f7ol.cloudfront.net/expansions/shrouded-fable/en-us/SV6pt5_EN_{number}-2x.png"
+    },
+    {
+      "name": "Pokémon TCG: Scarlet & Violet—Twilight Masquerade",
+      "set_slug": "twilight-masquerade",
+      "image_prefix": "SV06_EN",
+      "gallery_url": "https://tcg.pokemon.com/en-us/galleries/twilight-masquerade/",
+      "first_card_img_src": "https://dz3we2x72f7ol.cloudfront.net/expansions/twilight-masquerade/en-us/SV06_EN_1.png",
+      "first_card_2x_url": "https://dz3we2x72f7ol.cloudfront.net/expansions/twilight-masquerade/en-us/SV06_EN_1-2x.png",
+      "url_template": "https://dz3we2x72f7ol.cloudfront.net/expansions/twilight-masquerade/en-us/SV06_EN_{number}-2x.png"
+    },
+    {
+      "name": "Pokémon TCG: Scarlet & Violet—Temporal Forces",
+      "set_slug": "temporal-forces",
+      "image_prefix": "SV05_EN",
+      "gallery_url": "https://tcg.pokemon.com/en-us/galleries/temporal-forces/",
+      "first_card_img_src": "https://dz3we2x72f7ol.cloudfront.net/expansions/temporal-forces/en-us/SV05_EN_1.png",
+      "first_card_2x_url": "https://dz3we2x72f7ol.cloudfront.net/expansions/temporal-forces/en-us/SV05_EN_1-2x.png",
+      "url_template": "https://dz3we2x72f7ol.cloudfront.net/expansions/temporal-forces/en-us/SV05_EN_{number}-2x.png"
+    },
+    {
+      "name": "Pokémon TCG: Scarlet & Violet—Paldean Fates",
+      "set_slug": "paldean-fates",
+      "image_prefix": "SV4pt5_EN",
+      "gallery_url": "https://tcg.pokemon.com/en-us/galleries/paldean-fates/",
+      "first_card_img_src": "https://dz3we2x72f7ol.cloudfront.net/expansions/paldean-fates/en-us/SV4pt5_EN_1.png",
+      "first_card_2x_url": "https://dz3we2x72f7ol.cloudfront.net/expansions/paldean-fates/en-us/SV4pt5_EN_1-2x.png",
+      "url_template": "https://dz3we2x72f7ol.cloudfront.net/expansions/paldean-fates/en-us/SV4pt5_EN_{number}-2x.png"
+    },
+    {
+      "name": "Pokémon TCG: Scarlet & Violet—Paradox Rift",
+      "set_slug": "paradox-rift",
+      "image_prefix": "SV04_EN",
+      "gallery_url": "https://tcg.pokemon.com/en-us/galleries/paradox-rift/",
+      "first_card_img_src": "https://dz3we2x72f7ol.cloudfront.net/expansions/paradox-rift/en-us/SV04_EN_1.png",
+      "first_card_2x_url": "https://dz3we2x72f7ol.cloudfront.net/expansions/paradox-rift/en-us/SV04_EN_1-2x.png",
+      "url_template": "https://dz3we2x72f7ol.cloudfront.net/expansions/paradox-rift/en-us/SV04_EN_{number}-2x.png"
+    },
+    {
+      "name": "Pokémon TCG: Scarlet & Violet—151",
+      "set_slug": "151",
+      "image_prefix": "SV3pt5_EN",
+      "gallery_url": "https://tcg.pokemon.com/en-us/galleries/151/",
+      "first_card_img_src": "https://dz3we2x72f7ol.cloudfront.net/expansions/151/en-us/SV3pt5_EN_1.png",
+      "first_card_2x_url": "https://dz3we2x72f7ol.cloudfront.net/expansions/151/en-us/SV3pt5_EN_1-2x.png",
+      "url_template": "https://dz3we2x72f7ol.cloudfront.net/expansions/151/en-us/SV3pt5_EN_{number}-2x.png"
+    },
+    {
+      "name": "Pokémon TCG: Scarlet & Violet—Obsidian Flames",
+      "set_slug": "obsidian-flames",
+      "image_prefix": "SV03_EN",
+      "gallery_url": "https://tcg.pokemon.com/en-us/galleries/obsidian-flames/",
+      "first_card_img_src": "https://dz3we2x72f7ol.cloudfront.net/expansions/obsidian-flames/en-us/SV03_EN_1.png",
+      "first_card_2x_url": "https://dz3we2x72f7ol.cloudfront.net/expansions/obsidian-flames/en-us/SV03_EN_1-2x.png",
+      "url_template": "https://dz3we2x72f7ol.cloudfront.net/expansions/obsidian-flames/en-us/SV03_EN_{number}-2x.png"
+    },
+    {
+      "name": "Pokémon TCG: Scarlet & Violet—Paldea Evolved",
+      "set_slug": "paldea-evolved",
+      "image_prefix": "SV02_EN",
+      "gallery_url": "https://tcg.pokemon.com/en-us/galleries/paldea-evolved/",
+      "first_card_img_src": "https://dz3we2x72f7ol.cloudfront.net/expansions/paldea-evolved/en-us/SV02_EN_1.png",
+      "first_card_2x_url": "https://dz3we2x72f7ol.cloudfront.net/expansions/paldea-evolved/en-us/SV02_EN_1-2x.png",
+      "url_template": "https://dz3we2x72f7ol.cloudfront.net/expansions/paldea-evolved/en-us/SV02_EN_{number}-2x.png"
+    },
+    {
+      "name": "Pokémon TCG: Scarlet & Violet",
+      "set_slug": "scarlet-violet",
+      "image_prefix": "SV01_EN",
+      "gallery_url": "https://tcg.pokemon.com/en-us/galleries/scarlet-violet/",
+      "first_card_img_src": "https://dz3we2x72f7ol.cloudfront.net/expansions/scarlet-violet/en-us/SV01_EN_1.png",
+      "first_card_2x_url": "https://dz3we2x72f7ol.cloudfront.net/expansions/scarlet-violet/en-us/SV01_EN_1-2x.png",
+      "url_template": "https://dz3we2x72f7ol.cloudfront.net/expansions/scarlet-violet/en-us/SV01_EN_{number}-2x.png"
+    }
+  ]
+}

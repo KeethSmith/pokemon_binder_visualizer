@@ -59,6 +59,7 @@ Variant labels listed in `appearance.holographic_variants` receive a CSS reverse
 - `por_binder_layout.txt` — complete pocket-by-pocket layout for both arrangements.
 - `binder_generator.py` — reusable configuration-driven generator.
 - `sets/perfect_order.json` — Perfect Order set definition and image pattern.
+- `sets/official_gallery_sources.json` — first-card image sources and reusable `-2x` URL templates extracted from every set on Pokémon's official All Galleries page.
 - `por_binder_generator.py` — compatibility shortcut that regenerates the Perfect Order site.
 
 Card images load from the official Pokémon CloudFront CDN and are not stored in this repository.
