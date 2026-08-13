@@ -3,7 +3,7 @@ import re
 import unittest
 from pathlib import Path
 
-from binder_generator import build_pages, image_url, load_cards, metrics, number_set, render_html
+from binder_generator import BINDER_FORMATS, build_pages, image_url, load_cards, metrics, number_set, render_html
 
 
 class GeneratorTests(unittest.TestCase):
@@ -52,6 +52,15 @@ class GeneratorTests(unittest.TestCase):
         self.assertIn('const DATASETS=[{"id":"ex"', html)
         self.assertIn('"name":"Second Set"', html)
         self.assertNotIn("Load set JSON", html)
+
+    def test_supported_binder_formats_preserve_fresh_sections(self):
+        cards = load_cards(self.config)
+        self.assertEqual([item["id"] for item in BINDER_FORMATS], ["2x2", "3x3", "4x3", "4x4"])
+        for binder_format in BINDER_FORMATS:
+            page_size = binder_format["columns"] * binder_format["rows"]
+            pages = build_pages(cards, page_size, "paired")
+            self.assertEqual([page["section"] for page in pages], ["First", "Second"])
+            self.assertTrue(all(len(page["pockets"]) == page_size for page in pages))
 
     def test_perfect_order_master_count_and_ex_slots(self):
         path = Path(__file__).parents[1] / "sets" / "builtin" / "me03.json"

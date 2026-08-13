@@ -11,7 +11,9 @@ The visualizer provides two arrangements:
 - **Paired:** each regular card is followed by its reverse holo.
 - **Split:** regular cards appear first, followed by reverse holos.
 
-Every elemental type and collection section begins on a fresh nine-pocket page. Card variants are defined per set, and ex cards use one pocket each unless the source data explicitly identifies another physical variant.
+The **Binder** menu supports 2 × 2, 3 × 3, 4 × 3, and 4 × 4 pocket pages. Page totals and intentional blanks recalculate for the selected format, while every elemental type and collection section continues to begin on a fresh page.
+
+Card variants are defined per set, and ex cards use one pocket each unless the source data explicitly identifies another physical variant.
 
 ## Generate another set
 

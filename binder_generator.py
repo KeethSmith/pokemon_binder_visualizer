@@ -15,6 +15,14 @@ from pathlib import Path
 from typing import Any, Iterable
 
 
+BINDER_FORMATS = (
+    {"id": "2x2", "label": "2 × 2 — 4 pockets", "columns": 2, "rows": 2},
+    {"id": "3x3", "label": "3 × 3 — 9 pockets", "columns": 3, "rows": 3},
+    {"id": "4x3", "label": "4 × 3 — 12 pockets", "columns": 4, "rows": 3},
+    {"id": "4x4", "label": "4 × 4 — 16 pockets", "columns": 4, "rows": 4},
+)
+
+
 @dataclass(frozen=True)
 class Card:
     number: int
@@ -197,30 +205,39 @@ def browser_data(cards: list[Card], page_size: int, layout: str) -> list[dict[st
     return result
 
 
+def browser_pockets(cards: list[Card], layout: str) -> list[dict[str, Any]]:
+    return [{
+        "n": pocket.card.number,
+        "name": pocket.card.name,
+        "variant": pocket.variant,
+        "url": pocket.card.image_url,
+    } for pocket in section_pockets(cards, layout)]
+
+
 def browser_dataset(config: dict[str, Any], cards: list[Card]) -> dict[str, Any]:
     set_info = config["set"]
-    binder = config.get("binder", {})
-    page_size = int(binder.get("pockets_per_page", 9))
-    columns = int(binder.get("columns", 3))
-    stats = metrics(config, cards)
     appearance = config.get("appearance", {})
     holo_opacity = min(0.75, max(0.0, float(appearance.get("holographic_opacity", 0.58))))
     holo_darkening = min(0.65, max(0.0, float(appearance.get("holographic_darkening", 0.315))))
+    master_cards = sum(len(card.variants) for card in cards)
     return {
         "id": str(set_info.get("code", set_info["name"])).lower().replace(" ", "-"),
         "name": str(set_info["name"]),
         "code": str(set_info.get("code", "")),
         "releaseDate": str(set_info.get("release_date", "")),
-        "columns": columns,
-        "pageSize": page_size,
-        "stats": stats,
         "holoVariants": [str(value) for value in appearance.get("holographic_variants", ["Reverse Holo"])],
         "holoOpacity": holo_opacity,
         "holoDarkening": holo_darkening,
-        "layouts": {
-            "paired": browser_data(cards, page_size, "paired"),
-            "split": browser_data(cards, page_size, "split"),
-        },
+        "masterCards": master_cards,
+        "formats": [{
+            **binder_format,
+            "pageSize": int(binder_format["columns"]) * int(binder_format["rows"]),
+        } for binder_format in BINDER_FORMATS],
+        "sections": [{
+            "name": section,
+            "paired": browser_pockets(section_cards, "paired"),
+            "split": browser_pockets(section_cards, "split"),
+        } for section, section_cards in grouped(cards)],
     }
 
 
@@ -255,21 +272,21 @@ main{{max-width:1180px;margin:22px auto 60px;padding:0 16px}}.summary,.note{{col
 .empty{{border-style:dashed;color:#627187;font-weight:700;letter-spacing:.12em}}.error{{padding:14px;color:#ffb4b4;text-align:center;overflow-wrap:anywhere}}.note{{margin-top:18px;font-size:13px}}
 @media(max-width:700px){{h1{{flex-basis:100%}}.bar{{justify-content:center}}.page{{gap:6px;padding:8px}}.tag{{inset:auto 4px 4px;font-size:9px;padding:3px}}}}@media print{{header,.page-nav,.note{{display:none}}body{{background:white;color:black}}main{{margin:0}}.page{{box-shadow:none;break-after:page}}}}
 </style></head><body>
-<header><div class="bar"><h1>Pokémon Binder Visualizer</h1><label>Set <select id="setSelect"></select></label><label>Layout <select id="layout"><option value="paired">Paired</option><option value="split">Split</option></select></label><label>Page <select id="pageSelect"></select></label></div></header>
+<header><div class="bar"><h1>Pokémon Binder Visualizer</h1><label>Set <select id="setSelect"></select></label><label>Binder <select id="binderFormat"></select></label><label>Order <select id="layout"><option value="paired">Paired</option><option value="split">Split</option></select></label><label>Page <select id="pageSelect"></select></label></div></header>
 <main><p class="summary" id="summary"></p><div class="page-head"><h2 id="title"></h2><span id="count"></span></div><nav class="page-nav" aria-label="Binder pages"><button id="prev">← Previous</button><button id="next">Next →</button></nav><section class="page" id="page"></section><p class="note">All supported sets are built in. Card images load from Pokémon's official image CDN.</p></main>
 <script>
-const DATASETS={datasets};let active=DATASETS[0],index=0;
-const setSelect=document.querySelector('#setSelect'),layout=document.querySelector('#layout'),pageSelect=document.querySelector('#pageSelect'),grid=document.querySelector('#page');
-function expandNumbers(value){{if(Number.isInteger(value))return new Set([value]);if(Array.isArray(value)){{const out=new Set();value.forEach(v=>expandNumbers(v).forEach(n=>out.add(n)));return out}}if(typeof value==='string'){{const out=new Set();value.split(',').forEach(part=>{{const p=part.trim();if(!p)return;if(p.includes('-')){{const [a,b]=p.split('-',2).map(Number);for(let n=a;n<=b;n++)out.add(n)}}else out.add(Number(p))}});return out}}throw new Error(`Unsupported number selection: ${{value}}`)}}
-function variantsFor(number,rules){{for(const rule of rules||[])if(expandNumbers(rule.numbers).has(number))return rule.variants.map(String);throw new Error(`Card #${{number}} is not covered by a variant rule`)}}
-function formatImage(config,number){{const image=config.image||{{}},padding=Number(image.number_padding||0),rendered=padding?String(number).padStart(padding,'0'):String(number);const values={{...(image.context||{{}}),number:rendered,number_raw:String(number)}};return String(image.url_template).replace(/\\{{([^}}]+)\\}}/g,(_,key)=>{{if(!(key in values))throw new Error(`Missing image variable ${{key}}`);return values[key]}})}}
-function compileConfig(config){{if(!config.set||!Array.isArray(config.sections))throw new Error('Configuration requires set and sections');const binder=config.binder||{{}},pageSize=Number(binder.pockets_per_page||9),columns=Number(binder.columns||3),cards=[];for(const section of config.sections){{const start=Number(section.start||1);section.cards.forEach((entry,offset)=>{{const object=typeof entry==='string'?{{name:entry}}:entry,number=Number(object.number??start+offset),name=String(object.name??`Card ${{number}}`),variants=object.variants?object.variants.map(String):variantsFor(number,config.variant_rules);cards.push({{number,name,section:String(section.name),variants,url:formatImage(config,number)}})}})}}const seen=new Set();for(const card of cards){{if(seen.has(card.number))throw new Error(`Duplicate collector number #${{card.number}}`);seen.add(card.number)}}function sectionPockets(sectionCards,mode){{if(mode==='paired')return sectionCards.flatMap(card=>card.variants.map(variant=>({{n:card.number,name:card.name,variant,url:card.url}})));const order=[];sectionCards.forEach(card=>card.variants.forEach(v=>{{if(!order.includes(v))order.push(v)}}));return order.flatMap(variant=>sectionCards.filter(card=>card.variants.includes(variant)).map(card=>({{n:card.number,name:card.name,variant,url:card.url}})))}}function pages(mode){{const result=[];for(const section of config.sections){{const sectionCards=cards.filter(card=>card.section===String(section.name)),pockets=sectionPockets(sectionCards,mode);for(let offset=0;offset<pockets.length;offset+=pageSize){{const chunk=pockets.slice(offset,offset+pageSize);while(chunk.length<pageSize)chunk.push(null);result.push({{section:String(section.name),pockets:chunk}})}}}}return result}}const layouts={{paired:pages('paired'),split:pages('split')}},masterCards=cards.reduce((sum,card)=>sum+card.variants.length,0),usedPages=layouts.paired.length,blanks=layouts.paired.flatMap(p=>p.pockets).filter(p=>p===null).length,capacity=Number(binder.binder_capacity||usedPages*pageSize),appearance=config.appearance||{{}};return{{id:String(config.set.code||config.set.name).toLowerCase().replace(/\\s+/g,'-'),name:String(config.set.name),code:String(config.set.code||''),columns,pageSize,stats:{{unique_cards:cards.length,master_cards:masterCards,used_pages:usedPages,blanks,capacity,unused_pockets:capacity-masterCards-blanks,unused_pages:Math.max(0,Math.floor(capacity/pageSize)-usedPages)}},holoVariants:(appearance.holographic_variants||['Reverse Holo']).map(String),holoOpacity:Number(appearance.holographic_opacity??.58),holoDarkening:Number(appearance.holographic_darkening??.315),layouts}}}}
+const DATASETS={datasets};let active=DATASETS[0],activeFormatId='3x3',index=0;
+const setSelect=document.querySelector('#setSelect'),binderFormat=document.querySelector('#binderFormat'),layout=document.querySelector('#layout'),pageSelect=document.querySelector('#pageSelect'),grid=document.querySelector('#page');
 function formatReleaseDate(value){{if(!value)return'';return new Date(`${{value}}T00:00:00`).toLocaleDateString(undefined,{{year:'numeric',month:'short',day:'numeric'}})}}
 function refreshSetOptions(){{setSelect.innerHTML=DATASETS.map((set,i)=>`<option value="${{i}}">${{set.name}}${{set.releaseDate?` — ${{formatReleaseDate(set.releaseDate)}}`:''}}</option>`).join('');setSelect.value=String(DATASETS.indexOf(active))}}
-function activate(dataset){{active=dataset;index=0;document.documentElement.style.setProperty('--columns',String(active.columns));document.documentElement.style.setProperty('--holo-opacity',String(active.holoOpacity));document.documentElement.style.setProperty('--holo-darkening',String(active.holoDarkening));document.title=`${{active.name}} · Pokémon Binder Visualizer`;document.querySelector('#summary').textContent=`${{active.stats.master_cards}} cards · ${{active.stats.used_pages}} used pages · ${{active.stats.blanks}} intentional blanks · each section starts fresh`;resetPages()}}
-function resetPages(){{const pages=active.layouts[layout.value];pageSelect.innerHTML=pages.map((p,i)=>`<option value="${{i}}">${{i+1}}. ${{p.section}}</option>`).join('');index=Math.min(index,Math.max(0,pages.length-1));render()}}
-function render(){{const pages=active.layouts[layout.value],data=pages[index];if(!data){{grid.innerHTML='<div class="error">This set has no pages.</div>';return}}pageSelect.value=String(index);document.querySelector('#title').textContent=`${{active.name}} · Page ${{index+1}} — ${{data.section}}`;document.querySelector('#count').textContent=`${{index+1}} / ${{pages.length}}`;grid.innerHTML='';const holoVariants=new Set(active.holoVariants);data.pockets.forEach(card=>{{const el=document.createElement('article');el.className='pocket'+(card?'':' empty');if(!card)el.textContent='EMPTY';else{{if(holoVariants.has(card.variant))el.classList.add('holographic');const img=document.createElement('img');img.src=card.url;img.alt=`#${{String(card.n).padStart(3,'0')}} ${{card.name}}`;img.onerror=()=>{{el.innerHTML=`<div class="error">Image failed to load<br>${{card.url}}</div>`}};const tag=document.createElement('div');tag.className='tag';tag.innerHTML=`<strong>#${{String(card.n).padStart(3,'0')}}</strong> ${{card.name}}<br>${{card.variant}}`;el.append(img,tag)}}grid.append(el)}});document.querySelector('#prev').disabled=index===0;document.querySelector('#next').disabled=index===pages.length-1}}
-setSelect.addEventListener('change',()=>activate(DATASETS[Number(setSelect.value)]));layout.addEventListener('change',()=>{{index=0;resetPages()}});pageSelect.addEventListener('change',()=>{{index=Number(pageSelect.value);render()}});document.querySelector('#prev').addEventListener('click',()=>{{if(index>0){{index--;render()}}}});document.querySelector('#next').addEventListener('click',()=>{{if(index<active.layouts[layout.value].length-1){{index++;render()}}}});document.addEventListener('keydown',event=>{{if(event.key==='ArrowLeft')document.querySelector('#prev').click();if(event.key==='ArrowRight')document.querySelector('#next').click()}});refreshSetOptions();activate(active);
+function currentFormat(){{return active.formats.find(format=>format.id===activeFormatId)||active.formats[0]}}
+function currentPages(){{const pageSize=currentFormat().pageSize,pages=[];active.sections.forEach(section=>{{const pockets=section[layout.value];for(let offset=0;offset<pockets.length;offset+=pageSize){{const chunk=pockets.slice(offset,offset+pageSize);while(chunk.length<pageSize)chunk.push(null);pages.push({{section:section.name,pockets:chunk}})}}}});return pages}}
+function refreshBinderOptions(){{binderFormat.innerHTML=active.formats.map(format=>`<option value="${{format.id}}">${{format.label}}</option>`).join('');if(!active.formats.some(format=>format.id===activeFormatId))activeFormatId=active.formats[0].id;binderFormat.value=activeFormatId}}
+function updateSummary(pages=currentPages()){{const blanks=pages.reduce((total,page)=>total+page.pockets.filter(pocket=>pocket===null).length,0);document.querySelector('#summary').textContent=`${{active.masterCards}} cards · ${{pages.length}} used pages · ${{blanks}} intentional blanks · each section starts fresh`}}
+function activate(dataset){{active=dataset;index=0;refreshBinderOptions();document.documentElement.style.setProperty('--holo-opacity',String(active.holoOpacity));document.documentElement.style.setProperty('--holo-darkening',String(active.holoDarkening));document.title=`${{active.name}} · Pokémon Binder Visualizer`;updateSummary();resetPages()}}
+function resetPages(){{const format=currentFormat(),pages=currentPages();document.documentElement.style.setProperty('--columns',String(format.columns));pageSelect.innerHTML=pages.map((p,i)=>`<option value="${{i}}">${{i+1}}. ${{p.section}}</option>`).join('');index=Math.min(index,Math.max(0,pages.length-1));updateSummary(pages);render(pages)}}
+function render(pages=currentPages()){{const data=pages[index];if(!data){{grid.innerHTML='<div class="error">This set has no pages.</div>';return}}pageSelect.value=String(index);document.querySelector('#title').textContent=`${{active.name}} · Page ${{index+1}} — ${{data.section}}`;document.querySelector('#count').textContent=`${{index+1}} / ${{pages.length}}`;grid.innerHTML='';const holoVariants=new Set(active.holoVariants);data.pockets.forEach(card=>{{const el=document.createElement('article');el.className='pocket'+(card?'':' empty');if(!card)el.textContent='EMPTY';else{{if(holoVariants.has(card.variant))el.classList.add('holographic');const img=document.createElement('img');img.src=card.url;img.alt=`#${{String(card.n).padStart(3,'0')}} ${{card.name}}`;img.onerror=()=>{{el.innerHTML=`<div class="error">Image failed to load<br>${{card.url}}</div>`}};const tag=document.createElement('div');tag.className='tag';tag.innerHTML=`<strong>#${{String(card.n).padStart(3,'0')}}</strong> ${{card.name}}<br>${{card.variant}}`;el.append(img,tag)}}grid.append(el)}});document.querySelector('#prev').disabled=index===0;document.querySelector('#next').disabled=index===pages.length-1}}
+setSelect.addEventListener('change',()=>activate(DATASETS[Number(setSelect.value)]));binderFormat.addEventListener('change',()=>{{activeFormatId=binderFormat.value;index=0;resetPages()}});layout.addEventListener('change',()=>{{index=0;resetPages()}});pageSelect.addEventListener('change',()=>{{index=Number(pageSelect.value);render()}});document.querySelector('#prev').addEventListener('click',()=>{{if(index>0){{index--;render()}}}});document.querySelector('#next').addEventListener('click',()=>{{if(index<currentPages().length-1){{index++;render()}}}});document.addEventListener('keydown',event=>{{if(event.key==='ArrowLeft')document.querySelector('#prev').click();if(event.key==='ArrowRight')document.querySelector('#next').click()}});refreshSetOptions();activate(active);
 </script></body></html>'''
 
 
