@@ -1,10 +1,10 @@
 # Pokémon Binder Visualizer Generator
 
-A configuration-driven generator for interactive 3×3 Pokémon TCG binder planners. Perfect Order is included as a complete example.
+A set-agnostic, configuration-driven generator and browser app for interactive 3×3 Pokémon TCG binder planners. Perfect Order is included as a complete example.
 
 ## Open the visualizer
 
-Visit the published GitHub Pages site, or open `index.html` locally. The published root site is generated from `sets/perfect_order.json`.
+Visit the published GitHub Pages site, or open `index.html` locally. The published app includes Perfect Order by default and can load any compatible set JSON with the **Load set JSON** control. Imported files are processed locally in the browser and are not uploaded.
 
 The visualizer provides two arrangements:
 
