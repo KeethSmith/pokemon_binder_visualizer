@@ -19,7 +19,8 @@
   },
   "appearance": {
     "holographic_variants": ["Reverse Holo"],
-    "holographic_opacity": 0.38
+    "holographic_opacity": 0.2,
+    "holographic_darkening": 0.35
   },
   "variant_rules": [
     {
