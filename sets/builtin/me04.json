@@ -2,7 +2,8 @@
   "set": {
     "name": "Chaos Rising",
     "short_name": "Chaos Rising",
-    "code": "ME04"
+    "code": "ME04",
+    "release_date": "2026-05-22"
   },
   "image": {
     "url_template": "https://dz3we2x72f7ol.cloudfront.net/expansions/chaos-rising/en-us/SN54_EN_{number}-2x.png",

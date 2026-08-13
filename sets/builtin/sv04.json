@@ -2,7 +2,8 @@
   "set": {
     "name": "Paradox Rift",
     "short_name": "Paradox Rift",
-    "code": "SV04"
+    "code": "SV04",
+    "release_date": "2023-11-03"
   },
   "image": {
     "url_template": "https://dz3we2x72f7ol.cloudfront.net/expansions/paradox-rift/en-us/SV04_EN_{number}-2x.png",

@@ -2,7 +2,8 @@
   "set": {
     "name": "Phantasmal Flames",
     "short_name": "Phantasmal Flames",
-    "code": "ME02"
+    "code": "ME02",
+    "release_date": "2025-11-14"
   },
   "image": {
     "url_template": "https://dz3we2x72f7ol.cloudfront.net/expansions/phantasmal-flames/en-us/8BXG_EN_{number}-2x.png",

@@ -2,7 +2,8 @@
   "set": {
     "name": "Shrouded Fable",
     "short_name": "Shrouded Fable",
-    "code": "SV06.5"
+    "code": "SV06.5",
+    "release_date": "2024-08-02"
   },
   "image": {
     "url_template": "https://dz3we2x72f7ol.cloudfront.net/expansions/shrouded-fable/en-us/SV6pt5_EN_{number}-2x.png",

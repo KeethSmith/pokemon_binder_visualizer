@@ -2,7 +2,8 @@
   "set": {
     "name": "Twilight Masquerade",
     "short_name": "Twilight Masquerade",
-    "code": "SV06"
+    "code": "SV06",
+    "release_date": "2024-05-24"
   },
   "image": {
     "url_template": "https://dz3we2x72f7ol.cloudfront.net/expansions/twilight-masquerade/en-us/SV06_EN_{number}-2x.png",

@@ -2,7 +2,8 @@
   "set": {
     "name": "Temporal Forces",
     "short_name": "Temporal Forces",
-    "code": "SV05"
+    "code": "SV05",
+    "release_date": "2024-03-22"
   },
   "image": {
     "url_template": "https://dz3we2x72f7ol.cloudfront.net/expansions/temporal-forces/en-us/SV05_EN_{number}-2x.png",

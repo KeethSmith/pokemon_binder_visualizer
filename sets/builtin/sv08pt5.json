@@ -2,7 +2,8 @@
   "set": {
     "name": "Prismatic Evolutions",
     "short_name": "Prismatic Evolutions",
-    "code": "SV08.5"
+    "code": "SV08.5",
+    "release_date": "2025-01-17"
   },
   "image": {
     "url_template": "https://dz3we2x72f7ol.cloudfront.net/expansions/prismatic-evolutions/en-us/SV8pt5_EN_{number}-2x.png",

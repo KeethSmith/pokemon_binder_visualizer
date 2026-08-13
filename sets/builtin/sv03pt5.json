@@ -2,7 +2,8 @@
   "set": {
     "name": "151",
     "short_name": "151",
-    "code": "SV03.5"
+    "code": "SV03.5",
+    "release_date": "2023-09-22"
   },
   "image": {
     "url_template": "https://dz3we2x72f7ol.cloudfront.net/expansions/151/en-us/SV3pt5_EN_{number}-2x.png",

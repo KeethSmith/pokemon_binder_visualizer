@@ -2,7 +2,8 @@
   "set": {
     "name": "Ascended Heroes",
     "short_name": "Ascended Heroes",
-    "code": "ME02.5"
+    "code": "ME02.5",
+    "release_date": "2026-01-30"
   },
   "image": {
     "url_template": "https://dz3we2x72f7ol.cloudfront.net/expansions/ascended-heroes/en-us/M7XJ_EN_{number}-2x.png",

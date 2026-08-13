@@ -1,4 +1,5 @@
 import json
+import re
 import unittest
 from pathlib import Path
 
@@ -71,6 +72,15 @@ class GeneratorTests(unittest.TestCase):
                 all(len(card.variants) == 1 for card in cards if card.name.lower().endswith(" ex")),
                 path.name,
             )
+
+    def test_public_catalog_is_newest_first(self):
+        html = (Path(__file__).parents[1] / "index.html").read_text(encoding="utf-8")
+        match = re.search(r"const DATASETS=(\[.*\]);let active=", html)
+        self.assertIsNotNone(match)
+        datasets = json.loads(match.group(1))
+        dates = [item["releaseDate"] for item in datasets]
+        self.assertEqual(dates, sorted(dates, reverse=True))
+        self.assertEqual(datasets[0]["name"], "Pitch Black")
 
 
 if __name__ == "__main__":

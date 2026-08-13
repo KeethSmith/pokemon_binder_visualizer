@@ -98,6 +98,7 @@ def build_set(set_slug: str, image_prefix: str, tcgdex_id: str) -> dict:
             "name": set_data["name"],
             "short_name": set_data["name"],
             "code": tcgdex_id.upper(),
+            "release_date": set_data.get("releaseDate", ""),
         },
         "image": {
             "url_template": (

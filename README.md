@@ -4,7 +4,7 @@ A set-agnostic, configuration-driven generator and browser app for interactive 3
 
 ## Open the visualizer
 
-Visit the published GitHub Pages site, or open `index.html` locally. Choose any bundled expansion directly from the **Set** menu; no downloads or JSON imports are required. Perfect Order remains the default.
+Visit the published GitHub Pages site, or open `index.html` locally. Choose any bundled expansion directly from the **Set** menu; no downloads or JSON imports are required. Sets are listed newest to oldest with their release dates.
 
 The visualizer provides two arrangements:
 
@@ -59,9 +59,9 @@ Variant labels listed in `appearance.holographic_variants` receive a CSS reverse
 - `por_binder_layout.txt` — complete pocket-by-pocket layout for both arrangements.
 - `binder_generator.py` — reusable configuration-driven generator.
 - `sets/perfect_order.json` — Perfect Order set definition and image pattern.
-- `sets/builtin/` — generated definitions for all 22 expansions; the public build keeps the curated `perfect_order.json` definition for its default set.
+- `sets/builtin/` — generated definitions for all 22 expansions; the public build keeps the curated `perfect_order.json` definition at its chronological position.
 - `sets/official_gallery_sources.json` — first-card image sources and reusable `-2x` URL templates extracted from every set on Pokémon's official All Galleries page.
 - `scripts/build_set_configs.py` — refreshes bundled names, types, and variants from TCGdex metadata while retaining official Pokémon image URLs.
-- `por_binder_generator.py` — regenerates the public multi-set site with Perfect Order selected by default.
+- `por_binder_generator.py` — regenerates the public multi-set site in newest-to-oldest release order.
 
 Card images load from the official Pokémon CloudFront CDN and are not stored in this repository.
