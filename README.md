@@ -51,7 +51,7 @@ Every object in `sections` starts on a fresh binder page. Each section provides 
 
 ### Holographic appearance
 
-Variant labels listed in `appearance.holographic_variants` receive a CSS reverse-holo treatment. `holographic_darkening` controls the darker printed header and text field, while `holographic_opacity` controls the restrained foil sweep. Both accept values from `0` to `0.65`.
+Variant labels listed in `appearance.holographic_variants` receive a CSS reverse-holo treatment. `holographic_darkening` controls the darker printed header and text field, while `holographic_opacity` controls the full-card rainbow foil and cursor-responsive reflection. The included Perfect Order profile intentionally uses a strong `0.58` foil opacity.
 
 ## Contents
 
