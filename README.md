@@ -51,7 +51,7 @@ Every object in `sections` starts on a fresh binder page. Each section provides 
 
 ### Holographic appearance
 
-Variant labels listed in `appearance.holographic_variants` receive a subtle CSS foil sheen. Adjust `appearance.holographic_opacity` from `0` to `0.5`; Perfect Order uses `0.18` for a restrained effect.
+Variant labels listed in `appearance.holographic_variants` receive a CSS foil sheen. Adjust `appearance.holographic_opacity` from `0` to `0.65`; Perfect Order uses `0.38` for a visible but restrained effect.
 
 ## Contents
 
