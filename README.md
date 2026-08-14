@@ -4,7 +4,9 @@ A set-agnostic, configuration-driven generator and browser app for interactive 3
 
 ## Open the visualizer
 
-Visit the published GitHub Pages site, or open `index.html` locally. Choose any bundled expansion directly from the **Set** menu; no downloads or JSON imports are required. Sets are listed newest to oldest with their release dates.
+Visit the published GitHub Pages site, or open `index.html` locally. Choose any bundled expansion directly from the **Set** menu; no downloads or JSON imports are required. Sets are listed newest to oldest.
+
+The current set, binder format, ordering, and page are stored in the URL as `set`, `binder`, `order`, and `page` parameters. Refreshing or sharing the URL restores the same view.
 
 The visualizer provides two arrangements:
 

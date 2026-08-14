@@ -96,6 +96,12 @@ class GeneratorTests(unittest.TestCase):
         self.assertEqual(dates, sorted(dates, reverse=True))
         self.assertEqual(datasets[0]["name"], "Pitch Black")
 
+    def test_public_view_state_is_encoded_in_url(self):
+        html = (Path(__file__).parents[1] / "index.html").read_text(encoding="utf-8")
+        for parameter in ("set", "binder", "order", "page"):
+            self.assertIn(f"url.searchParams.set('{parameter}'", html)
+            self.assertIn(f"initialParams.get('{parameter}')", html)
+
 
 if __name__ == "__main__":
     unittest.main()
