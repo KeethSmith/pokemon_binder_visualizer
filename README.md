@@ -8,6 +8,8 @@ Visit the published GitHub Pages site, or open `index.html` locally. Choose any 
 
 The current set, binder format, ordering, and page are stored in the URL as `set`, `binder`, `order`, and `page` parameters. Refreshing or sharing the URL restores the same view.
 
+Click a card—or focus it and press Enter—to open a large card view. Reverse-holo cards retain their visual treatment in the enlarged view.
+
 The visualizer provides two arrangements:
 
 - **Paired:** each regular card is followed by its reverse holo.

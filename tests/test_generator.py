@@ -102,6 +102,13 @@ class GeneratorTests(unittest.TestCase):
             self.assertIn(f"url.searchParams.set('{parameter}'", html)
             self.assertIn(f"initialParams.get('{parameter}')", html)
 
+    def test_cards_have_an_accessible_large_view(self):
+        html = (Path(__file__).parents[1] / "index.html").read_text(encoding="utf-8")
+        self.assertIn('<dialog id="cardDialog"', html)
+        self.assertIn("cardDialog.showModal()", html)
+        self.assertIn("el.setAttribute('role','button')", html)
+        self.assertIn("event.key==='Enter'||event.key===' '", html)
+
 
 if __name__ == "__main__":
     unittest.main()
