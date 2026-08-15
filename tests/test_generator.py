@@ -100,7 +100,7 @@ class GeneratorTests(unittest.TestCase):
 
     def test_public_view_state_is_encoded_in_url(self):
         html = (Path(__file__).parents[1] / "index.html").read_text(encoding="utf-8")
-        for parameter in ("set", "binder", "order", "page"):
+        for parameter in ("set", "binder", "order", "finish", "page"):
             self.assertIn(f"url.searchParams.set('{parameter}'", html)
             self.assertIn(f"initialParams.get('{parameter}')", html)
 
@@ -124,6 +124,43 @@ class GeneratorTests(unittest.TestCase):
         self.assertIn("Reverse Holo", spinarak)
         self.assertEqual(spinarak["Regular"]["subTypeName"], "Normal")
         self.assertEqual(spinarak["Reverse Holo"]["subTypeName"], "Reverse Holofoil")
+
+    def test_special_finish_showcase_controls_are_built_in(self):
+        html = (Path(__file__).parents[1] / "index.html").read_text(encoding="utf-8")
+        self.assertIn('<select id="finishSelect">', html)
+        self.assertIn("SHOWCASE_LABELS", html)
+        self.assertIn("energy:'Energy Symbol Pattern'", html)
+        self.assertIn("cardShowcases(card)", html)
+        self.assertIn("All master-set variants", html)
+        self.assertIn("choices=finishes.length?['all','actual']:['actual']", html)
+        self.assertIn("expandedPockets", html)
+        self.assertIn("variantImageUrl", html)
+        self.assertIn("card.variantThumbnailUrl||card.variantImageUrl||card.url", html)
+        self.assertIn("if(!card.finish||card.variantImageUrl)return null", html)
+        self.assertIn("renderMode=initialParams.get('render')==='filter'?'filter':'scan'", html)
+        self.assertIn("energy-vector-mark", html)
+        self.assertIn(".holographic::before,.holographic::after{content:", html)
+        self.assertNotIn("mask-image:linear-gradient(to bottom", html)
+        self.assertIn('assets/finish-patterns/energy-grass.svg', html)
+        self.assertIn('assets/finish-patterns/loveball.svg', html)
+        self.assertIn("container.classList.toggle('holographic',isHolographic)", html)
+        self.assertIn("mix-blend-mode:multiply", html)
+        self.assertIn("pokeball-mark", html)
+        self.assertIn("energy-grass", html)
+        self.assertIn("energy-lightning", html)
+        catalog = json.loads((Path(__file__).parents[1] / "prices" / "tcgplayer.json").read_text(encoding="utf-8"))
+        ascended = catalog["sets"]["me02.5"]
+        self.assertEqual(ascended["showcases"]["1"], ["pokeball", "energy"])
+        self.assertEqual(ascended["showcasePrices"]["1"]["pokeball"]["productId"], 676852)
+        self.assertTrue(ascended["showcasePrices"]["1"]["pokeball"]["imageUrl"].endswith("_in_1000x1000.jpg"))
+        self.assertTrue(ascended["showcasePrices"]["1"]["energy"]["thumbnailUrl"].endswith("_400w.jpg"))
+        self.assertNotIn("3", ascended["showcases"])
+        self.assertIn("teamrocket", ascended["finishes"])
+        self.assertEqual(catalog["sets"]["sv08.5"]["finishes"], ["pokeball", "masterball"])
+        self.assertEqual(catalog["sets"]["por"]["finishes"], [])
+        pattern_dir = Path(__file__).parents[1] / "assets" / "finish-patterns"
+        for energy in ("grass", "fire", "water", "lightning", "psychic", "fighting", "darkness", "metal", "colorless", "dragon", "fairy"):
+            self.assertTrue((pattern_dir / f"energy-{energy}.svg").is_file(), energy)
 
 
 if __name__ == "__main__":

@@ -23,6 +23,21 @@ VARIANT_SUBTYPES = {
     "Holo": "Holofoil",
     "Reverse Holo": "Reverse Holofoil",
 }
+SHOWCASE_SUFFIXES = {
+    "poke ball": "pokeball",
+    "poke ball pattern": "pokeball",
+    "master ball pattern": "masterball",
+    "love ball": "loveball",
+    "friend ball": "friendball",
+    "quick ball": "quickball",
+    "dusk ball": "duskball",
+    "team rocket": "teamrocket",
+    "energy symbol pattern": "energy",
+}
+SHOWCASE_ORDER = (
+    "pokeball", "masterball", "loveball", "friendball",
+    "quickball", "duskball", "teamrocket", "energy",
+)
 
 
 def fetch_json(url: str) -> dict[str, Any]:
@@ -88,6 +103,15 @@ def collector_number(product: dict[str, Any]) -> int | None:
     return int(match.group(1)) if match else None
 
 
+def showcase_finish(product: dict[str, Any]) -> str | None:
+    suffixes = re.findall(r"\(([^()]*)\)", str(product.get("name", "")))
+    for suffix in suffixes:
+        finish = SHOWCASE_SUFFIXES.get(suffix.strip().lower())
+        if finish:
+            return finish
+    return None
+
+
 def build_set_prices(config: dict[str, Any], group: dict[str, Any]) -> dict[str, Any]:
     group_id = int(group["groupId"])
     products = fetch_json(f"{API_ROOT}/{group_id}/products").get("results", [])
@@ -97,13 +121,34 @@ def build_set_prices(config: dict[str, Any], group: dict[str, Any]) -> dict[str,
         prices_by_product.setdefault(int(price["productId"]), {})[str(price["subTypeName"])] = price
 
     cards: dict[str, dict[str, Any]] = {}
+    showcase_prices: dict[str, dict[str, Any]] = {}
+    showcases: dict[str, set[str]] = {}
     expected_variants = {card.number: set(card.variants) for card in load_cards(config)}
 
     for product in products:
         number = collector_number(product)
         if number is None or number not in expected_variants:
             continue
+        finish = showcase_finish(product)
+        if finish:
+            showcases.setdefault(str(number), set()).add(finish)
         product_prices = prices_by_product.get(int(product["productId"]), {})
+        if finish:
+            price = product_prices.get("Reverse Holofoil") or product_prices.get("Holofoil")
+            if price:
+                source_image = str(product.get("imageUrl") or "")
+                showcase_prices.setdefault(str(number), {})[finish] = {
+                    "marketPrice": price.get("marketPrice"),
+                    "lowPrice": price.get("lowPrice"),
+                    "midPrice": price.get("midPrice"),
+                    "highPrice": price.get("highPrice"),
+                    "subTypeName": price.get("subTypeName"),
+                    "productId": int(product["productId"]),
+                    "url": product.get("url"),
+                    "imageUrl": source_image.replace("_200w.jpg", "_in_1000x1000.jpg"),
+                    "thumbnailUrl": source_image.replace("_200w.jpg", "_400w.jpg"),
+                }
+            continue
         for variant in expected_variants[number]:
             subtype = VARIANT_SUBTYPES.get(variant)
             price = product_prices.get(subtype or "")
@@ -118,7 +163,18 @@ def build_set_prices(config: dict[str, Any], group: dict[str, Any]) -> dict[str,
                 "productId": int(product["productId"]),
                 "url": product.get("url"),
             }
-    return {"groupId": group_id, "groupName": group["name"], "cards": cards}
+    available = {finish for finishes in showcases.values() for finish in finishes}
+    return {
+        "groupId": group_id,
+        "groupName": group["name"],
+        "finishes": [finish for finish in SHOWCASE_ORDER if finish in available],
+        "showcases": {
+            number: [finish for finish in SHOWCASE_ORDER if finish in finishes]
+            for number, finishes in showcases.items()
+        },
+        "showcasePrices": showcase_prices,
+        "cards": cards,
+    }
 
 
 def main() -> int:

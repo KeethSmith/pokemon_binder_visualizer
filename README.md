@@ -6,9 +6,15 @@ A set-agnostic, configuration-driven generator and browser app for interactive 3
 
 Visit the published GitHub Pages site, or open `index.html` locally. Choose any bundled expansion directly from the **Set** menu; no downloads or JSON imports are required. Sets are listed newest to oldest.
 
-The current set, binder format, ordering, and page are stored in the URL as `set`, `binder`, `order`, and `page` parameters. Refreshing or sharing the URL restores the same view.
+The current set, binder format, ordering, showcased finish, and page are stored in the URL as `set`, `binder`, `order`, `finish`, and `page` parameters. Refreshing or sharing the URL restores the same view.
 
-Click a card—or focus it and press Enter—to open a large card view. Reverse-holo cards retain their visual treatment in the enlarged view; standard Holo cards display the unmodified scan.
+The **Variants** menu is built from the selected set's TCGplayer master product list. **All master-set variants** expands each eligible card into consecutive base, assigned Ball/Team Rocket, and Energy pockets; ex cards and other ineligible cards remain single-slot. **Standard variants only** hides every special parallel. The card-level finish assignments remain automatic rather than appearing as separate menu choices. Supported catalog patterns currently include Ascended Heroes' Ball families, Team Rocket, and Energy symbols plus Poké Ball and Master Ball patterns in Prismatic Evolutions, Black Bolt, and White Flare. The selected layout filter is stored in the URL as `finish`, and every special pocket shows its own label and TCGplayer price.
+
+Special variants use their catalog scans by default. Add `render=filter` to the URL to preview the experimental recreation on top of the official Pokémon base images. This comparison mode uses centered vector masks for Ball, Team Rocket, and modern TCG Energy symbols; it does not replace the scan-based default. The Energy outlines are generated from the non-commercial Creative Commons EssentiarumTCG symbol font, which is not redistributed by this repository.
+
+The experimental Poké Ball mask is based on [Poke ball by SoyGalem](https://thenounproject.com/icon/poke-ball-1390899/) from Noun Project (icon 1390899), with its dark artwork inverted to the visualizer's light watermark treatment.
+
+Click a card—or focus it and press Enter—to open a large card view. Reverse-holo cards retain their tonal treatment, border glow, and full-card shimmer in the enlarged view; standard Holo cards display the unmodified scan.
 
 Each pocket also shows its latest cached **TCGplayer Market Price** for the correct finish. Regular, Holo, and Reverse Holo prices remain separate. Pricing is refreshed from TCGCSV's daily export of TCGplayer's API, so the public GitHub Pages site never exposes a private API key.
 
@@ -59,7 +65,7 @@ Every object in `sections` starts on a fresh binder page. Each section provides 
 
 ### Holographic appearance
 
-Variant labels listed in `appearance.holographic_variants` receive a CSS reverse-holo treatment. `holographic_darkening` controls the darker printed header and text field, while `holographic_opacity` controls a full-card static shimmer rendered with `mix-blend-mode: screen`. The effect includes a strong fixed diagonal silver highlight with no animation or cursor tracking.
+Variant labels listed in `appearance.holographic_variants` receive the complete CSS reverse-holo treatment. `holographic_darkening` controls a uniform full-card darkening layer, while `holographic_opacity` controls the broad full-card static shimmer rendered with `mix-blend-mode: screen`. Tonal adjustment, border glow, darkening, and shimmer also remain beneath named master-set patterns.
 
 ## Contents
 
@@ -74,4 +80,4 @@ Variant labels listed in `appearance.holographic_variants` receive a CSS reverse
 - `prices/tcgplayer.json` — generated price cache embedded into the standalone visualizer.
 - `por_binder_generator.py` — regenerates the public multi-set site in newest-to-oldest release order.
 
-Card images load from the official Pokémon CloudFront CDN and are not stored in this repository.
+Base card images load from the official Pokémon CloudFront CDN. Named master-set variants use the matching TCGplayer product scan when available, with the official base scan and CSS treatment retained as a fallback. Images are not stored in this repository.
