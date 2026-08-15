@@ -32,9 +32,11 @@ if __name__ == "__main__":
         for name in BUILTIN_ORDER
     ]
     loaded = [(config, load_cards(config)) for config in configs]
+    price_path = root / "prices" / "tcgplayer.json"
+    price_catalog = read_config(price_path) if price_path.exists() else None
     primary_config, primary_cards = loaded[0]
     (root / "index.html").write_text(
-        render_html(primary_config, primary_cards, loaded[1:]),
+        render_html(primary_config, primary_cards, loaded[1:], price_catalog),
         encoding="utf-8",
     )
     (root / "por_binder_layout.txt").write_text(

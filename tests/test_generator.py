@@ -71,6 +71,7 @@ class GeneratorTests(unittest.TestCase):
         by_number = {card.number: card for card in cards}
         self.assertEqual(by_number[88].name, "Telepathic Psychic Energy")
         self.assertEqual(by_number[88].variants, ("Holo", "Reverse Holo"))
+        self.assertEqual(by_number[6].variants, ("Holo", "Reverse Holo"))
         self.assertEqual(by_number[12].variants, ("Holo",))
         self.assertEqual(by_number[1].variants, ("Regular", "Reverse Holo"))
 
@@ -90,7 +91,7 @@ class GeneratorTests(unittest.TestCase):
 
     def test_public_catalog_is_newest_first(self):
         html = (Path(__file__).parents[1] / "index.html").read_text(encoding="utf-8")
-        match = re.search(r"const DATASETS=(\[.*\]);let active=", html)
+        match = re.search(r"const DATASETS=(\[.*\]),PRICE_CATALOG=", html)
         self.assertIsNotNone(match)
         datasets = json.loads(match.group(1))
         dates = [item["releaseDate"] for item in datasets]
@@ -109,6 +110,20 @@ class GeneratorTests(unittest.TestCase):
         self.assertIn("cardDialog.showModal()", html)
         self.assertIn("el.setAttribute('role','button')", html)
         self.assertIn("event.key==='Enter'||event.key===' '", html)
+
+    def test_public_site_displays_variant_specific_tcgplayer_prices(self):
+        html = (Path(__file__).parents[1] / "index.html").read_text(encoding="utf-8")
+        self.assertIn("const DATASETS=", html)
+        self.assertIn(",PRICE_CATALOG=", html)
+        self.assertIn("TCGplayer Market:", html)
+        self.assertIn("[card.variant]", html)
+        self.assertIn('class="modal-price"', html)
+        catalog = json.loads((Path(__file__).parents[1] / "prices" / "tcgplayer.json").read_text(encoding="utf-8"))
+        spinarak = catalog["sets"]["por"]["cards"]["1"]
+        self.assertIn("Regular", spinarak)
+        self.assertIn("Reverse Holo", spinarak)
+        self.assertEqual(spinarak["Regular"]["subTypeName"], "Normal")
+        self.assertEqual(spinarak["Reverse Holo"]["subTypeName"], "Reverse Holofoil")
 
 
 if __name__ == "__main__":

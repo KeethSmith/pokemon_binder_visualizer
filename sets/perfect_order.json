@@ -1,6 +1,6 @@
 {
   "set": {
-    "name": "Pokémon Perfect Order",
+    "name": "Perfect Order",
     "short_name": "Perfect Order",
     "code": "POR",
     "release_date": "2026-03-27"
@@ -36,7 +36,7 @@
     },
     {
       "name": "Base holo rare cards",
-      "numbers": [19, 24, 28, 41, 45, 50, 54, 86, 87, 88],
+      "numbers": [6, 19, 24, 28, 41, 45, 50, 54, 86, 87, 88],
       "variants": ["Holo", "Reverse Holo"]
     },
     {

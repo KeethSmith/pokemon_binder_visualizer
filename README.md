@@ -10,6 +10,8 @@ The current set, binder format, ordering, and page are stored in the URL as `set
 
 Click a card—or focus it and press Enter—to open a large card view. Reverse-holo cards retain their visual treatment in the enlarged view; standard Holo cards display the unmodified scan.
 
+Each pocket also shows its latest cached **TCGplayer Market Price** for the correct finish. Regular, Holo, and Reverse Holo prices remain separate. Pricing is refreshed from TCGCSV's daily export of TCGplayer's API, so the public GitHub Pages site never exposes a private API key.
+
 The visualizer provides two arrangements:
 
 - **Paired:** each regular card is followed by its reverse holo.
@@ -68,6 +70,8 @@ Variant labels listed in `appearance.holographic_variants` receive a CSS reverse
 - `sets/builtin/` — generated definitions for all 22 expansions; the public build keeps the curated `perfect_order.json` definition at its chronological position.
 - `sets/official_gallery_sources.json` — first-card image sources and reusable `-2x` URL templates extracted from every set on Pokémon's official All Galleries page.
 - `scripts/build_set_configs.py` — refreshes bundled names, types, and variants from TCGdex metadata while retaining official Pokémon image URLs.
+- `scripts/update_tcgplayer_prices.py` — refreshes variant-specific TCGplayer market prices from TCGCSV's daily API export.
+- `prices/tcgplayer.json` — generated price cache embedded into the standalone visualizer.
 - `por_binder_generator.py` — regenerates the public multi-set site in newest-to-oldest release order.
 
 Card images load from the official Pokémon CloudFront CDN and are not stored in this repository.

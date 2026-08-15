@@ -1,4 +1,4 @@
-POKÉMON PERFECT ORDER — BINDER LAYOUT
+PERFECT ORDER — BINDER LAYOUT
 ================================================================
 
 Image template: https://dz3we2x72f7ol.cloudfront.net/expansions/{set_slug}/en-us/{image_prefix}_{number}-2x.png
@@ -16,7 +16,7 @@ PAGE 01 — Grass
 7. #004 Snivy — Regular | 8. #004 Snivy — Reverse Holo | 9. #005 Servine — Regular
 
 PAGE 02 — Grass
-1. #005 Servine — Reverse Holo | 2. #006 Serperior — Regular | 3. #006 Serperior — Reverse Holo
+1. #005 Servine — Reverse Holo | 2. #006 Serperior — Holo | 3. #006 Serperior — Reverse Holo
 4. #007 Scatterbug — Regular | 5. #007 Scatterbug — Reverse Holo | 6. #008 Spewpa — Regular
 7. #008 Spewpa — Reverse Holo | 8. #009 Vivillon — Regular | 9. #009 Vivillon — Reverse Holo
 
@@ -146,17 +146,17 @@ SPLIT LAYOUT
 
 PAGE 01 — Grass
 1. #001 Spinarak — Regular | 2. #002 Ariados — Regular | 3. #003 Shaymin — Regular
-4. #004 Snivy — Regular | 5. #005 Servine — Regular | 6. #006 Serperior — Regular
-7. #007 Scatterbug — Regular | 8. #008 Spewpa — Regular | 9. #009 Vivillon — Regular
+4. #004 Snivy — Regular | 5. #005 Servine — Regular | 6. #007 Scatterbug — Regular
+7. #008 Spewpa — Regular | 8. #009 Vivillon — Regular | 9. #010 Rowlet — Regular
 
 PAGE 02 — Grass
-1. #010 Rowlet — Regular | 2. #011 Dartrix — Regular | 3. #001 Spinarak — Reverse Holo
-4. #002 Ariados — Reverse Holo | 5. #003 Shaymin — Reverse Holo | 6. #004 Snivy — Reverse Holo
-7. #005 Servine — Reverse Holo | 8. #006 Serperior — Reverse Holo | 9. #007 Scatterbug — Reverse Holo
+1. #011 Dartrix — Regular | 2. #001 Spinarak — Reverse Holo | 3. #002 Ariados — Reverse Holo
+4. #003 Shaymin — Reverse Holo | 5. #004 Snivy — Reverse Holo | 6. #005 Servine — Reverse Holo
+7. #006 Serperior — Reverse Holo | 8. #007 Scatterbug — Reverse Holo | 9. #008 Spewpa — Reverse Holo
 
 PAGE 03 — Grass
-1. #008 Spewpa — Reverse Holo | 2. #009 Vivillon — Reverse Holo | 3. #010 Rowlet — Reverse Holo
-4. #011 Dartrix — Reverse Holo | 5. #012 Decidueye ex — Holo | 6. EMPTY
+1. #009 Vivillon — Reverse Holo | 2. #010 Rowlet — Reverse Holo | 3. #011 Dartrix — Reverse Holo
+4. #006 Serperior — Holo | 5. #012 Decidueye ex — Holo | 6. EMPTY
 7. EMPTY | 8. EMPTY | 9. EMPTY
 
 PAGE 04 — Fire
