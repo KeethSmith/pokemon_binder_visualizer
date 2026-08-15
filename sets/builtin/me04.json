@@ -13,6 +13,9 @@
     "pockets_per_page": 9,
     "columns": 3
   },
+  "master_set": {
+    "reverse_holo_main_non_ex": true
+  },
   "appearance": {
     "holographic_variants": [
       "Reverse Holo"

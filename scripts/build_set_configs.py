@@ -54,10 +54,11 @@ def get_json(url: str) -> dict:
 def variants(card: dict) -> list[str]:
     available = card.get("variants") or {}
     result = []
+    is_ex = str(card.get("name", "")).casefold().endswith(" ex")
+    if available.get("normal") and not is_ex:
+        result.append("Regular")
     if available.get("holo"):
         result.append("Holo")
-    elif available.get("normal"):
-        result.append("Regular")
     if available.get("reverse"):
         result.append("Reverse Holo")
     return result or ["Regular"]
@@ -108,6 +109,9 @@ def build_set(set_slug: str, image_prefix: str, tcgdex_id: str) -> dict:
             "number_padding": 0,
         },
         "binder": {"pockets_per_page": 9, "columns": 3},
+        "master_set": {
+            "reverse_holo_main_non_ex": tcgdex_id in {"me01", "me02", "me03", "me04", "me05"},
+        },
         "appearance": {
             "holographic_variants": ["Reverse Holo"],
             "holographic_opacity": 0.58,

@@ -112,6 +112,7 @@
           "number": 11,
           "name": "Tepig",
           "variants": [
+            "Regular",
             "Holo",
             "Reverse Holo"
           ]
@@ -196,6 +197,7 @@
           "number": 21,
           "name": "Oshawott",
           "variants": [
+            "Regular",
             "Holo",
             "Reverse Holo"
           ]

@@ -89,6 +89,46 @@ class GeneratorTests(unittest.TestCase):
                 path.name,
             )
 
+    def test_bundled_master_set_counts_match_published_checklists(self):
+        expected = {
+            "me01": 310, "me02": 214, "me02.5": 613, "me04": 198, "me05": 194,
+            "sv01": 444, "sv02": 455, "sv03": 406, "sv03.5": 360,
+            "sv04": 428, "sv04.5": 326, "sv05": 358, "sv06": 373,
+            "sv06.5": 154, "sv07": 300, "sv08": 417, "sv08.5": 447,
+            "sv09": 333, "sv10": 409, "sv10.5b": 406, "sv10.5w": 407,
+        }
+        stem_to_id = {
+            "me02pt5": "me02.5", "sv03pt5": "sv03.5", "sv04pt5": "sv04.5",
+            "sv06pt5": "sv06.5", "sv08pt5": "sv08.5", "sv10pt5b": "sv10.5b",
+            "sv10pt5w": "sv10.5w",
+        }
+        root = Path(__file__).parents[1]
+        catalog = json.loads((root / "prices" / "tcgplayer.json").read_text(encoding="utf-8"))["sets"]
+        actual = {"me03": 203}
+        for path in sorted((root / "sets" / "builtin").glob("*.json")):
+            set_id = stem_to_id.get(path.stem, path.stem)
+            config = json.loads(path.read_text(encoding="utf-8"))
+            cards = load_cards(config)
+            total = sum(len(card.variants) for card in cards)
+            set_catalog = catalog.get(set_id, {})
+            for card in cards:
+                if "Reverse Holo" not in card.variants:
+                    continue
+                finishes = set_catalog.get("showcases", {}).get(str(card.number), [])
+                if not finishes:
+                    continue
+                has_base_reverse = bool(
+                    set_catalog.get("cards", {}).get(str(card.number), {}).get("Reverse Holo")
+                )
+                total += len(finishes) - (0 if has_base_reverse else 1)
+            actual[set_id] = total
+        self.assertEqual(actual, expected | {"me03": 203})
+
+    def test_named_patterns_supplement_real_reverse_holos(self):
+        html = (Path(__file__).parents[1] / "index.html").read_text(encoding="utf-8")
+        self.assertIn("const hasBaseReverse=Boolean", html)
+        self.assertIn("if(hasBaseReverse&&(finishSelect.value==='all'||finishSelect.value==='actual'))", html)
+
     def test_public_catalog_is_newest_first(self):
         html = (Path(__file__).parents[1] / "index.html").read_text(encoding="utf-8")
         match = re.search(r"const DATASETS=(\[.*\]),PRICE_CATALOG=", html)

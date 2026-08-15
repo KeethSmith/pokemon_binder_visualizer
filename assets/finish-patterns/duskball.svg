@@ -1,7 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-  <g fill="none" stroke="white" stroke-width="13" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="100" cy="100" r="78"/><circle cx="100" cy="111" r="25"/>
-    <path d="M24 103h51m50 0h51M46 67c31-29 77-33 111-9M31 82c39-27 92-25 132 2M29 122c35 21 69 35 112 22"/>
-    <path d="M158 57l-1 38 22-20M39 68l9 31-27-9"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+  <title>Dusk Ball pattern</title>
+  <desc>A Poké Ball-based mark with solid top and bottom fields, four triangular cutouts, curved cutouts, and a hollow center button.</desc>
+  <defs>
+    <mask id="dusk-cutouts">
+      <rect width="240" height="240" fill="black"/>
+
+      <!-- Begin with one true circle, then open its center channel. -->
+      <circle cx="120" cy="120" r="102" fill="white"/>
+      <rect x="0" y="96" width="240" height="48" fill="black"/>
+
+      <!-- The two halves of the center band. -->
+      <path d="M20 108H85V132H20ZM155 108H220V132H155Z" fill="white"/>
+
+      <!-- Semicircular cutouts above and below the button. -->
+      <path d="M66 120A54 54 0 0 1 174 120M66 120A54 54 0 0 0 174 120" fill="none" stroke="black" stroke-width="12" stroke-linecap="round"/>
+
+      <!-- Four small corner triangles. -->
+      <path d="M37 78L50 48L63 78ZM177 78L190 48L203 78ZM37 162L50 192L63 162ZM177 162L190 192L203 162Z" fill="black"/>
+
+      <!-- Clear all fill from the button, then draw only its hollow ring. -->
+      <circle cx="120" cy="120" r="35" fill="black"/>
+      <circle cx="120" cy="120" r="31" fill="none" stroke="white" stroke-width="8"/>
+    </mask>
+  </defs>
+  <rect width="240" height="240" fill="white" mask="url(#dusk-cutouts)"/>
 </svg>

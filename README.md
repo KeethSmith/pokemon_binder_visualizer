@@ -12,6 +12,26 @@ The **Variants** menu is built from the selected set's TCGplayer master product 
 
 Special variants use their catalog scans by default. Add `render=filter` to the URL to preview the experimental recreation on top of the official Pokémon base images. This comparison mode uses centered vector masks for Ball, Team Rocket, and modern TCG Energy symbols; it does not replace the scan-based default. The Energy outlines are generated from the non-commercial Creative Commons EssentiarumTCG symbol font, which is not redistributed by this repository.
 
+## Verified master-set counts
+
+The visualizer's **All master-set variants** option means one copy of every numbered set card, every eligible regular/holo/reverse-holo printing, every named set parallel, and every secret rare. Promos, stamped product variants, and other unnumbered cards are excluded.
+
+| Set | Cards | Set | Cards |
+|---|---:|---|---:|
+| Pitch Black | 194 | Chaos Rising | 198 |
+| Perfect Order | 203 | Ascended Heroes | 613 |
+| Phantasmal Flames | 214 | Mega Evolution | 310 |
+| Black Bolt | 406 | White Flare | 407 |
+| Destined Rivals | 409 | Journey Together | 333 |
+| Prismatic Evolutions | 447 | Surging Sparks | 417 |
+| Stellar Crown | 300 | Shrouded Fable | 154 |
+| Twilight Masquerade | 373 | Temporal Forces | 358 |
+| Paldean Fates | 326 | Paradox Rift | 428 |
+| 151 | 360 | Obsidian Flames | 406 |
+| Paldea Evolved | 455 | Scarlet & Violet | 444 |
+
+Prismatic Evolutions is sometimes reported as **455** when its eight unnumbered Basic Energy reverse holos are included. Those unnumbered Energy cards are outside the numbered-card scope above. Regression tests lock all 22 totals and distinguish sets where named patterns supplement an ordinary reverse holo from Ascended Heroes, where the named Pokémon patterns replace it.
+
 The experimental Poké Ball mask is based on [Poke ball by SoyGalem](https://thenounproject.com/icon/poke-ball-1390899/) from Noun Project (icon 1390899), with its dark artwork inverted to the visualizer's light watermark treatment.
 
 Click a card—or focus it and press Enter—to open a large card view. Reverse-holo cards retain their tonal treatment, border glow, and full-card shimmer in the enlarged view; standard Holo cards display the unmodified scan.
