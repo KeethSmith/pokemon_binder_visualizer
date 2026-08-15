@@ -82,6 +82,7 @@ class GeneratorTests(unittest.TestCase):
             config = json.loads(path.read_text(encoding="utf-8"))
             cards = load_cards(config)
             self.assertTrue(cards, path.name)
+            self.assertEqual(config["appearance"]["holographic_variants"], ["Reverse Holo"], path.name)
             self.assertTrue(
                 all(len(card.variants) == 1 for card in cards if card.name.lower().endswith(" ex")),
                 path.name,

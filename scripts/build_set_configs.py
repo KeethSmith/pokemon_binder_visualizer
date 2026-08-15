@@ -109,7 +109,7 @@ def build_set(set_slug: str, image_prefix: str, tcgdex_id: str) -> dict:
         },
         "binder": {"pockets_per_page": 9, "columns": 3},
         "appearance": {
-            "holographic_variants": ["Reverse Holo", "Holo"],
+            "holographic_variants": ["Reverse Holo"],
             "holographic_opacity": 0.58,
             "holographic_darkening": 0.315,
         },
