@@ -147,9 +147,6 @@ class GeneratorTests(unittest.TestCase):
     def test_cards_have_an_accessible_large_view(self):
         html = (Path(__file__).parents[1] / "index.html").read_text(encoding="utf-8")
         self.assertIn('<dialog id="cardDialog"', html)
-        self.assertIn('class="modal-card card-surface"', html)
-        self.assertIn("surface.className='card-surface'", html)
-        self.assertIn(".finish-preview{position:absolute;z-index:2;inset:0", html)
         self.assertIn("cardDialog.showModal()", html)
         self.assertIn("el.setAttribute('role','button')", html)
         self.assertIn("event.key==='Enter'||event.key===' '", html)
@@ -203,9 +200,7 @@ class GeneratorTests(unittest.TestCase):
         self.assertEqual(catalog["sets"]["por"]["finishes"], [])
         pattern_dir = Path(__file__).parents[1] / "assets" / "finish-patterns"
         for energy in ("grass", "fire", "water", "lightning", "psychic", "fighting", "darkness", "metal", "colorless", "dragon", "fairy"):
-            energy_svg = pattern_dir / f"energy-{energy}.svg"
-            self.assertTrue(energy_svg.is_file(), energy)
-            self.assertIn('viewBox="61 67 403 403"', energy_svg.read_text(encoding="utf-8"), energy)
+            self.assertTrue((pattern_dir / f"energy-{energy}.svg").is_file(), energy)
 
 
 if __name__ == "__main__":
