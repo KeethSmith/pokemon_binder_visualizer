@@ -200,7 +200,9 @@ class GeneratorTests(unittest.TestCase):
         self.assertEqual(catalog["sets"]["por"]["finishes"], [])
         pattern_dir = Path(__file__).parents[1] / "assets" / "finish-patterns"
         for energy in ("grass", "fire", "water", "lightning", "psychic", "fighting", "darkness", "metal", "colorless", "dragon", "fairy"):
-            self.assertTrue((pattern_dir / f"energy-{energy}.svg").is_file(), energy)
+            energy_svg = pattern_dir / f"energy-{energy}.svg"
+            self.assertTrue(energy_svg.is_file(), energy)
+            self.assertIn('viewBox="61 67 403 403"', energy_svg.read_text(encoding="utf-8"), energy)
 
 
 if __name__ == "__main__":
