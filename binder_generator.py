@@ -140,23 +140,26 @@ def section_pockets(cards: list[Card], layout: str) -> list[Pocket]:
 
 
 def build_pages(cards: list[Card], page_size: int, layout: str) -> list[dict[str, Any]]:
-    if layout == "paired":
-        pockets = section_pockets(cards, layout)
+    if layout not in {"paired", "split"}:
+        raise ValueError(f"Unknown layout: {layout}")
+
+    if layout == "split":
         pages: list[dict[str, Any]] = []
-        for offset in range(0, len(pockets), page_size):
-            chunk: list[Pocket | None] = list(pockets[offset : offset + page_size])
-            sections = list(dict.fromkeys(pocket.card.section for pocket in chunk if pocket is not None))
-            chunk.extend([None] * (page_size - len(chunk)))
-            pages.append({"section": " / ".join(sections), "pockets": chunk})
+        for section, section_cards in grouped(cards):
+            pockets = section_pockets(section_cards, "paired")
+            for offset in range(0, len(pockets), page_size):
+                chunk: list[Pocket | None] = list(pockets[offset : offset + page_size])
+                chunk.extend([None] * (page_size - len(chunk)))
+                pages.append({"section": section, "pockets": chunk})
         return pages
 
+    pockets = section_pockets(cards, "paired")
     pages: list[dict[str, Any]] = []
-    for section, section_cards in grouped(cards):
-        pockets = section_pockets(section_cards, layout)
-        for offset in range(0, len(pockets), page_size):
-            chunk: list[Pocket | None] = list(pockets[offset : offset + page_size])
-            chunk.extend([None] * (page_size - len(chunk)))
-            pages.append({"section": section, "pockets": chunk})
+    for offset in range(0, len(pockets), page_size):
+        chunk: list[Pocket | None] = list(pockets[offset : offset + page_size])
+        labels = list(dict.fromkeys(pocket.card.section for pocket in chunk if pocket is not None))
+        chunk.extend([None] * (page_size - len(chunk)))
+        pages.append({"section": " / ".join(labels), "pockets": chunk})
     return pages
 
 
@@ -193,7 +196,7 @@ def render_text(config: dict[str, Any], cards: list[Card]) -> str:
         "=" * 64,
         "",
         f"Image template: {config['image']['url_template']}",
-        "Paired order packs continuously; split order begins each section on a fresh page.",
+        "Paired packs types continuously; split begins each type on a fresh page.",
         "",
         f"Totals: {stats['master_cards']} cards | {stats['used_pages']} used pages | "
         f"{stats['blanks']} deliberate blanks | {stats['unused_pages']} unused pages.",
@@ -335,7 +338,7 @@ main{{max-width:1180px;margin:22px auto 60px;padding:0 16px}}.summary,.note{{col
 dialog{{width:min(720px,96vw);max-height:96vh;padding:18px;border:1px solid #607895;border-radius:18px;color:var(--ink);background:#111a25;box-shadow:0 24px 80px #000c}}dialog::backdrop{{background:rgba(3,7,12,.86);backdrop-filter:blur(5px)}}.modal-close{{position:absolute;z-index:3;right:12px;top:12px;width:42px;height:42px;padding:0;border-radius:50%;font-size:25px;line-height:1;background:#101722e8}}.modal-card{{position:relative;width:min(660px,100%);margin:auto;aspect-ratio:660/921;overflow:hidden;border-radius:14px;background:#080c12}}.modal-card img{{display:block;width:100%;height:100%;object-fit:contain}}.modal-title{{margin:12px 0 0;text-align:center;font-size:17px;font-weight:700}}.modal-price{{margin:5px 0 0;text-align:center;color:var(--muted)}}.modal-price a{{color:#8ff0b2;font-weight:750;text-decoration:none}}.modal-price a:hover{{text-decoration:underline}}
 @media(max-width:700px){{h1{{flex-basis:100%}}.bar{{justify-content:center}}.page{{gap:6px;padding:8px}}.tag{{inset:auto 4px 4px;font-size:9px;padding:3px}}}}@media print{{header,.page-nav,.note{{display:none}}body{{background:white;color:black}}main{{margin:0}}.page{{box-shadow:none;break-after:page}}}}
 </style></head><body>
-<header><div class="bar"><h1>Pokémon Binder Visualizer</h1><label>Set <select id="setSelect"></select></label><label>Binder <select id="binderFormat"></select></label><label>Order <select id="layout"><option value="paired">Paired</option><option value="split">Split</option></select></label><label>Variants <select id="finishSelect"><option value="actual">Standard variants</option></select></label><label>Page <select id="pageSelect"></select></label></div></header>
+<header><div class="bar"><h1>Pokémon Binder Visualizer</h1><label>Set <select id="setSelect"></select></label><label>Binder <select id="binderFormat"></select></label><label>Spacing <select id="layout"><option value="paired">None — continuous</option><option value="split">Between types — fresh page</option></select></label><label>Variants <select id="finishSelect"><option value="none">None</option></select></label><label>Page <select id="pageSelect"></select></label></div></header>
 <main><p class="summary" id="summary"></p><div class="page-head"><h2 id="title"></h2><span id="count"></span></div><nav class="page-nav" aria-label="Binder pages"><button id="prev">← Previous</button><button id="next">Next →</button></nav><section class="page" id="page"></section><p class="note">Click any card to view it larger. Prices are TCGplayer market prices from TCGCSV's daily API export. Base card images load from Pokémon's official image CDN; named master-set variants use their corresponding TCGplayer scans when available.</p></main>
 <dialog id="cardDialog" aria-labelledby="modalTitle"><button class="modal-close" id="modalClose" aria-label="Close enlarged card">×</button><div class="modal-card" id="modalCard"><img id="modalImage" alt=""></div><p class="modal-title" id="modalTitle"></p><p class="modal-price" id="modalPrice"></p></dialog>
 <script>
@@ -344,12 +347,11 @@ const setSelect=document.querySelector('#setSelect'),binderFormat=document.query
 const SHOWCASE_LABELS={{pokeball:'Poké Ball pattern',masterball:'Master Ball pattern',loveball:'Love Ball pattern',friendball:'Friend Ball pattern',quickball:'Quick Ball pattern',duskball:'Dusk Ball pattern',teamrocket:'Team Rocket pattern',energy:'Energy Symbol Pattern'}};
 function refreshSetOptions(){{setSelect.innerHTML=DATASETS.map((set,i)=>`<option value="${{i}}">${{set.name}}</option>`).join('');setSelect.value=String(DATASETS.indexOf(active))}}
 function currentFormat(){{return active.formats.find(format=>format.id===activeFormatId)||active.formats[0]}}
-function expandedPockets(pockets){{const result=[];pockets.forEach(card=>{{const finishes=cardShowcases(card);if(card.variant==='Reverse Holo'&&finishes.length){{const hasBaseReverse=Boolean(PRICE_CATALOG.sets?.[active.id]?.cards?.[String(card.n)]?.['Reverse Holo']);if(hasBaseReverse&&(finishSelect.value==='all'||finishSelect.value==='actual'))result.push(card);const selected=finishSelect.value==='all'?finishes:finishSelect.value==='actual'?[]:finishes.filter(finish=>finish===finishSelect.value);selected.forEach(finish=>{{const product=PRICE_CATALOG.sets?.[active.id]?.showcasePrices?.[String(card.n)]?.[finish],useScan=renderMode==='scan';result.push({{...card,finish,variant:SHOWCASE_LABELS[finish],variantImageUrl:useScan?(product?.imageUrl||''):'',variantThumbnailUrl:useScan?(product?.thumbnailUrl||product?.imageUrl||''):''}})}})}}else result.push(card)}});return result}}
-function orderedPockets(section){{const pockets=expandedPockets(section.paired);if(layout.value==='paired')return pockets;const groups=new Map();pockets.forEach(card=>{{const key=card.finish?`finish:${{card.finish}}`:`variant:${{card.variant}}`;if(!groups.has(key))groups.set(key,[]);groups.get(key).push(card)}});return [...groups.values()].flat()}}
-function currentPages(){{const pageSize=currentFormat().pageSize,pages=[];if(layout.value==='paired'){{const pockets=active.sections.flatMap(section=>expandedPockets(section.paired).map(card=>({{...card,section:section.name}})));for(let offset=0;offset<pockets.length;offset+=pageSize){{const chunk=pockets.slice(offset,offset+pageSize),sections=[...new Set(chunk.map(card=>card.section))];while(chunk.length<pageSize)chunk.push(null);pages.push({{section:sections.join(' / '),pockets:chunk}})}}return pages}}active.sections.forEach(section=>{{const pockets=orderedPockets(section);for(let offset=0;offset<pockets.length;offset+=pageSize){{const chunk=pockets.slice(offset,offset+pageSize);while(chunk.length<pageSize)chunk.push(null);pages.push({{section:section.name,pockets:chunk}})}}}});return pages}}
+function expandedPockets(pockets){{if(finishSelect.value==='none'){{const seen=new Set();return pockets.filter(card=>{{if(seen.has(card.n))return false;seen.add(card.n);return true}})}}const result=[];pockets.forEach(card=>{{const finishes=cardShowcases(card);if(card.variant==='Reverse Holo'&&finishes.length){{const hasBaseReverse=Boolean(PRICE_CATALOG.sets?.[active.id]?.cards?.[String(card.n)]?.['Reverse Holo']);if(hasBaseReverse)result.push(card);finishes.forEach(finish=>{{const product=PRICE_CATALOG.sets?.[active.id]?.showcasePrices?.[String(card.n)]?.[finish],useScan=renderMode==='scan';result.push({{...card,finish,variant:SHOWCASE_LABELS[finish],variantImageUrl:useScan?(product?.imageUrl||''):'',variantThumbnailUrl:useScan?(product?.thumbnailUrl||product?.imageUrl||''):''}})}})}}else result.push(card)}});return result}}
+function currentPages(){{const pageSize=currentFormat().pageSize,pages=[];if(layout.value==='split'){{active.sections.forEach(section=>{{const pockets=expandedPockets(section.paired).map(card=>({{...card,section:section.name}}));for(let offset=0;offset<pockets.length;offset+=pageSize){{const chunk=pockets.slice(offset,offset+pageSize);while(chunk.length<pageSize)chunk.push(null);pages.push({{section:section.name,pockets:chunk}})}}}});return pages}}const pockets=active.sections.flatMap(section=>expandedPockets(section.paired).map(card=>({{...card,section:section.name}})));for(let offset=0;offset<pockets.length;offset+=pageSize){{const chunk=pockets.slice(offset,offset+pageSize),sections=[...new Set(chunk.map(card=>card.section))];while(chunk.length<pageSize)chunk.push(null);pages.push({{section:sections.join(' / '),pockets:chunk}})}}return pages}}
 function refreshBinderOptions(){{binderFormat.innerHTML=active.formats.map(format=>`<option value="${{format.id}}">${{format.label}}</option>`).join('');if(!active.formats.some(format=>format.id===activeFormatId))activeFormatId=active.formats[0].id;binderFormat.value=activeFormatId}}
-function refreshFinishOptions(preferred=null){{const finishes=PRICE_CATALOG.sets?.[active.id]?.finishes||[],choices=finishes.length?['all','actual']:['actual'];finishSelect.innerHTML=choices.map(finish=>`<option value="${{finish}}">${{finish==='all'?'All master-set variants':'Standard variants only'}}</option>`).join('');finishSelect.value=choices.includes(preferred)?preferred:finishes.length?'all':'actual'}}
-function updateSummary(pages=currentPages()){{const blanks=pages.reduce((total,page)=>total+page.pockets.filter(pocket=>pocket===null).length,0),cards=pages.reduce((total,page)=>total+page.pockets.filter(Boolean).length,0),preview=renderMode==='filter'?' · experimental recreated filters':'';document.querySelector('#summary').textContent=`${{cards}} cards · ${{pages.length}} used pages · ${{blanks}} intentional blanks · each section starts fresh${{preview}}`}}
+function refreshFinishOptions(preferred=null){{const choices=['all','none'],normalized=preferred==='actual'?'none':preferred;finishSelect.innerHTML=choices.map(finish=>`<option value="${{finish}}">${{finish==='all'?'All variants':'None'}}</option>`).join('');finishSelect.value=choices.includes(normalized)?normalized:'all'}}
+function updateSummary(pages=currentPages()){{const blanks=pages.reduce((total,page)=>total+page.pockets.filter(pocket=>pocket===null).length,0),cards=pages.reduce((total,page)=>total+page.pockets.filter(Boolean).length,0),placement=layout.value==='split'?'each type starts on a fresh page':'types packed continuously',preview=renderMode==='filter'?' · recreated filters':'';document.querySelector('#summary').textContent=`${{cards}} cards · ${{pages.length}} used pages · ${{blanks}} empty pockets · ${{placement}}${{preview}}`}}
 function syncUrl(){{const url=new URL(location.href);url.searchParams.set('set',active.id);url.searchParams.set('binder',activeFormatId);url.searchParams.set('order',layout.value);url.searchParams.set('finish',finishSelect.value);url.searchParams.set('page',String(index+1));if(renderMode==='scan')url.searchParams.set('render','scan');else url.searchParams.delete('render');history.replaceState(null,'',url)}}
 function activate(dataset,page=0,preferredFinish=null){{active=dataset;index=page;refreshBinderOptions();refreshFinishOptions(preferredFinish);document.documentElement.style.setProperty('--holo-opacity',String(active.holoOpacity));document.documentElement.style.setProperty('--holo-darkening',String(active.holoDarkening));document.title=`${{active.name}} · Pokémon Binder Visualizer`;updateSummary();resetPages()}}
 function resetPages(){{const format=currentFormat(),pages=currentPages();document.documentElement.style.setProperty('--columns',String(format.columns));pageSelect.innerHTML=pages.map((p,i)=>`<option value="${{i}}">${{i+1}}. ${{p.section}}</option>`).join('');index=Math.min(index,Math.max(0,pages.length-1));updateSummary(pages);render(pages)}}

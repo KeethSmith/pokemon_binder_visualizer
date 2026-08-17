@@ -8,13 +8,15 @@ Visit the published GitHub Pages site, or open `index.html` locally. Choose any 
 
 The current set, binder format, ordering, showcased finish, and page are stored in the URL as `set`, `binder`, `order`, `finish`, and `page` parameters. Refreshing or sharing the URL restores the same view.
 
-The **Variants** menu is built from the selected set's TCGplayer master product list. **All master-set variants** expands each eligible card into consecutive base, assigned Ball/Team Rocket, and Energy pockets; ex cards and other ineligible cards remain single-slot. **Standard variants only** hides every special parallel. The card-level finish assignments remain automatic rather than appearing as separate menu choices. Supported catalog patterns currently include Ascended Heroes' Ball families, Team Rocket, and Energy symbols plus Poké Ball and Master Ball patterns in Prismatic Evolutions, Black Bolt, and White Flare. The selected layout filter is stored in the URL as `finish`, and every special pocket shows its own label and TCGplayer price.
+The **Spacing** control determines type boundaries. **None — continuous** packs one type directly after another without leaving gaps. **Between types — fresh page** starts every elemental/type section on a fresh binder page. Both choices include the same selected cards and keep each card's variants together; only type-page boundaries differ.
+
+The **Variants** menu applies to the complete master set. **All variants** includes every eligible Regular, Holo, Reverse Holo, Ball/Team Rocket, Energy, and other supported pattern printing. **None** shows one base slot per numbered card. Ex cards and other ineligible cards remain single-slot. Variants flow through the normal binder pages automatically; the page selector does not separate them into special variant pages. Supported catalog patterns currently include Ascended Heroes' Ball families, Team Rocket, and Energy symbols plus Poké Ball and Master Ball patterns in Prismatic Evolutions, Black Bolt, and White Flare. The selection is stored in the URL as `finish`, and old `finish=actual` links map to **None**.
 
 Special variants use the recreated filters on top of the official Pokémon base images by default. Add `render=scan` to the URL to use catalog scans instead. The filter mode uses centered vector masks for Ball, Team Rocket, and modern TCG Energy symbols. The Energy outlines are generated from the non-commercial Creative Commons EssentiarumTCG symbol font, which is not redistributed by this repository.
 
 ## Verified master-set counts
 
-The visualizer's **All master-set variants** option means one copy of every numbered set card, every eligible regular/holo/reverse-holo printing, every named set parallel, and every secret rare. Promos, stamped product variants, and other unnumbered cards are excluded.
+The visualizer's **All variants** option means one copy of every numbered set card, every eligible regular/holo/reverse-holo printing, every named set parallel, and every secret rare. Promos, stamped product variants, and other unnumbered cards are excluded.
 
 | Set | Cards | Set | Cards |
 |---|---:|---|---:|
@@ -32,7 +34,7 @@ The visualizer's **All master-set variants** option means one copy of every numb
 
 Prismatic Evolutions is sometimes reported as **455** when its eight unnumbered Basic Energy reverse holos are included. Those unnumbered Energy cards are outside the numbered-card scope above. Regression tests lock all 22 totals and distinguish sets where named patterns supplement an ordinary reverse holo from Ascended Heroes, where the named Pokémon patterns replace it.
 
-The experimental Poké Ball mask is based on [Poke ball by SoyGalem](https://thenounproject.com/icon/poke-ball-1390899/) from Noun Project (icon 1390899), with its dark artwork inverted to the visualizer's light watermark treatment.
+The recreated Poké Ball mask is based on [Poke ball by SoyGalem](https://thenounproject.com/icon/poke-ball-1390899/) from Noun Project (icon 1390899), with its dark artwork inverted to the visualizer's light watermark treatment.
 
 Click a card—or focus it and press Enter—to open a large card view. Reverse-holo cards retain their tonal treatment, border glow, and full-card shimmer in the enlarged view; standard Holo cards display the unmodified scan.
 

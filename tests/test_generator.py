@@ -1,5 +1,7 @@
 import json
 import re
+import shutil
+import subprocess
 import unittest
 from pathlib import Path
 
@@ -52,6 +54,30 @@ class GeneratorTests(unittest.TestCase):
         self.assertIn('"name":"Second Set"', html)
         self.assertNotIn("Load set JSON", html)
 
+    def test_generated_browser_script_has_valid_javascript_syntax(self):
+        node = shutil.which("node")
+        if not node:
+            self.skipTest("Node.js is not installed")
+        html = (Path(__file__).parents[1] / "index.html").read_text(encoding="utf-8")
+        script = re.search(r"<script>\s*(.*?)\s*</script>", html, re.DOTALL)
+        self.assertIsNotNone(script)
+        syntax_source = re.sub(
+            r"const DATASETS=.*?,PRICE_CATALOG=.*?;let active=",
+            "const DATASETS=[],PRICE_CATALOG={};let active=",
+            script.group(1),
+            count=1,
+            flags=re.DOTALL,
+        )
+        checked = subprocess.run(
+            [node, "--check", "-"],
+            input=syntax_source,
+            text=True,
+            capture_output=True,
+            check=False,
+            timeout=10,
+        )
+        self.assertEqual(checked.returncode, 0, checked.stderr)
+
     def test_supported_binder_formats_preserve_fresh_sections(self):
         cards = load_cards(self.config)
         self.assertEqual([item["id"] for item in BINDER_FORMATS], ["2x2", "3x3", "4x3", "4x4"])
@@ -60,7 +86,9 @@ class GeneratorTests(unittest.TestCase):
             pages = build_pages(cards, page_size, "paired")
             self.assertTrue(all(len(page["pockets"]) == page_size for page in pages))
             self.assertTrue(all(all(page["pockets"]) for page in pages[:-1]))
-        self.assertEqual([page["section"] for page in build_pages(cards, 9, "split")], ["First", "Second"])
+        split_pages = build_pages(cards, 9, "split")
+        self.assertEqual([page["section"] for page in split_pages], ["First", "Second"])
+        self.assertEqual(sum(bool(p) for page in split_pages for p in page["pockets"]), 5)
 
     def test_perfect_order_master_count_and_ex_slots(self):
         path = Path(__file__).parents[1] / "sets" / "perfect_order.json"
@@ -127,7 +155,9 @@ class GeneratorTests(unittest.TestCase):
     def test_named_patterns_supplement_real_reverse_holos(self):
         html = (Path(__file__).parents[1] / "index.html").read_text(encoding="utf-8")
         self.assertIn("const hasBaseReverse=Boolean", html)
-        self.assertIn("if(hasBaseReverse&&(finishSelect.value==='all'||finishSelect.value==='actual'))", html)
+        self.assertIn("if(hasBaseReverse)result.push(card)", html)
+        self.assertIn("if(finishSelect.value==='none')", html)
+        self.assertIn("if(seen.has(card.n))return false", html)
 
     def test_public_catalog_is_newest_first(self):
         html = (Path(__file__).parents[1] / "index.html").read_text(encoding="utf-8")
@@ -171,17 +201,25 @@ class GeneratorTests(unittest.TestCase):
         self.assertIn("SHOWCASE_LABELS", html)
         self.assertIn("energy:'Energy Symbol Pattern'", html)
         self.assertIn("cardShowcases(card)", html)
-        self.assertIn("All master-set variants", html)
-        self.assertIn("choices=finishes.length?['all','actual']:['actual']", html)
+        self.assertIn("'All variants':'None'", html)
+        self.assertIn("const choices=['all','none']", html)
+        self.assertIn("preferred==='actual'?'none':preferred", html)
         self.assertIn("expandedPockets", html)
-        self.assertIn("function orderedPockets(section)", html)
-        self.assertIn("if(layout.value==='paired')return pockets", html)
-        self.assertIn("card.finish?`finish:${card.finish}`:`variant:${card.variant}`", html)
-        self.assertIn("const pockets=orderedPockets(section)", html)
+        self.assertIn("if(layout.value==='split')", html)
+        self.assertIn("pages.push({section:section.name,pockets:chunk})", html)
+        self.assertIn("'each type starts on a fresh page':'types packed continuously'", html)
+        self.assertNotIn("group:`${section.name} — ${group.name}`", html)
+        self.assertIn("each type starts on a fresh page", html)
+        self.assertIn("types packed continuously", html)
+        self.assertIn("Spacing <select id=\"layout\">", html)
+        self.assertIn("None — continuous", html)
+        self.assertIn("Between types — fresh page", html)
         self.assertIn("variantImageUrl", html)
         self.assertIn("card.variantThumbnailUrl||card.variantImageUrl||card.url", html)
         self.assertIn("if(!card.finish||card.variantImageUrl)return null", html)
         self.assertIn("renderMode=initialParams.get('render')==='scan'?'scan':'filter'", html)
+        self.assertIn("preview=renderMode==='filter'?' · recreated filters':''", html)
+        self.assertNotIn("experimental recreated filters", html)
         self.assertIn("energy-vector-mark", html)
         self.assertIn(".holographic::before,.holographic::after{content:", html)
         self.assertNotIn("mask-image:linear-gradient(to bottom", html)
