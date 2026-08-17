@@ -10,7 +10,7 @@ The current set, binder format, ordering, showcased finish, and page are stored 
 
 The **Variants** menu is built from the selected set's TCGplayer master product list. **All master-set variants** expands each eligible card into consecutive base, assigned Ball/Team Rocket, and Energy pockets; ex cards and other ineligible cards remain single-slot. **Standard variants only** hides every special parallel. The card-level finish assignments remain automatic rather than appearing as separate menu choices. Supported catalog patterns currently include Ascended Heroes' Ball families, Team Rocket, and Energy symbols plus Poké Ball and Master Ball patterns in Prismatic Evolutions, Black Bolt, and White Flare. The selected layout filter is stored in the URL as `finish`, and every special pocket shows its own label and TCGplayer price.
 
-Special variants use their catalog scans by default. Add `render=filter` to the URL to preview the experimental recreation on top of the official Pokémon base images. This comparison mode uses centered vector masks for Ball, Team Rocket, and modern TCG Energy symbols; it does not replace the scan-based default. The Energy outlines are generated from the non-commercial Creative Commons EssentiarumTCG symbol font, which is not redistributed by this repository.
+Special variants use the recreated filters on top of the official Pokémon base images by default. Add `render=scan` to the URL to use catalog scans instead. The filter mode uses centered vector masks for Ball, Team Rocket, and modern TCG Energy symbols. The Energy outlines are generated from the non-commercial Creative Commons EssentiarumTCG symbol font, which is not redistributed by this repository.
 
 ## Verified master-set counts
 
