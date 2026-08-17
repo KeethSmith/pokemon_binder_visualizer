@@ -81,6 +81,7 @@ class GeneratorTests(unittest.TestCase):
     def test_supported_binder_formats_preserve_fresh_sections(self):
         cards = load_cards(self.config)
         self.assertEqual([item["id"] for item in BINDER_FORMATS], ["2x2", "3x3", "4x3", "4x4"])
+        self.assertEqual([item["label"] for item in BINDER_FORMATS], ["2 × 2", "3 × 3", "4 × 3", "4 × 4"])
         for binder_format in BINDER_FORMATS:
             page_size = binder_format["columns"] * binder_format["rows"]
             pages = build_pages(cards, page_size, "paired")
@@ -212,8 +213,8 @@ class GeneratorTests(unittest.TestCase):
         self.assertIn("each type starts on a fresh page", html)
         self.assertIn("types packed continuously", html)
         self.assertIn("Spacing <select id=\"layout\">", html)
-        self.assertIn("None — continuous", html)
-        self.assertIn("Between types — fresh page", html)
+        self.assertIn('<option value="paired">None</option>', html)
+        self.assertIn('<option value="split">Fresh page</option>', html)
         self.assertIn("variantImageUrl", html)
         self.assertIn("card.variantThumbnailUrl||card.variantImageUrl||card.url", html)
         self.assertIn("if(!card.finish||card.variantImageUrl)return null", html)

@@ -8,7 +8,7 @@ Visit the published GitHub Pages site, or open `index.html` locally. Choose any 
 
 The current set, binder format, ordering, showcased finish, and page are stored in the URL as `set`, `binder`, `order`, `finish`, and `page` parameters. Refreshing or sharing the URL restores the same view.
 
-The **Spacing** control determines type boundaries. **None — continuous** packs one type directly after another without leaving gaps. **Between types — fresh page** starts every elemental/type section on a fresh binder page. Both choices include the same selected cards and keep each card's variants together; only type-page boundaries differ.
+The **Spacing** control determines type boundaries. **None** packs one type directly after another without leaving gaps. **Fresh page** starts every elemental/type section on a new binder page. Both choices include the same selected cards and keep each card's variants together; only type-page boundaries differ.
 
 The **Variants** menu applies to the complete master set. **All variants** includes every eligible Regular, Holo, Reverse Holo, Ball/Team Rocket, Energy, and other supported pattern printing. **None** shows one base slot per numbered card. Ex cards and other ineligible cards remain single-slot. Variants flow through the normal binder pages automatically; the page selector does not separate them into special variant pages. Supported catalog patterns currently include Ascended Heroes' Ball families, Team Rocket, and Energy symbols plus Poké Ball and Master Ball patterns in Prismatic Evolutions, Black Bolt, and White Flare. The selection is stored in the URL as `finish`, and old `finish=actual` links map to **None**.
 
@@ -45,7 +45,7 @@ The visualizer provides two arrangements:
 - **Paired:** each regular card is followed by its reverse holo.
 - **Split:** regular cards appear first, followed by reverse holos.
 
-The **Binder** menu supports 2 × 2, 3 × 3, 4 × 3, and 4 × 4 pocket pages. Page totals and intentional blanks recalculate for the selected format, while every elemental type and collection section continues to begin on a fresh page.
+The **Binder** menu supports 2 × 2, 3 × 3, 4 × 3, and 4 × 4 layouts. Page totals and empty pockets recalculate for the selected format and spacing choice.
 
 Card variants are defined per set. Non-holo cards are labeled **Regular**, holo rares are labeled **Holo**, and their parallel finish is labeled **Reverse Holo**. ex cards use one pocket each unless the source data explicitly identifies another physical variant.
 
