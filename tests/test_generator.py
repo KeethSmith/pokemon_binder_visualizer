@@ -222,6 +222,8 @@ class GeneratorTests(unittest.TestCase):
         self.assertIn('id="controlsToggle" aria-controls="controls" aria-expanded="false"', html)
         self.assertIn("controls.classList.toggle('open')", html)
         self.assertIn(".controls.open{display:flex}", html)
+        self.assertIn(".page{gap:2px;padding:4px}", html)
+        self.assertIn(".pocket{padding:2px}", html)
         self.assertIn("variantImageUrl", html)
         self.assertIn("card.variantThumbnailUrl||card.variantImageUrl||card.url", html)
         self.assertIn("if(!card.finish||card.variantImageUrl)return null", html)
