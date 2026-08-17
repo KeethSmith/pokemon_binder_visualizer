@@ -34,15 +34,14 @@ class GeneratorTests(unittest.TestCase):
         self.assertEqual(image_url(self.config, 1), "https://images.example/example-set/CARD_001.png")
         self.assertEqual(cards[1].variants, ("Special",))
         pages = build_pages(cards, 9, "paired")
-        self.assertEqual([page["section"] for page in pages], ["First", "Second"])
-        self.assertEqual(len([p for p in pages[0]["pockets"] if p]), 3)
-        self.assertEqual(len([p for p in pages[1]["pockets"] if p]), 2)
+        self.assertEqual([page["section"] for page in pages], ["First / Second"])
+        self.assertEqual(len([p for p in pages[0]["pockets"] if p]), 5)
 
     def test_metrics(self):
         stats = metrics(self.config, load_cards(self.config))
         self.assertEqual(stats["master_cards"], 5)
-        self.assertEqual(stats["used_pages"], 2)
-        self.assertEqual(stats["blanks"], 13)
+        self.assertEqual(stats["used_pages"], 1)
+        self.assertEqual(stats["blanks"], 4)
 
     def test_bundled_sets_render_without_import_control(self):
         cards = load_cards(self.config)
@@ -59,8 +58,9 @@ class GeneratorTests(unittest.TestCase):
         for binder_format in BINDER_FORMATS:
             page_size = binder_format["columns"] * binder_format["rows"]
             pages = build_pages(cards, page_size, "paired")
-            self.assertEqual([page["section"] for page in pages], ["First", "Second"])
             self.assertTrue(all(len(page["pockets"]) == page_size for page in pages))
+            self.assertTrue(all(all(page["pockets"]) for page in pages[:-1]))
+        self.assertEqual([page["section"] for page in build_pages(cards, 9, "split")], ["First", "Second"])
 
     def test_perfect_order_master_count_and_ex_slots(self):
         path = Path(__file__).parents[1] / "sets" / "perfect_order.json"

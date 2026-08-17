@@ -2,9 +2,9 @@ PERFECT ORDER — BINDER LAYOUT
 ================================================================
 
 Image template: https://dz3we2x72f7ol.cloudfront.net/expansions/{set_slug}/en-us/{image_prefix}_{number}-2x.png
-Every configured section begins on a fresh page.
+Paired order packs continuously; split order begins each section on a fresh page.
 
-Totals: 203 cards | 26 used pages | 31 deliberate blanks | 14 unused pages.
+Totals: 203 cards | 23 used pages | 4 deliberate blanks | 17 unused pages.
 
 
 PAIRED LAYOUT
@@ -20,125 +20,110 @@ PAGE 02 — Grass
 4. #007 Scatterbug — Regular | 5. #007 Scatterbug — Reverse Holo | 6. #008 Spewpa — Regular
 7. #008 Spewpa — Reverse Holo | 8. #009 Vivillon — Regular | 9. #009 Vivillon — Reverse Holo
 
-PAGE 03 — Grass
+PAGE 03 — Grass / Fire
 1. #010 Rowlet — Regular | 2. #010 Rowlet — Reverse Holo | 3. #011 Dartrix — Regular
-4. #011 Dartrix — Reverse Holo | 5. #012 Decidueye ex — Holo | 6. EMPTY
-7. EMPTY | 8. EMPTY | 9. EMPTY
+4. #011 Dartrix — Reverse Holo | 5. #012 Decidueye ex — Holo | 6. #013 Fletchinder — Regular
+7. #013 Fletchinder — Reverse Holo | 8. #014 Talonflame — Regular | 9. #014 Talonflame — Reverse Holo
 
-PAGE 04 — Fire
-1. #013 Fletchinder — Regular | 2. #013 Fletchinder — Reverse Holo | 3. #014 Talonflame — Regular
-4. #014 Talonflame — Reverse Holo | 5. #015 Salandit — Regular | 6. #015 Salandit — Reverse Holo
-7. #016 Salazzle ex — Holo | 8. #017 Turtonator — Regular | 9. #017 Turtonator — Reverse Holo
+PAGE 04 — Fire / Water
+1. #015 Salandit — Regular | 2. #015 Salandit — Reverse Holo | 3. #016 Salazzle ex — Holo
+4. #017 Turtonator — Regular | 5. #017 Turtonator — Reverse Holo | 6. #018 Seel — Regular
+7. #018 Seel — Reverse Holo | 8. #019 Dewgong — Holo | 9. #019 Dewgong — Reverse Holo
 
 PAGE 05 — Water
-1. #018 Seel — Regular | 2. #018 Seel — Reverse Holo | 3. #019 Dewgong — Holo
-4. #019 Dewgong — Reverse Holo | 5. #020 Staryu — Regular | 6. #020 Staryu — Reverse Holo
-7. #021 Mega Starmie ex — Holo | 8. #022 Lapras ex — Holo | 9. #023 Amaura — Regular
+1. #020 Staryu — Regular | 2. #020 Staryu — Reverse Holo | 3. #021 Mega Starmie ex — Holo
+4. #022 Lapras ex — Holo | 5. #023 Amaura — Regular | 6. #023 Amaura — Reverse Holo
+7. #024 Aurorus — Holo | 8. #024 Aurorus — Reverse Holo | 9. #025 Volcanion — Regular
 
-PAGE 06 — Water
-1. #023 Amaura — Reverse Holo | 2. #024 Aurorus — Holo | 3. #024 Aurorus — Reverse Holo
-4. #025 Volcanion — Regular | 5. #025 Volcanion — Reverse Holo | 6. EMPTY
-7. EMPTY | 8. EMPTY | 9. EMPTY
+PAGE 06 — Water / Lightning
+1. #025 Volcanion — Reverse Holo | 2. #026 Shinx — Regular | 3. #026 Shinx — Reverse Holo
+4. #027 Luxio — Regular | 5. #027 Luxio — Reverse Holo | 6. #028 Luxray — Holo
+7. #028 Luxray — Reverse Holo | 8. #029 Dedenne — Regular | 9. #029 Dedenne — Reverse Holo
 
-PAGE 07 — Lightning
-1. #026 Shinx — Regular | 2. #026 Shinx — Reverse Holo | 3. #027 Luxio — Regular
-4. #027 Luxio — Reverse Holo | 5. #028 Luxray — Holo | 6. #028 Luxray — Reverse Holo
-7. #029 Dedenne — Regular | 8. #029 Dedenne — Reverse Holo | 9. EMPTY
-
-PAGE 08 — Psychic
+PAGE 07 — Psychic
 1. #030 Clefairy — Regular | 2. #030 Clefairy — Reverse Holo | 3. #031 Mega Clefable ex — Holo
 4. #032 Mawile — Regular | 5. #032 Mawile — Reverse Holo | 6. #033 Espurr — Regular
 7. #033 Espurr — Reverse Holo | 8. #034 Meowstic — Regular | 9. #034 Meowstic — Reverse Holo
 
-PAGE 09 — Psychic
+PAGE 08 — Psychic / Fighting
 1. #035 Spritzee — Regular | 2. #035 Spritzee — Reverse Holo | 3. #036 Aromatisse — Regular
-4. #036 Aromatisse — Reverse Holo | 5. EMPTY | 6. EMPTY
-7. EMPTY | 8. EMPTY | 9. EMPTY
+4. #036 Aromatisse — Reverse Holo | 5. #037 Nosepass — Regular | 6. #037 Nosepass — Reverse Holo
+7. #038 Probopass — Regular | 8. #038 Probopass — Reverse Holo | 9. #039 Hippopotas — Regular
 
-PAGE 10 — Fighting
-1. #037 Nosepass — Regular | 2. #037 Nosepass — Reverse Holo | 3. #038 Probopass — Regular
-4. #038 Probopass — Reverse Holo | 5. #039 Hippopotas — Regular | 6. #039 Hippopotas — Reverse Holo
-7. #040 Hippowdon — Regular | 8. #040 Hippowdon — Reverse Holo | 9. #041 Landorus — Holo
+PAGE 09 — Fighting
+1. #039 Hippopotas — Reverse Holo | 2. #040 Hippowdon — Regular | 3. #040 Hippowdon — Reverse Holo
+4. #041 Landorus — Holo | 5. #041 Landorus — Reverse Holo | 6. #042 Binacle — Regular
+7. #042 Binacle — Reverse Holo | 8. #043 Barbaracle — Regular | 9. #043 Barbaracle — Reverse Holo
 
-PAGE 11 — Fighting
-1. #041 Landorus — Reverse Holo | 2. #042 Binacle — Regular | 3. #042 Binacle — Reverse Holo
-4. #043 Barbaracle — Regular | 5. #043 Barbaracle — Reverse Holo | 6. #044 Tyrunt — Regular
-7. #044 Tyrunt — Reverse Holo | 8. #045 Tyrantrum — Holo | 9. #045 Tyrantrum — Reverse Holo
+PAGE 10 — Fighting / Darkness
+1. #044 Tyrunt — Regular | 2. #044 Tyrunt — Reverse Holo | 3. #045 Tyrantrum — Holo
+4. #045 Tyrantrum — Reverse Holo | 5. #046 Hawlucha — Regular | 6. #046 Hawlucha — Reverse Holo
+7. #047 Mega Zygarde ex — Holo | 8. #048 Gastly — Regular | 9. #048 Gastly — Reverse Holo
 
-PAGE 12 — Fighting
-1. #046 Hawlucha — Regular | 2. #046 Hawlucha — Reverse Holo | 3. #047 Mega Zygarde ex — Holo
-4. EMPTY | 5. EMPTY | 6. EMPTY
-7. EMPTY | 8. EMPTY | 9. EMPTY
+PAGE 11 — Darkness
+1. #049 Haunter — Regular | 2. #049 Haunter — Reverse Holo | 3. #050 Gengar — Holo
+4. #050 Gengar — Reverse Holo | 5. #051 Skorupi — Regular | 6. #051 Skorupi — Reverse Holo
+7. #052 Drapion — Regular | 8. #052 Drapion — Reverse Holo | 9. #053 Yveltal ex — Holo
 
-PAGE 13 — Darkness
-1. #048 Gastly — Regular | 2. #048 Gastly — Reverse Holo | 3. #049 Haunter — Regular
-4. #049 Haunter — Reverse Holo | 5. #050 Gengar — Holo | 6. #050 Gengar — Reverse Holo
-7. #051 Skorupi — Regular | 8. #051 Skorupi — Reverse Holo | 9. #052 Drapion — Regular
+PAGE 12 — Darkness / Metal
+1. #054 Chien-Pao — Holo | 2. #054 Chien-Pao — Reverse Holo | 3. #055 Mega Skarmory ex — Holo
+4. #056 Honedge — Regular | 5. #056 Honedge — Reverse Holo | 6. #057 Doublade — Regular
+7. #057 Doublade — Reverse Holo | 8. #058 Aegislash — Regular | 9. #058 Aegislash — Reverse Holo
 
-PAGE 14 — Darkness
-1. #052 Drapion — Reverse Holo | 2. #053 Yveltal ex — Holo | 3. #054 Chien-Pao — Holo
-4. #054 Chien-Pao — Reverse Holo | 5. EMPTY | 6. EMPTY
-7. EMPTY | 8. EMPTY | 9. EMPTY
+PAGE 13 — Metal / Colorless
+1. #059 Klefki — Regular | 2. #059 Klefki — Reverse Holo | 3. #060 Rattata — Regular
+4. #060 Rattata — Reverse Holo | 5. #061 Raticate — Regular | 6. #061 Raticate — Reverse Holo
+7. #062 Meowth ex — Holo | 8. #063 Snorlax — Regular | 9. #063 Snorlax — Reverse Holo
 
-PAGE 15 — Metal
-1. #055 Mega Skarmory ex — Holo | 2. #056 Honedge — Regular | 3. #056 Honedge — Reverse Holo
-4. #057 Doublade — Regular | 5. #057 Doublade — Reverse Holo | 6. #058 Aegislash — Regular
-7. #058 Aegislash — Reverse Holo | 8. #059 Klefki — Regular | 9. #059 Klefki — Reverse Holo
+PAGE 14 — Colorless / Trainers
+1. #064 Bunnelby — Regular | 2. #064 Bunnelby — Reverse Holo | 3. #065 Diggersby — Regular
+4. #065 Diggersby — Reverse Holo | 5. #066 Fletchling — Regular | 6. #066 Fletchling — Reverse Holo
+7. #067 Furfrou — Regular | 8. #067 Furfrou — Reverse Holo | 9. #068 Antique Jaw Fossil — Regular
 
-PAGE 16 — Colorless
-1. #060 Rattata — Regular | 2. #060 Rattata — Reverse Holo | 3. #061 Raticate — Regular
-4. #061 Raticate — Reverse Holo | 5. #062 Meowth ex — Holo | 6. #063 Snorlax — Regular
-7. #063 Snorlax — Reverse Holo | 8. #064 Bunnelby — Regular | 9. #064 Bunnelby — Reverse Holo
+PAGE 15 — Trainers
+1. #068 Antique Jaw Fossil — Reverse Holo | 2. #069 Antique Sail Fossil — Regular | 3. #069 Antique Sail Fossil — Reverse Holo
+4. #070 Core Memory — Regular | 5. #070 Core Memory — Reverse Holo | 6. #071 Crushing Hammer — Regular
+7. #071 Crushing Hammer — Reverse Holo | 8. #072 Energy Search — Regular | 9. #072 Energy Search — Reverse Holo
 
-PAGE 17 — Colorless
-1. #065 Diggersby — Regular | 2. #065 Diggersby — Reverse Holo | 3. #066 Fletchling — Regular
-4. #066 Fletchling — Reverse Holo | 5. #067 Furfrou — Regular | 6. #067 Furfrou — Reverse Holo
-7. EMPTY | 8. EMPTY | 9. EMPTY
+PAGE 16 — Trainers
+1. #073 Energy Swatter — Regular | 2. #073 Energy Swatter — Reverse Holo | 3. #074 Hole-Digging Shovel — Regular
+4. #074 Hole-Digging Shovel — Reverse Holo | 5. #075 Jacinthe — Regular | 6. #075 Jacinthe — Reverse Holo
+7. #076 Judge — Regular | 8. #076 Judge — Reverse Holo | 9. #077 Lumiose City — Regular
 
-PAGE 18 — Trainers
-1. #068 Antique Jaw Fossil — Regular | 2. #068 Antique Jaw Fossil — Reverse Holo | 3. #069 Antique Sail Fossil — Regular
-4. #069 Antique Sail Fossil — Reverse Holo | 5. #070 Core Memory — Regular | 6. #070 Core Memory — Reverse Holo
-7. #071 Crushing Hammer — Regular | 8. #071 Crushing Hammer — Reverse Holo | 9. #072 Energy Search — Regular
+PAGE 17 — Trainers
+1. #077 Lumiose City — Reverse Holo | 2. #078 Lumiose Galette — Regular | 3. #078 Lumiose Galette — Reverse Holo
+4. #079 Naveen — Regular | 5. #079 Naveen — Reverse Holo | 6. #080 Poké Ball — Regular
+7. #080 Poké Ball — Reverse Holo | 8. #081 Poké Pad — Regular | 9. #081 Poké Pad — Reverse Holo
 
-PAGE 19 — Trainers
-1. #072 Energy Search — Reverse Holo | 2. #073 Energy Swatter — Regular | 3. #073 Energy Swatter — Reverse Holo
-4. #074 Hole-Digging Shovel — Regular | 5. #074 Hole-Digging Shovel — Reverse Holo | 6. #075 Jacinthe — Regular
-7. #075 Jacinthe — Reverse Holo | 8. #076 Judge — Regular | 9. #076 Judge — Reverse Holo
+PAGE 18 — Trainers / Energy
+1. #082 Pokémon Catcher — Regular | 2. #082 Pokémon Catcher — Reverse Holo | 3. #083 Potion — Regular
+4. #083 Potion — Reverse Holo | 5. #084 Rosa's Encouragement — Regular | 6. #084 Rosa's Encouragement — Reverse Holo
+7. #085 Tarragon — Regular | 8. #085 Tarragon — Reverse Holo | 9. #086 Growing Grass Energy — Holo
 
-PAGE 20 — Trainers
-1. #077 Lumiose City — Regular | 2. #077 Lumiose City — Reverse Holo | 3. #078 Lumiose Galette — Regular
-4. #078 Lumiose Galette — Reverse Holo | 5. #079 Naveen — Regular | 6. #079 Naveen — Reverse Holo
-7. #080 Poké Ball — Regular | 8. #080 Poké Ball — Reverse Holo | 9. #081 Poké Pad — Regular
+PAGE 19 — Energy / Secret Rares
+1. #086 Growing Grass Energy — Reverse Holo | 2. #087 Rocky Fighting Energy — Holo | 3. #087 Rocky Fighting Energy — Reverse Holo
+4. #088 Telepathic Psychic Energy — Holo | 5. #088 Telepathic Psychic Energy — Reverse Holo | 6. #089 Spewpa — Holo
+7. #090 Rowlet — Holo | 8. #091 Talonflame — Holo | 9. #092 Aurorus — Holo
 
-PAGE 21 — Trainers
-1. #081 Poké Pad — Reverse Holo | 2. #082 Pokémon Catcher — Regular | 3. #082 Pokémon Catcher — Reverse Holo
-4. #083 Potion — Regular | 5. #083 Potion — Reverse Holo | 6. #084 Rosa's Encouragement — Regular
-7. #084 Rosa's Encouragement — Reverse Holo | 8. #085 Tarragon — Regular | 9. #085 Tarragon — Reverse Holo
+PAGE 20 — Secret Rares
+1. #093 Dedenne — Holo | 2. #094 Clefairy — Holo | 3. #095 Espurr — Holo
+4. #096 Probopass — Holo | 5. #097 Drapion — Holo | 6. #098 Doublade — Holo
+7. #099 Raticate — Holo | 8. #100 Decidueye ex — Holo | 9. #101 Salazzle ex — Holo
 
-PAGE 22 — Energy
-1. #086 Growing Grass Energy — Holo | 2. #086 Growing Grass Energy — Reverse Holo | 3. #087 Rocky Fighting Energy — Holo
-4. #087 Rocky Fighting Energy — Reverse Holo | 5. #088 Telepathic Psychic Energy — Holo | 6. #088 Telepathic Psychic Energy — Reverse Holo
-7. EMPTY | 8. EMPTY | 9. EMPTY
+PAGE 21 — Secret Rares
+1. #102 Mega Starmie ex — Holo | 2. #103 Mega Clefable ex — Holo | 3. #104 Mega Zygarde ex — Holo
+4. #105 Yveltal ex — Holo | 5. #106 Mega Skarmory ex — Holo | 6. #107 Meowth ex — Holo
+7. #108 Energy Recycler — Holo | 8. #109 Forest of Vitality — Holo | 9. #110 Jacinthe — Holo
+
+PAGE 22 — Secret Rares
+1. #111 Lumiose City — Holo | 2. #112 Naveen — Holo | 3. #113 Poké Pad — Holo
+4. #114 Rosa's Encouragement — Holo | 5. #115 Sacred Ash — Holo | 6. #116 Tarragon — Holo
+7. #117 Wondrous Patch — Holo | 8. #118 Mega Starmie ex — Holo | 9. #119 Mega Clefable ex — Holo
 
 PAGE 23 — Secret Rares
-1. #089 Spewpa — Holo | 2. #090 Rowlet — Holo | 3. #091 Talonflame — Holo
-4. #092 Aurorus — Holo | 5. #093 Dedenne — Holo | 6. #094 Clefairy — Holo
-7. #095 Espurr — Holo | 8. #096 Probopass — Holo | 9. #097 Drapion — Holo
-
-PAGE 24 — Secret Rares
-1. #098 Doublade — Holo | 2. #099 Raticate — Holo | 3. #100 Decidueye ex — Holo
-4. #101 Salazzle ex — Holo | 5. #102 Mega Starmie ex — Holo | 6. #103 Mega Clefable ex — Holo
-7. #104 Mega Zygarde ex — Holo | 8. #105 Yveltal ex — Holo | 9. #106 Mega Skarmory ex — Holo
-
-PAGE 25 — Secret Rares
-1. #107 Meowth ex — Holo | 2. #108 Energy Recycler — Holo | 3. #109 Forest of Vitality — Holo
-4. #110 Jacinthe — Holo | 5. #111 Lumiose City — Holo | 6. #112 Naveen — Holo
-7. #113 Poké Pad — Holo | 8. #114 Rosa's Encouragement — Holo | 9. #115 Sacred Ash — Holo
-
-PAGE 26 — Secret Rares
-1. #116 Tarragon — Holo | 2. #117 Wondrous Patch — Holo | 3. #118 Mega Starmie ex — Holo
-4. #119 Mega Clefable ex — Holo | 5. #120 Mega Zygarde ex — Holo | 6. #121 Meowth ex — Holo
-7. #122 Jacinthe — Holo | 8. #123 Rosa's Encouragement — Holo | 9. #124 Mega Zygarde ex — Holo
+1. #120 Mega Zygarde ex — Holo | 2. #121 Meowth ex — Holo | 3. #122 Jacinthe — Holo
+4. #123 Rosa's Encouragement — Holo | 5. #124 Mega Zygarde ex — Holo | 6. EMPTY
+7. EMPTY | 8. EMPTY | 9. EMPTY
 
 
 SPLIT LAYOUT
