@@ -178,6 +178,9 @@ class GeneratorTests(unittest.TestCase):
     def test_cards_have_an_accessible_large_view(self):
         html = (Path(__file__).parents[1] / "index.html").read_text(encoding="utf-8")
         self.assertIn('<dialog id="cardDialog"', html)
+        self.assertLess(html.index('class="page-head"'), html.index('class="page-nav"'))
+        self.assertIn("textContent=`Page ${index+1} — ${data.section}`", html)
+        self.assertNotIn("textContent=`${active.name} · Page", html)
         self.assertIn("cardDialog.showModal()", html)
         self.assertIn("el.setAttribute('role','button')", html)
         self.assertIn("event.key==='Enter'||event.key===' '", html)
@@ -215,6 +218,7 @@ class GeneratorTests(unittest.TestCase):
         self.assertIn("Spacing <select id=\"layout\">", html)
         self.assertIn('<option value="paired">None</option>', html)
         self.assertIn('<option value="split">Fresh page</option>', html)
+        self.assertIn("touch-action:manipulation", html)
         self.assertIn("variantImageUrl", html)
         self.assertIn("card.variantThumbnailUrl||card.variantImageUrl||card.url", html)
         self.assertIn("if(!card.finish||card.variantImageUrl)return null", html)
