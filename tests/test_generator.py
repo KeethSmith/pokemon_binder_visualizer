@@ -107,7 +107,7 @@ class GeneratorTests(unittest.TestCase):
     def test_all_bundled_sets_load_and_keep_ex_cards_single_slot(self):
         directory = Path(__file__).parents[1] / "sets" / "builtin"
         paths = sorted(directory.glob("*.json"))
-        self.assertEqual(len(paths), 22)
+        self.assertEqual(len(paths), 24)
         for path in paths:
             config = json.loads(path.read_text(encoding="utf-8"))
             cards = load_cards(config)
@@ -120,6 +120,7 @@ class GeneratorTests(unittest.TestCase):
 
     def test_bundled_master_set_counts_match_published_checklists(self):
         expected = {
+            "thirty": 158, "thirtycc": 30,
             "me01": 310, "me02": 214, "me02.5": 613, "me04": 198, "me05": 194,
             "sv01": 444, "sv02": 455, "sv03": 406, "sv03.5": 360,
             "sv04": 428, "sv04.5": 326, "sv05": 358, "sv06": 373,
@@ -167,7 +168,7 @@ class GeneratorTests(unittest.TestCase):
         datasets = json.loads(match.group(1))
         dates = [item["releaseDate"] for item in datasets]
         self.assertEqual(dates, sorted(dates, reverse=True))
-        self.assertEqual(datasets[0]["name"], "Pitch Black")
+        self.assertEqual(datasets[0]["name"], "30th Celebration")
 
     def test_public_view_state_is_encoded_in_url(self):
         html = (Path(__file__).parents[1] / "index.html").read_text(encoding="utf-8")

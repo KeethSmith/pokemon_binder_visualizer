@@ -1,0 +1,1196 @@
+{
+  "set": {
+    "name": "30th Celebration",
+    "short_name": "30th Celebration",
+    "code": "THIRTY",
+    "release_date": "2026-09-16"
+  },
+  "image": {
+    "url_template": "https://dz3we2x72f7ol.cloudfront.net/expansions/30th-celebration/en-us/2M6P_EN_{number}-2x.png",
+    "number_padding": 0
+  },
+  "binder": {
+    "pockets_per_page": 9,
+    "columns": 3
+  },
+  "appearance": {
+    "holographic_variants": [
+      "Reverse Holo"
+    ],
+    "holographic_opacity": 0.58,
+    "holographic_darkening": 0.315
+  },
+  "sources": [
+    "https://d1i787aglh9bmb.cloudfront.net/assets/img/me-expansions/thirty/gallery/_pdfs/P11221_30th_Celebration_Card_List_EN_HiRes.pdf",
+    "https://tcg.pokemon.com/assets/img/me-expansions/30th-celebration/cards/cards.json"
+  ],
+  "notes": "Numbered standard foil cards only; no reverse parallels listed. Classic numbers identify official gallery images, not original collector numbers. Unnumbered product Energy/promos excluded.",
+  "sections": [
+    {
+      "name": "Grass",
+      "cards": [
+        {
+          "number": 1,
+          "name": "Exeggcute",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 2,
+          "name": "Alolan Exeggutor",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 3,
+          "name": "Volbeat",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 4,
+          "name": "Illumise",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 5,
+          "name": "Tropius",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 6,
+          "name": "Cherubi",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 7,
+          "name": "Cherrim",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 8,
+          "name": "Vivillon",
+          "variants": [
+            "Holo"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fire",
+      "cards": [
+        {
+          "number": 9,
+          "name": "Vulpix",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 10,
+          "name": "Ninetales",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 11,
+          "name": "Moltres",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 12,
+          "name": "Ho-Oh",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 13,
+          "name": "Victini",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 14,
+          "name": "Reshiram",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 15,
+          "name": "Fuecoco ex",
+          "variants": [
+            "Holo"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Water",
+      "cards": [
+        {
+          "number": 16,
+          "name": "Slowpoke",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 17,
+          "name": "Lapras",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 18,
+          "name": "Articuno",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 19,
+          "name": "Kyogre",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 20,
+          "name": "Palkia",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 21,
+          "name": "Greninja ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 22,
+          "name": "Wishiwashi",
+          "variants": [
+            "Holo"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lightning",
+      "cards": [
+        {
+          "number": 23,
+          "name": "Pikachu",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 24,
+          "name": "Pikachu",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 25,
+          "name": "Pikachu",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 26,
+          "name": "Pikachu",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 27,
+          "name": "Pikachu",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 28,
+          "name": "Pikachu",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 29,
+          "name": "Pikachu",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 30,
+          "name": "Pikachu",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 31,
+          "name": "Pikachu",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 32,
+          "name": "Pikachu",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 33,
+          "name": "Pikachu",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 34,
+          "name": "Pikachu",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 35,
+          "name": "Pikachu",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 36,
+          "name": "Pikachu",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 37,
+          "name": "Pikachu",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 38,
+          "name": "Pikachu",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 39,
+          "name": "Pikachu",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 40,
+          "name": "Pikachu",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 41,
+          "name": "Pikachu",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 42,
+          "name": "Pikachu",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 43,
+          "name": "Pikachu",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 44,
+          "name": "Pikachu",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 45,
+          "name": "Pikachu",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 46,
+          "name": "Pikachu",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 47,
+          "name": "Pikachu",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 48,
+          "name": "Pikachu",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 49,
+          "name": "Pikachu",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 50,
+          "name": "Pikachu",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 51,
+          "name": "Pikachu",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 52,
+          "name": "Pikachu",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 53,
+          "name": "Pikachu ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 54,
+          "name": "Pikachu ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 55,
+          "name": "Zapdos",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 56,
+          "name": "Zekrom",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 57,
+          "name": "Zeraora",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 58,
+          "name": "Toxel",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 59,
+          "name": "Toxtricity",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 60,
+          "name": "Toxtricity",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 61,
+          "name": "Morpeko",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 62,
+          "name": "Miraidon",
+          "variants": [
+            "Holo"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Psychic",
+      "cards": [
+        {
+          "number": 63,
+          "name": "Mewtwo",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 64,
+          "name": "Mewtwo ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 65,
+          "name": "Mew",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 66,
+          "name": "Mew ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 67,
+          "name": "Marill",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 68,
+          "name": "Azumarill",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 69,
+          "name": "Espeon",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 70,
+          "name": "Espeon ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 71,
+          "name": "Sylveon ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 72,
+          "name": "Unown",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 73,
+          "name": "Drifloon",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 74,
+          "name": "Cresselia",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 75,
+          "name": "Chandelure",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 76,
+          "name": "Xerneas",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 77,
+          "name": "Comfey",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 78,
+          "name": "Cosmog",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 79,
+          "name": "Cosmoem",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 80,
+          "name": "Lunala",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 81,
+          "name": "Gimmighoul",
+          "variants": [
+            "Holo"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fighting",
+      "cards": [
+        {
+          "number": 82,
+          "name": "Groudon",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 83,
+          "name": "Lucario",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 84,
+          "name": "Seismitoad",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 85,
+          "name": "Lycanroc",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 86,
+          "name": "Koraidon",
+          "variants": [
+            "Holo"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Darkness",
+      "cards": [
+        {
+          "number": 87,
+          "name": "Nidoran♀",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 88,
+          "name": "Nidorina",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 89,
+          "name": "Alolan Meowth",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 90,
+          "name": "Gengar ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 91,
+          "name": "Umbreon",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 92,
+          "name": "Umbreon ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 93,
+          "name": "Murkrow",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 94,
+          "name": "Scraggy",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 95,
+          "name": "Zorua",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 96,
+          "name": "Zoroark",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 97,
+          "name": "Deino",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 98,
+          "name": "Zweilous",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 99,
+          "name": "Hydreigon",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 100,
+          "name": "Yveltal",
+          "variants": [
+            "Holo"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Metal",
+      "cards": [
+        {
+          "number": 101,
+          "name": "Galarian Meowth",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 102,
+          "name": "Jirachi ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 103,
+          "name": "Dialga",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 104,
+          "name": "Ferrothorn",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 105,
+          "name": "Solgaleo",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 106,
+          "name": "Zacian",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 107,
+          "name": "Zamazenta",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 108,
+          "name": "Gholdengo",
+          "variants": [
+            "Holo"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Dragon",
+      "cards": [
+        {
+          "number": 109,
+          "name": "Salamence ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 110,
+          "name": "Jangmo-o",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 111,
+          "name": "Hakamo-o",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 112,
+          "name": "Kommo-o",
+          "variants": [
+            "Holo"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Colorless",
+      "cards": [
+        {
+          "number": 113,
+          "name": "Meowth",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 114,
+          "name": "Kangaskhan",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 115,
+          "name": "Ditto",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 116,
+          "name": "Eevee",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 117,
+          "name": "Eevee",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 118,
+          "name": "Eevee",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 119,
+          "name": "Snorlax",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 120,
+          "name": "Igglybuff",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 121,
+          "name": "Lugia",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 122,
+          "name": "Hisuian Zorua",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 123,
+          "name": "Hisuian Zoroark",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 124,
+          "name": "Minior",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 125,
+          "name": "Maushold",
+          "variants": [
+            "Holo"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Trainers",
+      "cards": [
+        {
+          "number": 126,
+          "name": "Poké Pad",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 127,
+          "name": "Switch",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 128,
+          "name": "Ultra Ball",
+          "variants": [
+            "Holo"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Secret Rares",
+      "cards": [
+        {
+          "number": 129,
+          "name": "Alolan Exeggutor",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 130,
+          "name": "Moltres",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 131,
+          "name": "Lapras",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 132,
+          "name": "Articuno",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 133,
+          "name": "Zapdos",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 134,
+          "name": "Toxtricity",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 135,
+          "name": "Morpeko",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 136,
+          "name": "Drifloon",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 137,
+          "name": "Chandelure",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 138,
+          "name": "Lycanroc",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 139,
+          "name": "Alolan Meowth",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 140,
+          "name": "Scraggy",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 141,
+          "name": "Galarian Meowth",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 142,
+          "name": "Gholdengo",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 143,
+          "name": "Kommo-o",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 144,
+          "name": "Meowth",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 145,
+          "name": "Hisuian Zorua",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 146,
+          "name": "Maushold",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 147,
+          "name": "Fuecoco ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 148,
+          "name": "Greninja ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 149,
+          "name": "Pikachu ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 150,
+          "name": "Pikachu ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 151,
+          "name": "Mewtwo ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 152,
+          "name": "Mew ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 153,
+          "name": "Sylveon ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 154,
+          "name": "Gengar ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 155,
+          "name": "Jirachi ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 156,
+          "name": "Salamence ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 157,
+          "name": "Mewtwo ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 158,
+          "name": "Mew ex",
+          "variants": [
+            "Holo"
+          ]
+        }
+      ]
+    }
+  ]
+}
