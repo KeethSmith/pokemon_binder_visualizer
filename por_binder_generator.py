@@ -10,7 +10,7 @@ from binder_generator import load_cards, render_html, render_text
 
 
 BUILTIN_ORDER = [
-    "thirty", "thirtycc",
+    "thirty",
     "me05", "me04", "perfect_order", "me02pt5", "me02", "me01",
     "sv10pt5b", "sv10pt5w", "sv10", "sv09", "sv08pt5", "sv08",
     "sv07", "sv06pt5", "sv06", "sv05", "sv04pt5", "sv04",

@@ -16,7 +16,7 @@ Special variants use the recreated filters on top of the official Pokémon base 
 
 ## Verified master-set counts
 
-30th Celebration is bundled from Pokémon's official gallery and checklist: 158 numbered main-set cards and a separate 30-card Classic Collection. The checklist lists standard-set foil only, so no reverse-holo copies are invented. Product Basic Energy and promos remain excluded. Classic slot numbers follow the official gallery's image order, rather than the cards' historical collector numbers. Rebuild with `python scripts/build_30th_celebration.py`; verify the official images with `--check-images`.
+30th Celebration combines 158 main-set cards and 30 Classic Collection cards in the official PDF checklist order. Explicit image overrides keep Classic names matched to their official scans despite the different CDN ordering. Classic IDs 159–188 are internal slot identifiers, not printed collector numbers. The checklist lists standard-set foil only, so no reverse-holo copies are invented. Product Basic Energy and promos remain excluded; official gallery Energy scans have not been located. Rebuild with `python scripts/build_30th_celebration.py`; verify the official images with `--check-images`.
 
 The visualizer's **All variants** option means one copy of every numbered set card, every eligible regular/holo/reverse-holo printing, every named set parallel, and every secret rare. Promos, stamped product variants, and other unnumbered cards are excluded.
 

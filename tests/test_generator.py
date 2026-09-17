@@ -106,8 +106,14 @@ class GeneratorTests(unittest.TestCase):
 
     def test_classic_collection_names_match_verified_official_images(self):
         root = Path(__file__).parents[1]
-        config = json.loads((root / 'sets/builtin/thirtycc.json').read_text(encoding='utf-8'))
-        names = [card.name for card in load_cards(config)]
+        config = json.loads((root / 'sets/builtin/thirty.json').read_text(encoding='utf-8'))
+        cards = load_cards(config)[158:]
+        by_image = {int(card.image_url.split('_')[-1].split('-')[0]): card for card in cards}
+        names = [by_image[n].name for n in range(1, 31)]
+        self.assertEqual(cards[0].name, 'Pikachu')
+        self.assertTrue(cards[0].image_url.endswith('_14-2x.png'))
+        self.assertEqual(cards[1].name, 'Charizard')
+        self.assertEqual(cards[-1].name, 'Magikarp')
         self.assertEqual(names, [
             'Charizard', 'Delcatty', 'Metagross δ', 'Genesect-EX', 'Misty',
             'Dark Tyranitar', 'Sneasel', 'Pikachu & Zekrom-GX', 'Greninja BREAK', 'Uxie',
@@ -121,7 +127,7 @@ class GeneratorTests(unittest.TestCase):
     def test_all_bundled_sets_load_and_keep_ex_cards_single_slot(self):
         directory = Path(__file__).parents[1] / "sets" / "builtin"
         paths = sorted(directory.glob("*.json"))
-        self.assertEqual(len(paths), 24)
+        self.assertEqual(len(paths), 23)
         for path in paths:
             config = json.loads(path.read_text(encoding="utf-8"))
             cards = load_cards(config)
@@ -134,7 +140,7 @@ class GeneratorTests(unittest.TestCase):
 
     def test_bundled_master_set_counts_match_published_checklists(self):
         expected = {
-            "thirty": 158, "thirtycc": 30,
+            "thirty": 188,
             "me01": 310, "me02": 214, "me02.5": 613, "me04": 198, "me05": 194,
             "sv01": 444, "sv02": 455, "sv03": 406, "sv03.5": 360,
             "sv04": 428, "sv04.5": 326, "sv05": 358, "sv06": 373,

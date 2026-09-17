@@ -7,7 +7,39 @@
   },
   "image": {
     "url_template": "https://dz3we2x72f7ol.cloudfront.net/expansions/30th-celebration/en-us/2M6P_EN_{number}-2x.png",
-    "number_padding": 0
+    "number_padding": 0,
+    "overrides": {
+      "159": "https://dz3we2x72f7ol.cloudfront.net/expansions/30th-celebration/en-us/2M6P_Classic_EN_14-2x.png",
+      "160": "https://dz3we2x72f7ol.cloudfront.net/expansions/30th-celebration/en-us/2M6P_Classic_EN_1-2x.png",
+      "161": "https://dz3we2x72f7ol.cloudfront.net/expansions/30th-celebration/en-us/2M6P_Classic_EN_5-2x.png",
+      "162": "https://dz3we2x72f7ol.cloudfront.net/expansions/30th-celebration/en-us/2M6P_Classic_EN_15-2x.png",
+      "163": "https://dz3we2x72f7ol.cloudfront.net/expansions/30th-celebration/en-us/2M6P_Classic_EN_7-2x.png",
+      "164": "https://dz3we2x72f7ol.cloudfront.net/expansions/30th-celebration/en-us/2M6P_Classic_EN_24-2x.png",
+      "165": "https://dz3we2x72f7ol.cloudfront.net/expansions/30th-celebration/en-us/2M6P_Classic_EN_29-2x.png",
+      "166": "https://dz3we2x72f7ol.cloudfront.net/expansions/30th-celebration/en-us/2M6P_Classic_EN_2-2x.png",
+      "167": "https://dz3we2x72f7ol.cloudfront.net/expansions/30th-celebration/en-us/2M6P_Classic_EN_6-2x.png",
+      "168": "https://dz3we2x72f7ol.cloudfront.net/expansions/30th-celebration/en-us/2M6P_Classic_EN_25-2x.png",
+      "169": "https://dz3we2x72f7ol.cloudfront.net/expansions/30th-celebration/en-us/2M6P_Classic_EN_3-2x.png",
+      "170": "https://dz3we2x72f7ol.cloudfront.net/expansions/30th-celebration/en-us/2M6P_Classic_EN_22-2x.png",
+      "171": "https://dz3we2x72f7ol.cloudfront.net/expansions/30th-celebration/en-us/2M6P_Classic_EN_10-2x.png",
+      "172": "https://dz3we2x72f7ol.cloudfront.net/expansions/30th-celebration/en-us/2M6P_Classic_EN_11-2x.png",
+      "173": "https://dz3we2x72f7ol.cloudfront.net/expansions/30th-celebration/en-us/2M6P_Classic_EN_18-2x.png",
+      "174": "https://dz3we2x72f7ol.cloudfront.net/expansions/30th-celebration/en-us/2M6P_Classic_EN_19-2x.png",
+      "175": "https://dz3we2x72f7ol.cloudfront.net/expansions/30th-celebration/en-us/2M6P_Classic_EN_20-2x.png",
+      "176": "https://dz3we2x72f7ol.cloudfront.net/expansions/30th-celebration/en-us/2M6P_Classic_EN_21-2x.png",
+      "177": "https://dz3we2x72f7ol.cloudfront.net/expansions/30th-celebration/en-us/2M6P_Classic_EN_16-2x.png",
+      "178": "https://dz3we2x72f7ol.cloudfront.net/expansions/30th-celebration/en-us/2M6P_Classic_EN_4-2x.png",
+      "179": "https://dz3we2x72f7ol.cloudfront.net/expansions/30th-celebration/en-us/2M6P_Classic_EN_23-2x.png",
+      "180": "https://dz3we2x72f7ol.cloudfront.net/expansions/30th-celebration/en-us/2M6P_Classic_EN_9-2x.png",
+      "181": "https://dz3we2x72f7ol.cloudfront.net/expansions/30th-celebration/en-us/2M6P_Classic_EN_17-2x.png",
+      "182": "https://dz3we2x72f7ol.cloudfront.net/expansions/30th-celebration/en-us/2M6P_Classic_EN_13-2x.png",
+      "183": "https://dz3we2x72f7ol.cloudfront.net/expansions/30th-celebration/en-us/2M6P_Classic_EN_8-2x.png",
+      "184": "https://dz3we2x72f7ol.cloudfront.net/expansions/30th-celebration/en-us/2M6P_Classic_EN_28-2x.png",
+      "185": "https://dz3we2x72f7ol.cloudfront.net/expansions/30th-celebration/en-us/2M6P_Classic_EN_12-2x.png",
+      "186": "https://dz3we2x72f7ol.cloudfront.net/expansions/30th-celebration/en-us/2M6P_Classic_EN_26-2x.png",
+      "187": "https://dz3we2x72f7ol.cloudfront.net/expansions/30th-celebration/en-us/2M6P_Classic_EN_27-2x.png",
+      "188": "https://dz3we2x72f7ol.cloudfront.net/expansions/30th-celebration/en-us/2M6P_Classic_EN_30-2x.png"
+    }
   },
   "binder": {
     "pockets_per_page": 9,
@@ -24,7 +56,7 @@
     "https://d1i787aglh9bmb.cloudfront.net/assets/img/me-expansions/thirty/gallery/_pdfs/P11221_30th_Celebration_Card_List_EN_HiRes.pdf",
     "https://tcg.pokemon.com/assets/img/me-expansions/30th-celebration/cards/cards.json"
   ],
-  "notes": "Numbered standard foil cards only; no reverse parallels listed. Classic names are visually matched to CDN image order, not checklist order. Classic numbers identify official gallery images, not original collector numbers. Unnumbered product Energy/promos excluded.",
+  "notes": "Main set followed by Classic Collection in official PDF order. Classic slot IDs 159-188 are internal unique IDs, not original collector numbers. Basic product Energy/promos excluded; no official gallery Energy images are available.",
   "sections": [
     {
       "name": "Grass",
@@ -1186,6 +1218,221 @@
         {
           "number": 158,
           "name": "Mew ex",
+          "variants": [
+            "Holo"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Classic Collection",
+      "cards": [
+        {
+          "number": 159,
+          "name": "Pikachu",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 160,
+          "name": "Charizard",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 161,
+          "name": "Misty",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 162,
+          "name": "Erika’s Jigglypuff",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 163,
+          "name": "Sneasel",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 164,
+          "name": "Shining Celebi",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 165,
+          "name": "Lugia",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 166,
+          "name": "Delcatty",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 167,
+          "name": "Dark Tyranitar",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 168,
+          "name": "Scizor ex",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 169,
+          "name": "Metagross δ",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 170,
+          "name": "Palkia LV.X",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 171,
+          "name": "Uxie",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 172,
+          "name": "Crobat",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 173,
+          "name": "Gengar",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 174,
+          "name": "Darkrai & Cresselia LEGEND",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 175,
+          "name": "Darkrai & Cresselia LEGEND",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 176,
+          "name": "N",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 177,
+          "name": "Rayquaza-EX",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 178,
+          "name": "Genesect-EX",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 179,
+          "name": "M Gardevoir-EX",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 180,
+          "name": "Greninja BREAK",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 181,
+          "name": "Solgaleo-GX",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 182,
+          "name": "Buzzwole-GX",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 183,
+          "name": "Pikachu & Zekrom-GX",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 184,
+          "name": "Zacian V",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 185,
+          "name": "Raikou",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 186,
+          "name": "Mew VMAX",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 187,
+          "name": "Arceus VSTAR",
+          "variants": [
+            "Holo"
+          ]
+        },
+        {
+          "number": 188,
+          "name": "Magikarp",
           "variants": [
             "Holo"
           ]

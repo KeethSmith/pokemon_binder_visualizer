@@ -72,6 +72,8 @@ def variants_for(number: int, rules: list[dict[str, Any]]) -> tuple[str, ...]:
 
 def image_url(config: dict[str, Any], number: int) -> str:
     image = config["image"]
+    if str(number) in image.get("overrides", {}):
+        return str(image["overrides"][str(number)])
     padding = int(image.get("number_padding", 0))
     rendered_number = str(number).zfill(padding) if padding else str(number)
     context = {str(k): str(v) for k, v in image.get("context", {}).items()}
