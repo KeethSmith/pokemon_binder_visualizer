@@ -17,6 +17,18 @@ ROOT = Path(__file__).resolve().parents[1]
 CHECKLIST = 'https://d1i787aglh9bmb.cloudfront.net/assets/img/me-expansions/thirty/gallery/_pdfs/P11221_30th_Celebration_Card_List_EN_HiRes.pdf'
 GALLERY = 'https://tcg.pokemon.com/assets/img/me-expansions/30th-celebration/cards/cards.json'
 
+# Visually verified against all 30 official CDN images. The checklist is in
+# chronological order; the CDN is in original collector-number order instead.
+CLASSIC_IMAGE_NAMES = [
+    'Charizard', 'Delcatty', 'Metagross δ', 'Genesect-EX', 'Misty',
+    'Dark Tyranitar', 'Sneasel', 'Pikachu & Zekrom-GX', 'Greninja BREAK', 'Uxie',
+    'Crobat', 'Raikou', 'Buzzwole-GX', 'Pikachu', 'Erika’s Jigglypuff',
+    'Rayquaza-EX', 'Solgaleo-GX', 'Gengar', 'Darkrai & Cresselia LEGEND',
+    'Darkrai & Cresselia LEGEND', 'N', 'Palkia LV.X', 'M Gardevoir-EX',
+    'Shining Celebi', 'Scizor ex', 'Mew VMAX', 'Arceus VSTAR', 'Zacian V',
+    'Lugia', 'Magikarp',
+]
+
 
 def build():
     text = '\n'.join(p.extract_text() for p in PdfReader(io.BytesIO(urlopen(CHECKLIST).read())).pages)
@@ -36,7 +48,7 @@ def build():
         for index, (original, card_name) in enumerate(selected, 1):
             section = next(s for end, s in boundaries if index <= end) if code == 'thirty' else 'Classic Collection'
             if code == 'thirtycc':
-                card_name = card_name.removesuffix(' C').strip()
+                card_name = CLASSIC_IMAGE_NAMES[index - 1]
             sections.setdefault(section, []).append({'number': index, 'name': card_name, 'variants': ['Holo']})
         config = {
             'set': {'name': name, 'short_name': name, 'code': code.upper(), 'release_date': '2026-09-16'},
@@ -44,7 +56,7 @@ def build():
             'binder': {'pockets_per_page': 9, 'columns': 3},
             'appearance': {'holographic_variants': ['Reverse Holo'], 'holographic_opacity': 0.58, 'holographic_darkening': 0.315},
             'sources': [CHECKLIST, GALLERY],
-            'notes': 'Numbered standard foil cards only; no reverse parallels listed. Classic numbers identify official gallery images, not original collector numbers. Unnumbered product Energy/promos excluded.',
+            'notes': 'Numbered standard foil cards only; no reverse parallels listed. Classic names are visually matched to CDN image order, not checklist order. Classic numbers identify official gallery images, not original collector numbers. Unnumbered product Energy/promos excluded.',
             'sections': [{'name': s, 'cards': cards} for s, cards in sections.items()],
         }
         (ROOT / 'sets' / 'builtin' / f'{code}.json').write_text(json.dumps(config, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')

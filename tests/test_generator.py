@@ -104,6 +104,20 @@ class GeneratorTests(unittest.TestCase):
         self.assertEqual(by_number[12].variants, ("Holo",))
         self.assertEqual(by_number[1].variants, ("Regular", "Reverse Holo"))
 
+    def test_classic_collection_names_match_verified_official_images(self):
+        root = Path(__file__).parents[1]
+        config = json.loads((root / 'sets/builtin/thirtycc.json').read_text(encoding='utf-8'))
+        names = [card.name for card in load_cards(config)]
+        self.assertEqual(names, [
+            'Charizard', 'Delcatty', 'Metagross δ', 'Genesect-EX', 'Misty',
+            'Dark Tyranitar', 'Sneasel', 'Pikachu & Zekrom-GX', 'Greninja BREAK', 'Uxie',
+            'Crobat', 'Raikou', 'Buzzwole-GX', 'Pikachu', 'Erika’s Jigglypuff',
+            'Rayquaza-EX', 'Solgaleo-GX', 'Gengar', 'Darkrai & Cresselia LEGEND',
+            'Darkrai & Cresselia LEGEND', 'N', 'Palkia LV.X', 'M Gardevoir-EX',
+            'Shining Celebi', 'Scizor ex', 'Mew VMAX', 'Arceus VSTAR', 'Zacian V',
+            'Lugia', 'Magikarp',
+        ])
+
     def test_all_bundled_sets_load_and_keep_ex_cards_single_slot(self):
         directory = Path(__file__).parents[1] / "sets" / "builtin"
         paths = sorted(directory.glob("*.json"))
