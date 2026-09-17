@@ -59,7 +59,7 @@
   "notes": "Main set followed by Classic Collection in official PDF order. Classic slot IDs 159-188 are internal unique IDs, not original collector numbers. Basic product Energy/promos excluded; no official gallery Energy images are available.",
   "sections": [
     {
-      "name": "Grass",
+      "name": "Official Checklist",
       "cards": [
         {
           "number": 1,
@@ -116,12 +116,7 @@
           "variants": [
             "Holo"
           ]
-        }
-      ]
-    },
-    {
-      "name": "Fire",
-      "cards": [
+        },
         {
           "number": 9,
           "name": "Vulpix",
@@ -170,12 +165,7 @@
           "variants": [
             "Holo"
           ]
-        }
-      ]
-    },
-    {
-      "name": "Water",
-      "cards": [
+        },
         {
           "number": 16,
           "name": "Slowpoke",
@@ -224,12 +214,7 @@
           "variants": [
             "Holo"
           ]
-        }
-      ]
-    },
-    {
-      "name": "Lightning",
-      "cards": [
+        },
         {
           "number": 23,
           "name": "Pikachu",
@@ -509,12 +494,7 @@
           "variants": [
             "Holo"
           ]
-        }
-      ]
-    },
-    {
-      "name": "Psychic",
-      "cards": [
+        },
         {
           "number": 63,
           "name": "Mewtwo",
@@ -647,12 +627,7 @@
           "variants": [
             "Holo"
           ]
-        }
-      ]
-    },
-    {
-      "name": "Fighting",
-      "cards": [
+        },
         {
           "number": 82,
           "name": "Groudon",
@@ -687,12 +662,7 @@
           "variants": [
             "Holo"
           ]
-        }
-      ]
-    },
-    {
-      "name": "Darkness",
-      "cards": [
+        },
         {
           "number": 87,
           "name": "Nidoran♀",
@@ -790,12 +760,7 @@
           "variants": [
             "Holo"
           ]
-        }
-      ]
-    },
-    {
-      "name": "Metal",
-      "cards": [
+        },
         {
           "number": 101,
           "name": "Galarian Meowth",
@@ -851,12 +816,7 @@
           "variants": [
             "Holo"
           ]
-        }
-      ]
-    },
-    {
-      "name": "Dragon",
-      "cards": [
+        },
         {
           "number": 109,
           "name": "Salamence ex",
@@ -884,12 +844,7 @@
           "variants": [
             "Holo"
           ]
-        }
-      ]
-    },
-    {
-      "name": "Colorless",
-      "cards": [
+        },
         {
           "number": 113,
           "name": "Meowth",
@@ -980,12 +935,7 @@
           "variants": [
             "Holo"
           ]
-        }
-      ]
-    },
-    {
-      "name": "Trainers",
-      "cards": [
+        },
         {
           "number": 126,
           "name": "Poké Pad",
@@ -1006,12 +956,7 @@
           "variants": [
             "Holo"
           ]
-        }
-      ]
-    },
-    {
-      "name": "Secret Rares",
-      "cards": [
+        },
         {
           "number": 129,
           "name": "Alolan Exeggutor",
@@ -1221,12 +1166,7 @@
           "variants": [
             "Holo"
           ]
-        }
-      ]
-    },
-    {
-      "name": "Classic Collection",
-      "cards": [
+        },
         {
           "number": 159,
           "name": "Pikachu",

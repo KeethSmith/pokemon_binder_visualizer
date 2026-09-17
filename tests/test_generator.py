@@ -114,6 +114,16 @@ class GeneratorTests(unittest.TestCase):
         self.assertTrue(cards[0].image_url.endswith('_14-2x.png'))
         self.assertEqual(cards[1].name, 'Charizard')
         self.assertEqual(cards[-1].name, 'Magikarp')
+        all_cards = load_cards(config)
+        self.assertEqual(len(config['sections']), 1)
+        for spacing in ['paired', 'split']:
+            pages = build_pages(all_cards, 9, spacing)
+            pockets = [pocket for page in pages for pocket in page['pockets']]
+            self.assertEqual(pockets[128].card.name, 'Alolan Exeggutor')
+            self.assertEqual(pockets[157].card.name, 'Mew ex')
+            self.assertEqual(pockets[158].card.name, 'Pikachu')
+            self.assertEqual(pockets[159].card.name, 'Charizard')
+            self.assertTrue(all(pocket is not None for pocket in pockets[:188]))
         self.assertEqual(names, [
             'Charizard', 'Delcatty', 'Metagross δ', 'Genesect-EX', 'Misty',
             'Dark Tyranitar', 'Sneasel', 'Pikachu & Zekrom-GX', 'Greninja BREAK', 'Uxie',

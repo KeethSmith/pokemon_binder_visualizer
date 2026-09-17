@@ -61,7 +61,9 @@ def build():
             'appearance': {'holographic_variants': ['Reverse Holo'], 'holographic_opacity': 0.58, 'holographic_darkening': 0.315},
             'sources': [CHECKLIST, GALLERY],
             'notes': 'Main set followed by Classic Collection in official PDF order. Classic slot IDs 159-188 are internal unique IDs, not original collector numbers. Basic product Energy/promos excluded; no official gallery Energy images are available.',
-            'sections': [{'name': s, 'cards': cards} for s, cards in sections.items()],
+            # One checklist section prevents Fresh page from inserting blank
+            # pockets before secrets or Classics and shifting PDF positions.
+            'sections': [{'name': 'Official Checklist', 'cards': [card for cards in sections.values() for card in cards]}],
         }
         (ROOT / 'sets' / 'builtin' / f'{code}.json').write_text(json.dumps(config, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
