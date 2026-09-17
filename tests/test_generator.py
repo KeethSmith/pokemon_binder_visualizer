@@ -115,15 +115,19 @@ class GeneratorTests(unittest.TestCase):
         self.assertEqual(cards[1].name, 'Charizard')
         self.assertEqual(cards[-1].name, 'Magikarp')
         all_cards = load_cards(config)
-        self.assertEqual(len(config['sections']), 1)
+        self.assertEqual(config['sections'][0]['name'], 'Grass')
+        self.assertEqual(config['sections'][-2]['name'], 'Trainers')
+        self.assertEqual(config['sections'][-1]['name'], 'Secret Rares / Classic Collection')
+        self.assertEqual([card.name for card in all_cards[128:]],
+                         [card['name'] for card in config['sections'][-1]['cards']])
         for spacing in ['paired', 'split']:
             pages = build_pages(all_cards, 9, spacing)
-            pockets = [pocket for page in pages for pocket in page['pockets']]
+            pockets = [pocket for page in pages for pocket in page['pockets'] if pocket is not None]
             self.assertEqual(pockets[128].card.name, 'Alolan Exeggutor')
             self.assertEqual(pockets[157].card.name, 'Mew ex')
             self.assertEqual(pockets[158].card.name, 'Pikachu')
             self.assertEqual(pockets[159].card.name, 'Charizard')
-            self.assertTrue(all(pocket is not None for pocket in pockets[:188]))
+            self.assertEqual(len(pockets), 188)
         self.assertEqual(names, [
             'Charizard', 'Delcatty', 'Metagross δ', 'Genesect-EX', 'Misty',
             'Dark Tyranitar', 'Sneasel', 'Pikachu & Zekrom-GX', 'Greninja BREAK', 'Uxie',
