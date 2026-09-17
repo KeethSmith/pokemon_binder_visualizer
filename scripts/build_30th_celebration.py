@@ -61,13 +61,8 @@ def build():
             'appearance': {'holographic_variants': ['Reverse Holo'], 'holographic_opacity': 0.58, 'holographic_darkening': 0.315},
             'sources': [CHECKLIST, GALLERY],
             'notes': 'Main set followed by Classic Collection in official PDF order. Classic slot IDs 159-188 are internal unique IDs, not original collector numbers. Basic product Energy/promos excluded; no official gallery Energy images are available.',
-            # Main-set types retain normal spacing behavior. The checklist's
-            # trailing secret/Classics block stays together in PDF sequence.
-            'sections': [
-                {'name': s, 'cards': cards} for s, cards in sections.items()
-                if s not in ('Secret Rares', 'Classic Collection')
-            ] + [{'name': 'Secret Rares / Classic Collection',
-                  'cards': sections['Secret Rares'] + sections['Classic Collection']}],
+            # Keep type, Secret Rare, and Classic sections distinct in PDF order.
+            'sections': [{'name': s, 'cards': cards} for s, cards in sections.items()],
         }
         (ROOT / 'sets' / 'builtin' / f'{code}.json').write_text(json.dumps(config, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 

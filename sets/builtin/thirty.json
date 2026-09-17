@@ -1010,7 +1010,7 @@
       ]
     },
     {
-      "name": "Secret Rares / Classic Collection",
+      "name": "Secret Rares",
       "cards": [
         {
           "number": 129,
@@ -1221,7 +1221,12 @@
           "variants": [
             "Holo"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "name": "Classic Collection",
+      "cards": [
         {
           "number": 159,
           "name": "Pikachu",

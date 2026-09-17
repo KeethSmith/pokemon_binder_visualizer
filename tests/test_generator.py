@@ -116,10 +116,11 @@ class GeneratorTests(unittest.TestCase):
         self.assertEqual(cards[-1].name, 'Magikarp')
         all_cards = load_cards(config)
         self.assertEqual(config['sections'][0]['name'], 'Grass')
-        self.assertEqual(config['sections'][-2]['name'], 'Trainers')
-        self.assertEqual(config['sections'][-1]['name'], 'Secret Rares / Classic Collection')
+        self.assertEqual(config['sections'][-3]['name'], 'Trainers')
+        self.assertEqual(config['sections'][-2]['name'], 'Secret Rares')
+        self.assertEqual(config['sections'][-1]['name'], 'Classic Collection')
         self.assertEqual([card.name for card in all_cards[128:]],
-                         [card['name'] for card in config['sections'][-1]['cards']])
+                         [card['name'] for section in config['sections'][-2:] for card in section['cards']])
         for spacing in ['paired', 'split']:
             pages = build_pages(all_cards, 9, spacing)
             pockets = [pocket for page in pages for pocket in page['pockets'] if pocket is not None]
