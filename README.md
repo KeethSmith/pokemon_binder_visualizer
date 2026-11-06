@@ -22,6 +22,7 @@ The visualizer's **All variants** option means one copy of every numbered set ca
 
 | Set | Cards | Set | Cards |
 |---|---:|---|---:|
+| Delta Reign | 234 | 30th Celebration | 188 |
 | Pitch Black | 194 | Chaos Rising | 198 |
 | Perfect Order | 203 | Ascended Heroes | 613 |
 | Phantasmal Flames | 214 | Mega Evolution | 310 |
